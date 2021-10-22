@@ -41,9 +41,8 @@ const Footer = ({ bg }: { bg: string }) => {
       }}
     >
       <div>
-        &copy; {new Date().getFullYear()} by {siteTitle}.
+        &copy; {new Date().getFullYear()} {siteTitle}.
       </div>
-      <div>Derp derp derp</div>
     </footer>
   );
 };

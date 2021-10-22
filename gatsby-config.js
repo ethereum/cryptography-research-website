@@ -5,21 +5,21 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 module.exports = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
-    siteTitle: `Jodie`,
+    siteTitle: `Ethereum Foundation Cryptography`,
     // Default title of the page
-    siteTitleAlt: `Ethereum Cryptography`,
+    siteTitleAlt: `Ethereum Foundation Cryptography`,
     // Can be used for e.g. JSONLD
-    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
+    siteHeadline: `Ethereum Foundation Cryptography team headline`,
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://crypto.ethereum.org`,
     // Used for SEO
-    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    siteDescription: `Updates from the Ethereum Foundation cryptography team`,
     // Will be set on the html tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@lekoarts_de`,
+    author: `@samonchain`,
   },
   plugins: [
     {
