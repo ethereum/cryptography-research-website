@@ -1,20 +1,39 @@
-require(`dotenv`).config()
+require(`dotenv`).config();
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Jodie`,
+    // Default title of the page
+    siteTitleAlt: `Ethereum Cryptography`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://crypto.ethereum.org`,
+    // Used for SEO
+    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    // Will be set on the html tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-jodie`,
       // See the theme's README for all available options
+      // https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie#theme-options
       options: {
+        projectsUrl: `/blog`,
+        projectsPrefix: `/blog`,
         navigation: [
-          { name: `Projects`, slug: `/projects` },
-          { name: `Art`, slug: `/art` },
-          { name: `About`, slug: `/about` },
+          { name: `Blog`, slug: `/blog` },
+          { name: `Research`, slug: `/research` },
+          { name: `Bounties`, slug: `/bounties` },
+          { name: `Team`, slug: `/team` },
         ],
       },
     },
@@ -72,4 +91,4 @@ module.exports = {
       },
     },
   ].filter(Boolean),
-}
+};
