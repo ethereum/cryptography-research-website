@@ -28,6 +28,7 @@ module.exports = {
       // https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie#theme-options
       options: {
         projectsUrl: `/blog`,
+        projectsPath: `content/blog`,
         projectsPrefix: `/blog`,
         navigation: [
           { name: `Blog`, slug: `/blog` },

@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from "theme-ui";
 import { readableColor } from "polished";
-import useSiteMetadata from "../hooks/use-site-metadata";
 
 const Footer = ({ bg }: { bg: string }) => {
-  const { siteTitle } = useSiteMetadata();
   const {
     theme: { rawColors },
   } = useThemeUI();
@@ -40,9 +38,7 @@ const Footer = ({ bg }: { bg: string }) => {
         variant: `footer`,
       }}
     >
-      <div>
-        &copy; {new Date().getFullYear()} {siteTitle}.
-      </div>
+      <div>&copy; {new Date().getFullYear()} Ethereum Foundation.</div>
     </footer>
   );
 };
