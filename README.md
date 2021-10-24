@@ -6,7 +6,7 @@ Web application for the Ethereum Foundation Cryptography team using the Gatsby T
 
 ## ✨ Features
 
-- MDX
+- MDX with math support (via KaTeX)
 - Fully customizable through the usage of Gatsby Themes (and Theme UI)
 - Create a project by creating an MDX file and dropping the images into the same folder
 - Extensible custom pages
@@ -18,15 +18,13 @@ Web application for the Ethereum Foundation Cryptography team using the Gatsby T
 
 ### 1. **Install dependencies.**
 
-If you use npm 7 or above use the `--legacy-peer-deps` flag. If you use npm 6 you can use `npm install`.
-
 ```sh
-npm install --legacy-peer-deps
+yarn
 ```
 
 ### 2. **Open the code and start customizing!**
 
-Start the site by running `npm run develop`.
+Start the site by running `yarn start`.
 
 Your site is now running at `http://localhost:8000`!
 

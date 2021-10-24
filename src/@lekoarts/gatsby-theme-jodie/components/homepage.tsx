@@ -14,6 +14,7 @@ import { visuallyHidden } from "@lekoarts/gatsby-theme-jodie/src/styles/utils";
 import modifyGrid from "@lekoarts/gatsby-theme-jodie/src/utils/modify-grid";
 
 type DataProps = {
+  // `projects` are blog posts - items within `content/blog/`
   projects: {
     nodes: {
       slug: string;

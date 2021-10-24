@@ -27,6 +27,7 @@ module.exports = {
       // See the theme's README for all available options
       // https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie#theme-options
       options: {
+        mdx: false,
         projectsUrl: `/blog`,
         projectsPath: `content/blog`,
         projectsPrefix: `/blog`,
@@ -36,6 +37,20 @@ module.exports = {
           { name: `Bounties`, slug: `/bounties` },
           { name: `Team`, slug: `/team` },
         ],
+      },
+    },
+    // Add KaTeX support
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        remarkPlugins: [require("remark-math")],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/content/`,
       },
     },
     {
@@ -55,7 +70,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`, // TODO remove
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
