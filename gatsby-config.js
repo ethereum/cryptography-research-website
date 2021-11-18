@@ -36,6 +36,7 @@ module.exports = {
           { name: `Research`, slug: `/research` },
           { name: `Bounties`, slug: `/bounties` },
           { name: `Team`, slug: `/team` },
+          { name: `Events`, slug: `/events` },
         ],
       },
     },
