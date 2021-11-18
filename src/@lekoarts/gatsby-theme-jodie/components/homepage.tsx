@@ -1,96 +1,28 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import * as React from "react";
-import { PageProps } from "gatsby";
-import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image";
 import Layout from "@lekoarts/gatsby-theme-jodie/src/components/layout";
-import GridItem from "@lekoarts/gatsby-theme-jodie/src/components/grid-item";
-import {
-  itemListWrapperStyles,
-  itemStyles,
-} from "@lekoarts/gatsby-theme-jodie/src/styles/item-list";
-import locales from "@lekoarts/gatsby-theme-jodie/src/locales";
-import { visuallyHidden } from "@lekoarts/gatsby-theme-jodie/src/styles/utils";
-import modifyGrid from "@lekoarts/gatsby-theme-jodie/src/utils/modify-grid";
 
-type DataProps = {
-  // `projects` are blog posts - items within `content/blog/`
-  projects: {
-    nodes: {
-      slug: string;
-      title: string;
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData;
-        };
-      };
-      __typename: "MdxProject";
-    }[];
-  };
-  pages: {
-    nodes: {
-      slug: string;
-      title: string;
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData;
-        };
-      };
-      __typename: "MdxPage";
-    }[];
-  };
-};
-
-const Homepage: React.FC<PageProps<DataProps>> = ({ data: { projects } }) => {
-  // Pass project pages as items to display
-  // Could also add standard pages (i.e. [...pages.nodes, ...projects.nodes])
-  const rawItems = [...projects.nodes];
-  const items = modifyGrid(rawItems);
-  const itemsCount = items.length;
-  let divisor = 9;
-
-  for (let i = 0; i < itemsCount; i++) {
-    const quotient = itemsCount % divisor;
-    const quotientAlt = (itemsCount - 1) % divisor;
-
-    if (quotient === 0 || quotientAlt === 0) {
-      break;
-    }
-
-    divisor -= 1;
-  }
-
+const Homepage = () => {
   return (
     <Layout>
-      <h1 sx={visuallyHidden} data-testid="page-title">
-        {locales.home}
-      </h1>
-      <div className={`item-list-wrapper`} sx={itemListWrapperStyles}>
-        <div className={`item-list div${divisor}`}>
-          {items.length > 0 ? (
-            items.map((item, index) => (
-              <GridItem
-                to={item.slug}
-                className="item"
-                key={item.title}
-                sx={itemStyles}
-                data-testid={item.title}
-              >
-                <GatsbyImage
-                  loading={index === 0 ? `eager` : `lazy`}
-                  image={item.cover.childImageSharp.gatsbyImageData}
-                  alt=""
-                />
-                <span>{item.title}</span>
-              </GridItem>
-            ))
-          ) : (
-            <div sx={{ padding: 3 }}>
-              No projects and pages found at the locations defined for
-              "projectsPath" and "pagesPath"
-            </div>
-          )}
-        </div>
+      <div
+        sx={{
+          padding: [4, 4, 5],
+        }}
+      >
+        <h1 sx={{ textAlign: "center" }}>
+          Welcome to Cryptography Research at the Ethereum Foundation
+        </h1>
+        <p>
+          The Ethereum Foundation leads research into cryptographic protocols
+          that are useful within the greater Ethereum community and more
+          generally. Cryptography is a key tool that enables greater
+          functionality, security, efficiency, and auditability in decentralized
+          settings. We are currently conducting research into verifiable delay
+          functions, multiparty computation, vector commitments, and
+          zero-knowledge proofs etc. We have a culture of open source and no
+          patents are put on any work that we produce.
+        </p>
       </div>
     </Layout>
   );
