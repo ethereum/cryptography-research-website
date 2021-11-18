@@ -38,6 +38,9 @@ const Footer = ({ bg }: { bg: string }) => {
         variant: `footer`,
       }}
     >
+      <div>
+        <a href="mailto:cryptography@ethereum.org">cryptography@ethereum.org</a>
+      </div>
       <div>&copy; {new Date().getFullYear()} Ethereum Foundation.</div>
     </footer>
   );
