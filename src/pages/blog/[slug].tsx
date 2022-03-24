@@ -30,9 +30,11 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 // generate the static props for the page
-export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps: GetStaticProps = async context => {
+  const slug = context.params?.slug as string;
   const fileName = fs.readFileSync(`src/posts/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
+
   return {
     props: {
       frontmatter,
