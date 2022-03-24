@@ -1,0 +1,1 @@
+export { getParsedDate } from './getParsedDate';
