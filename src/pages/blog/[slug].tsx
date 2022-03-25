@@ -100,8 +100,8 @@ export const PostTheme = {
     return (
       <Link
         textDecoration='none'
-        color='#14add2'
-        _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+        color='brand.lightblue'
+        _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
         href={href}
       >
         {children}

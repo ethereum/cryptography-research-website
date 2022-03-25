@@ -10,7 +10,7 @@ export const Footer: FC = () => {
             href='mailto:cryptography@ethereum.org'
             textDecoration='underline'
             color='gray.500'
-            _hover={{ color: '#667bbe' }}
+            _hover={{ color: 'brand.blue' }}
           >
             cryptography@ethereum.org
           </Link>

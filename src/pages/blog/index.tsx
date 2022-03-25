@@ -70,8 +70,8 @@ const Blog: NextPage<Props> = ({ posts }) => {
                 <NextLink href={`blog/${slug}`} passHref>
                   <Link
                     href={`blog/${slug}`}
-                    color='#14add2'
-                    _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                    color='brand.lightblue'
+                    _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                   >
                     <Heading as='h1' mb={4} size='md' fontWeight={500}>
                       {title}

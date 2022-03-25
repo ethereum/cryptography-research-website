@@ -16,25 +16,30 @@ const Bounties: NextPage = () => {
           Bounties
         </Heading>
 
-        <Text mb={4}>Here&apos;s our bounties page!</Text>
-
-        <Text mb={12}>Do want subpages within here? Or is one long page all we need?</Text>
-
-        {/* TODO: links color update hover */}
         <Text mb={4}>
           To improve the cryptanalysis of new RSA assumptions needed for Verifiable Delay Functions
           (VDFs), the Ethereum Foundation announced the following bounties at Real World Crypto
           2020.{' '}
-          <Link href='https://rsa.cash/bounties' color='blue.400'>
-            https://rsa.cash/bounties
+          <Link
+            href='https://rsa.cash/bounties'
+            color='brand.lightblue'
+            _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+            isExternal
+          >
+            rsa.cash/bounties
           </Link>
         </Text>
 
         <Text>
           Help us understand the security of new hash functions better. The Ethereum Foundation
           announced the following bounties in November 2021.{' '}
-          <Link href='https://www.zkhashbounties.info/' color='blue.400'>
-            https://www.zkhashbounties.info/
+          <Link
+            href='https://www.zkhashbounties.info/'
+            color='brand.lightblue'
+            _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+            isExternal
+          >
+            zkhashbounties.info
           </Link>
         </Text>
       </main>

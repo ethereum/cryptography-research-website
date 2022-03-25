@@ -8,6 +8,8 @@ import '../styles/globals.css';
 import 'katex/dist/katex.min.css'; // `rehype-katex` does not import the CSS for you
 import 'focus-visible/dist/focus-visible';
 
+import theme from '../theme';
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -18,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
