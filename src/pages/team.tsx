@@ -25,14 +25,14 @@ const Team: NextPage = () => {
         <Stack spacing={9}>
           <Stack>
             <Text>
-              <strong>Justin Drake.</strong> MEV, secret leader election, VDFs, zkEVM, sharding,
-              proof-of-custody.
+              <strong>Justin Drake.</strong> MEV; secret leader election; verifiable delay
+              functions; zkEVM; sharding; and proof-of-custody.
             </Text>
 
             <Text lineHeight='10px'>
               <Link
                 href='https://twitter.com/drakefjustin'
-                color=''
+                color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
@@ -96,18 +96,19 @@ const Team: NextPage = () => {
 
           <Stack>
             <Text>
-              <strong>Dmitry Khovratovich.</strong> Hash function design; cryptanalysis; SNARK
-              friendly primitives; universal composibility.
+              <strong>Dmitry Khovratovich.</strong> Symmetric crypto design; cryptanalysis of
+              schemes and protocols; zero-knowledge proofs and circuits; verifiable delay functions;
+              and privacy and anonymity.
             </Text>
 
             <Text lineHeight='10px'>
               <Link
-                href='https://en.wikipedia.org/wiki/Dmitry_Khovratovich'
+                href='https://www.khovratovich.info/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                en.wikipedia.org/wiki/Dmitry_Khovratovich
+                khovratovich.info
               </Link>
             </Text>
           </Stack>
@@ -132,7 +133,7 @@ const Team: NextPage = () => {
 
           <Stack>
             <Text>
-              <strong>Mark Simkin.</strong> Cryptographic protocols and primitives, algorithms and
+              <strong>Mark Simkin.</strong> Cryptographic protocols and primitives; algorithms and
               data structures.
             </Text>
 
