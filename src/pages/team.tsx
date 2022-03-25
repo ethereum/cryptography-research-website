@@ -32,8 +32,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://twitter.com/drakefjustin'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color=''
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 twitter.com/drakefjustin
@@ -50,8 +50,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://dankradfeist.de/about/'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 dankradfeist.de/about
@@ -67,8 +67,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://dblp.org/pid/47/11389.html'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 dblp.org/pid/47/11389.html
@@ -85,8 +85,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://github.com/asn-d6'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 github.com/asn-d6
@@ -103,8 +103,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://en.wikipedia.org/wiki/Dmitry_Khovratovich'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 en.wikipedia.org/wiki/Dmitry_Khovratovich
@@ -121,8 +121,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://www.marymaller.com/'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 marymaller.com
@@ -139,8 +139,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://msimkin.github.io/'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 msimkin.github.io
@@ -157,8 +157,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://www.nds.ruhr-uni-bochum.de/chair/people/asanso/'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 nds.ruhr-uni-bochum.de/chair/people/asanso
@@ -175,8 +175,8 @@ const Team: NextPage = () => {
             <Text lineHeight='10px'>
               <Link
                 href='https://zhenfeizhang.github.io/material/aboutme/'
-                color='#14add2'
-                _hover={{ color: '#f38b75', textDecoration: 'underline' }}
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
                 zhenfeizhang.github.io/material/aboutme
