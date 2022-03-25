@@ -9,7 +9,7 @@ export const Header: FC = () => {
   return (
     <header>
       <Flex justifyContent='space-between' px={{ base: 6, md: 8 }} pt={6}>
-        <Box>
+        <Box mr={{ base: 8, md: 0 }}>
           <Image src={EFlogo} alt='Ethereum Foundation logo' height={50} width={146.66} />
         </Box>
 
