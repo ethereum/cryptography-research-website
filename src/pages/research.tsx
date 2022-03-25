@@ -1,4 +1,15 @@
-import { Heading, Stack, Text } from '@chakra-ui/react';
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  Heading,
+  Link,
+  Stack,
+  Text
+} from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -16,7 +27,377 @@ const Research: NextPage = () => {
           Research
         </Heading>
 
-        <Text>A list of publications...</Text>
+        <Stack mb={10}>
+          <Heading as='h2' size='lg' fontWeight={600} mb={2}>
+            Polynomial and vector commitments
+          </Heading>
+
+          <Stack spacing={6}>
+            <Stack>
+              <Text>
+                Halo Infinite: Proof-Carrying Data from Additive Polynomial Commitments.{' '}
+                <em>Dan Boneh, Justin Drake, Ben Fisch, Ariel Gabizon.</em>{' '}
+                <strong>Crypto 2021.</strong>{' '}
+                <Link
+                  href='https://eprint.iacr.org/2020/1536.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Accordion allowToggle>
+                <AccordionItem border='none'>
+                  <h2>
+                    <AccordionButton pl={0}>
+                      <AccordionIcon color='gray.600' fontSize='sm' />
+                      <Text color='gray.600' fontSize='sm'>
+                        Abstract
+                      </Text>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pl={0}>
+                    <Text mb={4} fontSize='sm'>
+                      <em>
+                        Polynomial commitment schemes (PCS) have recently been in the spotlight for
+                        their key role in building SNARKs. A PCS provides the ability to commit to a
+                        polynomial over a finite field and prove its evaluation at points. A
+                        succinct PCS has commitment and evaluation proof size sublinear in the
+                        degree of the polynomial. An efficient PCS has sublinear proof verification.
+                        Any efficient and succinct PCS can be used to construct a SNARK with similar
+                        security and efficiency characteristics (in the random oracle model).
+                      </em>
+                    </Text>
+
+                    <Text fontSize='sm'>
+                      <em>
+                        Proof-carrying data (PCD) enables a set of parties to carry out an
+                        indefinitely long distributed computation where every step along the way is
+                        accompanied by a proof of correctness. It generalizes incrementally
+                        verifiable computation and can even be used to construct SNARKs. Until
+                        recently, however, the only known method for constructing PCD required
+                        expensive SNARK recursion. A system called Halo first demonstrated a new
+                        methodology for building PCD without SNARKs, exploiting an aggregation
+                        property of the Bulletproofs innerproduct argument. The construction was
+                        heuristic because it makes non-black-box use of a concrete instantiation of
+                        the Fiat-Shamir transform. We expand upon this methodology to show that PCD
+                        can be (heuristically) built from any homomorphic polynomial commitment
+                        scheme (PCS), even if the PCS evaluation proofs are neither succinct nor
+                        efficient. In fact, the Halo methodology extends to any PCS that has an even
+                        more general property, namely the ability to aggregate linear combinations
+                        of commitments into a new succinct commitment that can later be opened to
+                        this linear combination. Our results thus imply new constructions of SNARKs
+                        and PCD that were not previously described in the literature and serve as a
+                        blueprint for future constructions as well.
+                      </em>
+                    </Text>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+
+            <Stack>
+              <Text>
+                Aggregatable subvector commitments for stateless cryptocurrencies.{' '}
+                <em>
+                  Alin Tomescu, Ittai Abraham, Vitalik Buterin, Justin Drake, Dankrad Feist, Dmitry
+                  Khovratovich.
+                </em>{' '}
+                <strong>SCN 2020.</strong>{' '}
+                <Link
+                  href='https://eprint.iacr.org/2020/527.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Accordion allowToggle>
+                <AccordionItem border='none'>
+                  <h2>
+                    <AccordionButton pl={0}>
+                      <AccordionIcon color='gray.600' fontSize='sm' />
+                      <Text color='gray.600' fontSize='sm'>
+                        Abstract
+                      </Text>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pl={0}>
+                    <Text fontSize='sm'>
+                      <em>
+                        An aggregatable subvector commitment (aSVC) scheme is a vector commitment
+                        (VC) scheme that can aggregate multiple proofs into a single, small
+                        subvector proof. In this paper, we formalize aSVCs and give a construction
+                        from constant-sized polynomial commitments. Our construction is unique in
+                        that it has linear-sized public parameters, it can compute all
+                        constant-sized proofs in quasilinear time, it updates proofs in constant
+                        time and it can aggregate multiple proofs into a constant-sized subvector
+                        proof. Furthermore, our concrete proof sizes are small due to our use of
+                        pairing-friendly groups. We use our aSVC to obtain a payments-only stateless
+                        cryptocurrency with very low communication and computation overheads.
+                        Specifically, our constant-sized, aggregatable proofs reduce each
+                        block&apos;s proof overhead to a single group element, which is optimal.
+                        Furthermore, our subvector proofs speed up block verification and our
+                        smaller public parameters further reduce block size.
+                      </em>
+                    </Text>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+
+            <Stack>
+              <Text>
+                Efficient polynomial commitment schemes for multiple points and polynomials.{' '}
+                <em>Dan Boneh, Justin Drake, Ben Fisch, Ariel Gabizon.</em> 2020.{' '}
+                <Link
+                  href='https://eprint.iacr.org/2020/081.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Accordion allowToggle>
+                <AccordionItem border='none'>
+                  <h2>
+                    <AccordionButton pl={0}>
+                      <AccordionIcon color='gray.600' fontSize='sm' />
+                      <Text color='gray.600' fontSize='sm'>
+                        Abstract
+                      </Text>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pl={0}>
+                    <Text mb={4} fontSize='sm'>
+                      <em>
+                        We present an enhanced version of the Kate, Zaverucha and Goldberg
+                        polynomial commitment scheme [KZG10] where a single group element can be an
+                        opening proof for multiple polynomials each evaluated at a different
+                        arbitrary subset of points.
+                      </em>
+                    </Text>
+
+                    <Text mb={4} fontSize='sm'>
+                      <em>
+                        As a sample application we “plug in” this scheme into the PLONK proving
+                        system[GWC19] to obtain improved proof size and prover run time at the
+                        expense of additional verifier G2 operations and pairings, and additional G2
+                        SRS elements.
+                      </em>
+                    </Text>
+
+                    <Text fontSize='sm'>
+                      <em>
+                        We also present a second scheme where the proof consists of two group
+                        elements and the verifier complexity is better than previously known batched
+                        verification methods for [KZG10].
+                      </em>
+                    </Text>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+          </Stack>
+        </Stack>
+
+        {/* <Stack mb={10}>
+          <Heading as='h2' size='lg' fontWeight={600} mb={2}>
+            Verifiable delay functions and random beacons
+          </Heading>
+
+          <Stack spacing={6}>
+            <Stack>
+              <Text mb={4}>
+                Not So Slowth: Invertible VDF for Ethereum and others.{' '}
+                <em>Dmitry Khovratovich, Mary Maller, Pratyush Ranjan Tiwari.</em> 2021.{' '}
+                <Link
+                  href='https://khovratovich.github.io/MinRoot/minroot.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Text>
+                Reaching Consensus for Asynchronous Distributed Key Generation.{' '}
+                <em>
+                  Ittai Abraham, Philipp Jovanovic, Mary Maller, Sarah Meiklejohn, Gilad Stern, Alin
+                  Tomescu.
+                </em>{' '}
+                <strong>PODC 2021.</strong>{' '}
+                <Link
+                  href='https://arxiv.org/pdf/2102.09041.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Accordion allowToggle>
+                <AccordionItem border='none'>
+                  <h2>
+                    <AccordionButton pl={0}>
+                      <AccordionIcon color='gray.600' fontSize='sm' />
+                      <Text color='gray.600' fontSize='sm'>
+                        Abstract
+                      </Text>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pl={0}>
+                    <Text mb={4} fontSize='sm'>
+                      <em>
+                        Polynomial commitment schemes (PCS) have recently been in the spotlight for
+                        their key role in building SNARKs. A PCS provides the ability to commit to a
+                        polynomial over a finite field and prove its evaluation at points. A
+                        succinct PCS has commitment and evaluation proof size sublinear in the
+                        degree of the polynomial. An efficient PCS has sublinear proof verification.
+                        Any efficient and succinct PCS can be used to construct a SNARK with similar
+                        security and efficiency characteristics (in the random oracle model).
+                      </em>
+                    </Text>
+
+                    <Text fontSize='sm'>
+                      <em>
+                        Proof-carrying data (PCD) enables a set of parties to carry out an
+                        indefinitely long distributed computation where every step along the way is
+                        accompanied by a proof of correctness. It generalizes incrementally
+                        verifiable computation and can even be used to construct SNARKs. Until
+                        recently, however, the only known method for constructing PCD required
+                        expensive SNARK recursion. A system called Halo first demonstrated a new
+                        methodology for building PCD without SNARKs, exploiting an aggregation
+                        property of the Bulletproofs innerproduct argument. The construction was
+                        heuristic because it makes non-black-box use of a concrete instantiation of
+                        the Fiat-Shamir transform. We expand upon this methodology to show that PCD
+                        can be (heuristically) built from any homomorphic polynomial commitment
+                        scheme (PCS), even if the PCS evaluation proofs are neither succinct nor
+                        efficient. In fact, the Halo methodology extends to any PCS that has an even
+                        more general property, namely the ability to aggregate linear combinations
+                        of commitments into a new succinct commitment that can later be opened to
+                        this linear combination. Our results thus imply new constructions of SNARKs
+                        and PCD that were not previously described in the literature and serve as a
+                        blueprint for future constructions as well.
+                      </em>
+                    </Text>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+
+            <Stack>
+              <Text>
+                Aggregatable subvector commitments for stateless cryptocurrencies.{' '}
+                <em>
+                  Alin Tomescu, Ittai Abraham, Vitalik Buterin, Justin Drake, Dankrad Feist, Dmitry
+                  Khovratovich.
+                </em>{' '}
+                <strong>SCN 2020.</strong>{' '}
+                <Link
+                  href='https://eprint.iacr.org/2020/527.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Accordion allowToggle>
+                <AccordionItem border='none'>
+                  <h2>
+                    <AccordionButton pl={0}>
+                      <AccordionIcon color='gray.600' />
+                      <Text color='gray.600'>Abstract</Text>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pl={0}>
+                    <Text>
+                      <em>
+                        An aggregatable subvector commitment (aSVC) scheme is a vector commitment
+                        (VC) scheme that can aggregate multiple proofs into a single, small
+                        subvector proof. In this paper, we formalize aSVCs and give a construction
+                        from constant-sized polynomial commitments. Our construction is unique in
+                        that it has linear-sized public parameters, it can compute all
+                        constant-sized proofs in quasilinear time, it updates proofs in constant
+                        time and it can aggregate multiple proofs into a constant-sized subvector
+                        proof. Furthermore, our concrete proof sizes are small due to our use of
+                        pairing-friendly groups. We use our aSVC to obtain a payments-only stateless
+                        cryptocurrency with very low communication and computation overheads.
+                        Specifically, our constant-sized, aggregatable proofs reduce each
+                        block&apos;s proof overhead to a single group element, which is optimal.
+                        Furthermore, our subvector proofs speed up block verification and our
+                        smaller public parameters further reduce block size.
+                      </em>
+                    </Text>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+
+            <Stack>
+              <Text>
+                Efficient polynomial commitment schemes for multiple points and polynomials.{' '}
+                <em>Dan Boneh, Justin Drake, Ben Fisch, Ariel Gabizon.</em> 2020.{' '}
+                <Link
+                  href='https://eprint.iacr.org/2020/081.pdf'
+                  color='brand.lightblue'
+                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                  isExternal
+                >
+                  PDF.
+                </Link>
+              </Text>
+
+              <Accordion allowToggle>
+                <AccordionItem border='none'>
+                  <h2>
+                    <AccordionButton pl={0}>
+                      <AccordionIcon color='gray.600' />
+                      <Text color='gray.600'>Abstract</Text>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pl={0}>
+                    <Text mb={4}>
+                      <em>
+                        We present an enhanced version of the Kate, Zaverucha and Goldberg
+                        polynomial commitment scheme [KZG10] where a single group element can be an
+                        opening proof for multiple polynomials each evaluated at a different
+                        arbitrary subset of points.
+                      </em>
+                    </Text>
+
+                    <Text mb={4}>
+                      <em>
+                        As a sample application we “plug in” this scheme into the PLONK proving
+                        system[GWC19] to obtain improved proof size and prover run time at the
+                        expense of additional verifier G2 operations and pairings, and additional G2
+                        SRS elements.
+                      </em>
+                    </Text>
+
+                    <Text>
+                      <em>
+                        We also present a second scheme where the proof consists of two group
+                        elements and the verifier complexity is better than previously known batched
+                        verification methods for [KZG10].
+                      </em>
+                    </Text>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+          </Stack>
+        </Stack> */}
       </main>
     </>
   );
