@@ -273,24 +273,18 @@ const Research: NextPage = () => {
 
                     <Text fontSize='sm'>
                       <em>
-                        Proof-carrying data (PCD) enables a set of parties to carry out an
-                        indefinitely long distributed computation where every step along the way is
-                        accompanied by a proof of correctness. It generalizes incrementally
-                        verifiable computation and can even be used to construct SNARKs. Until
-                        recently, however, the only known method for constructing PCD required
-                        expensive SNARK recursion. A system called Halo first demonstrated a new
-                        methodology for building PCD without SNARKs, exploiting an aggregation
-                        property of the Bulletproofs innerproduct argument. The construction was
-                        heuristic because it makes non-black-box use of a concrete instantiation of
-                        the Fiat-Shamir transform. We expand upon this methodology to show that PCD
-                        can be (heuristically) built from any homomorphic polynomial commitment
-                        scheme (PCS), even if the PCS evaluation proofs are neither succinct nor
-                        efficient. In fact, the Halo methodology extends to any PCS that has an even
-                        more general property, namely the ability to aggregate linear combinations
-                        of commitments into a new succinct commitment that can later be opened to
-                        this linear combination. Our results thus imply new constructions of SNARKs
-                        and PCD that were not previously described in the literature and serve as a
-                        blueprint for future constructions as well.
+                        Our A-DKG protocol relies on several building blocks that are of independent
+                        interest. We define and design a Proposal Election (PE) protocol that allows
+                        parties to retrospectively agree on a valid proposal after enough proposals
+                        have been sent from different parties. With constant probability the elected
+                        proposal was proposed by a nonfaulty party. In building our PE protocol, we
+                        design a Verifiable Gather protocol which allows parties to communicate
+                        which proposals they have and have not seen in a verifiable manner. The
+                        final building block to our A-DKG is a Validated Asynchronous Byzantine
+                        Agreement (VABA) protocol. We use our PE protocol to construct a VABA
+                        protocol that does not require leaders or an asynchronous DKG setup. Our
+                        VABA protocol can be used more generally when it is not possible to use
+                        threshold signatures.
                       </em>
                     </Text>
                   </AccordionPanel>

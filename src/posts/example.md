@@ -178,7 +178,7 @@ The verifier returns true if and only if all checks pass. See that the verifiers
 
 #### Proving Correct Inputs
 
-To prove that $z_1$ and $z_2$ are computed correctly we will use the [KZG10 polynomial commitment](https://www.iacr.org/archive/asiacrypt2010/6477178/6477178.pdf) scheme. The techniques used here are similar to those by [ Tyagi et al.](https://eprint.iacr.org/2021/627.pdf). We set a polynomial commitment to $p(X)$ and $q(X)$ as
+To prove that $z_1$ and $z_2$ are computed correctly we will use the [KZG10 polynomial commitment](https://www.iacr.org/archive/asiacrypt2010/6477178/6477178.pdf) scheme. The techniques used here are similar to those by [ Tyagi et al.](https://eprint.iacr.org/2021/627.pdf) We set a polynomial commitment to $p(X)$ and $q(X)$ as
 
 $$
 \mathsf{com}_p = g^{ \sum_{j=0}^{m-1} x_j \tau^j} \quad \mbox{ and } \quad \mathsf{com}_q = g^{ \sum_{j=0}^{m-1} y_j \tau^j}
