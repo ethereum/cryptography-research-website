@@ -3,7 +3,7 @@ import { InlineMath } from 'react-katex';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import { Abstract, Publication, ResearchArea } from '../components';
+import { Abstract, Publication, ResearchArea } from '../components/UI';
 
 const Research: NextPage = () => {
   return (

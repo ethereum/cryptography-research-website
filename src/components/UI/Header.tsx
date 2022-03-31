@@ -3,7 +3,7 @@ import { FC } from 'react';
 import NextLink from 'next/link';
 import Image from 'next/image';
 
-import EFlogo from '../../public/images/ef-logo.png';
+import EFlogo from '../../../public/images/ef-logo.png';
 
 export const Header: FC = () => {
   return (

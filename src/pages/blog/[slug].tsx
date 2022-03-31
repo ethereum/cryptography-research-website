@@ -10,9 +10,9 @@ import rehypeRaw from 'rehype-raw';
 import { Heading } from '@chakra-ui/react';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
-import { getParsedDate } from '../../utils';
+import { PostTheme } from '../../components/styles/';
 
-import { PostTheme } from './PostTheme';
+import { getParsedDate } from '../../utils';
 
 // generating the paths for each post
 export const getStaticPaths: GetStaticPaths = () => {

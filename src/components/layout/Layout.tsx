@@ -1,7 +1,7 @@
 import { Container, Stack } from '@chakra-ui/react';
 import { FC } from 'react';
 
-import { Footer, Header } from './';
+import { Footer, Header } from '../UI';
 
 export const Layout: FC = ({ children }) => {
   return (
