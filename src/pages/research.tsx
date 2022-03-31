@@ -161,8 +161,7 @@ const Research: NextPage = () => {
                   {<InlineMath math={'\\tilde{\\mathcal{O}}(n^3)'} />} expected communication
                   complexity, and assumes only the existence of a PKI. Prior to our work, the best
                   A-DKG protocols required {<InlineMath math={'\\Omega(n)'} />} expected number of
-                  rounds, and
-                  {<InlineMath math={'\\Omega(n^4)'} />} expected communication.
+                  rounds, and {<InlineMath math={'\\Omega(n^4)'} />} expected communication.
                 </em>
               </Text>
 
