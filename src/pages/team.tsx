@@ -22,166 +22,132 @@ const Team: NextPage = () => {
           ranging from cryptanalysis to zero-knowledge proofs to post-quantum cryptography.
         </Text>
 
-        <Stack spacing={9}>
+        <Stack spacing={5}>
           <Stack>
             <Text>
-              <strong>Justin Drake.</strong> MEV; secret leader election; verifiable delay
-              functions; zkEVM; sharding; and proof-of-custody.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://twitter.com/drakefjustin'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                twitter.com/drakefjustin
-              </Link>
+                <strong>Justin Drake.</strong>
+              </Link>{' '}
+              MEV; secret leader election; verifiable delay functions; zkEVM; sharding; and
+              proof-of-custody.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Dankrad Feist.</strong> Vector commitments; Verkle trees; MPCs; and
-              zero-knowledge proofs.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://dankradfeist.de/about/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                dankradfeist.de/about
-              </Link>
+                <strong>Dankrad Feist.</strong>
+              </Link>{' '}
+              Vector commitments; Verkle trees; MPCs; and zero-knowledge proofs.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Gottfried Herold.</strong> Public key cryptanalysis.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://dblp.org/pid/47/11389.html'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                dblp.org/pid/47/11389.html
-              </Link>
+                <strong>Gottfried Herold.</strong>
+              </Link>{' '}
+              Public key cryptanalysis.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>George Kadianakis.</strong> Elliptic curves; zero-knowledge proofs; and
-              protocol implementations.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://github.com/asn-d6'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                github.com/asn-d6
-              </Link>
+                <strong>George Kadianakis.</strong>
+              </Link>{' '}
+              Elliptic curves; zero-knowledge proofs; and protocol implementations.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Dmitry Khovratovich.</strong> Symmetric crypto design; cryptanalysis of
-              schemes and protocols; zero-knowledge proofs and circuits; verifiable delay functions;
-              and privacy and anonymity.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://www.khovratovich.info/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                khovratovich.info
-              </Link>
+                <strong>Dmitry Khovratovich.</strong>
+              </Link>{' '}
+              Symmetric crypto design; cryptanalysis of schemes and protocols; zero-knowledge proofs
+              and circuits; verifiable delay functions; and privacy and anonymity.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Mary Maller.</strong> Zero-knowledge proofs; distributed key generation; and
-              setup ceremonies.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://www.marymaller.com/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                marymaller.com
-              </Link>
+                <strong>Mary Maller.</strong>
+              </Link>{' '}
+              Zero-knowledge proofs; distributed key generation; and setup ceremonies.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Mark Simkin.</strong> Cryptographic protocols and primitives; algorithms and
-              data structures.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://msimkin.github.io/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                msimkin.github.io
-              </Link>
+                <strong>Mark Simkin.</strong>
+              </Link>{' '}
+              Cryptographic protocols and primitives; algorithms and data structures.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Antonio Sanso.</strong> Isogenies; elliptic curves; public key cryptography;
-              cryptanalysis.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://www.nds.ruhr-uni-bochum.de/chair/people/asanso/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                nds.ruhr-uni-bochum.de/chair/people/asanso
-              </Link>
+                <strong>Antonio Sanso.</strong>
+              </Link>{' '}
+              Isogenies; elliptic curves; public key cryptography; cryptanalysis.
             </Text>
           </Stack>
 
           <Stack>
             <Text>
-              <strong>Zhenfei Zhang.</strong> Lattice based cryptography; zero-knowledge proofs;
-              cryptographic implementations.
-            </Text>
-
-            <Text lineHeight='10px'>
               <Link
                 href='https://zhenfeizhang.github.io/material/aboutme/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
               >
-                zhenfeizhang.github.io/material/aboutme
-              </Link>
+                <strong>Zhenfei Zhang.</strong>
+              </Link>{' '}
+              Lattice based cryptography; zero-knowledge proofs; cryptographic implementations.
             </Text>
           </Stack>
         </Stack>
