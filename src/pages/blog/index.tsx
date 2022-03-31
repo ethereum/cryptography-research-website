@@ -1,9 +1,10 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Heading, Link, Stack } from '@chakra-ui/react';
+import { Flex, Heading, HStack, Link, Stack } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+// import TweetEmbed from 'react-tweet-embed';
 
 import { getParsedDate } from '../../utils';
 
@@ -46,18 +47,17 @@ const Blog: NextPage<Props> = ({ posts }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* TODO: add another blog entry https://cryptography-website.netlify.app/blog/extreme-neon-what-is-this-trend-about */}
       <main>
         <Heading as='h1' mb={10}>
           Blog
         </Heading>
 
-        <Stack>
+        <Stack spacing={2}>
           {posts.map(post => {
             //extract slug and frontmatter
             const { slug, frontmatter } = post;
             //extract frontmatter properties
-            const { title, author, date } = frontmatter;
+            const { title, date } = frontmatter;
             const parsedDate = getParsedDate(date);
 
             //JSX for individual blog listing
@@ -82,6 +82,14 @@ const Blog: NextPage<Props> = ({ posts }) => {
             );
           })}
         </Stack>
+
+        {/* <HStack spacing={8} alignItems='flex-start' wrap='wrap'>
+          <TweetEmbed tweetId='1506958509195374598' />
+
+          <TweetEmbed tweetId='1508538717660663809' />
+
+          <TweetEmbed tweetId='1508474058748403716' />
+        </HStack> */}
       </main>
     </>
   );
