@@ -81,10 +81,24 @@ export const PostTheme = {
       </Stack>
     );
   },
-  code: ({ children }: any) => {
+  pre: ({ children }: any) => {
     return (
-      <Text as='span' p={1} bg='gray.100' borderRadius={3} fontFamily='mono' fontSize='sm'>
-        {children}
+      <Stack>
+        <pre>{children}</pre>
+      </Stack>
+    );
+  },
+  code: (code: any) => {
+    return (
+      <Text
+        as={!!code.inline ? 'span' : 'p'}
+        p={1}
+        bg='gray.100'
+        borderRadius={3}
+        fontFamily='mono'
+        fontSize='sm'
+      >
+        {code.children[0]}
       </Text>
     );
   }
