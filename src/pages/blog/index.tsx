@@ -6,7 +6,7 @@ import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 // import TweetEmbed from 'react-tweet-embed';
 
-import { getParsedDate } from '../../utils';
+import { getParsedDate, sortByDate } from '../../utils';
 
 import { Post } from '../../types';
 
@@ -53,7 +53,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
         </Heading>
 
         <Stack spacing={2}>
-          {posts.map(post => {
+          {posts.sort(sortByDate).map(post => {
             //extract slug and frontmatter
             const { slug, frontmatter } = post;
             //extract frontmatter properties
