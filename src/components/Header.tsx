@@ -52,12 +52,13 @@ export const Header: FC = () => {
               </NextLink>
             </WrapItem>
             <WrapItem display='inline'>
-              <NextLink href={'/bounties'} passHref>
+              <NextLink href={'https://challenges.ethereum.org/'} passHref>
                 <Link
                   href={'/bounties'}
                   _hover={{ textDecoration: 'none', color: 'gray.800' }}
                   color='gray.500'
                   mr={3}
+                  isExternal
                 >
                   bounties
                 </Link>
