@@ -43,7 +43,7 @@ To achieve its goals, the protocol is split into events and phases as demonstrat
   * Proposer selection event          -- where from the set of shuffled candidates we select the proposers for the next day
   * Block proposal phase              -- where the winners of the election propose new blocks
 
-<img src='https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/whisk_minimal.png' alt='Whisk minimal'>
+![Whisk minimal](https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/whisk_minimal.png)
 
 ### Document overview
 
@@ -77,7 +77,7 @@ Finally, we achieve *identity binding* by having Alice provide a deterministic c
 
 Now let's dive deeper into Whisk to understand how candidates are selected and how proposing works. For this section, we will assume that all validators have registered *trackers*. We will tackle registration later in this document.
 
-<img src='https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/whisk.png' alt='Whisk'>
+![Whisk](https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/whisk.png)
 
 The protocol starts with the beacon chain using public randomness from RANDAO [to sample](https://github.com/asn-d6/consensus-specs/blob/whisk_ethresearch/specs/whisk/beacon-chain.md?plain=1#L109) 16,384 random trackers from the entire set of validators (currently around 250,000 validators). The beacon chain places those trackers into a *candidate list*.
 
@@ -105,11 +105,11 @@ At every step of each round, a validator *stirs* a set of Whisk trackers [given 
 
 After 128 steps, all rows of the shuffling matrix have been processed and that concludes a round.
 
-<img src='https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/feistelshuffle.png' alt='Feistelshuffle'>
+![Feistelshuffle](https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/feistelshuffle.png)
 
 At the end of each round, we perform a *dispersion* transformation on the shuffling matrix. To perform the *dispersion*, we interpret every $(x,y)$ coordinate in the shuffling matrix as a plaintext and modify it using [a one-round Feistel mapping](https://github.com/asn-d6/consensus-specs/blob/whisk_ethresearch/specs/whisk/beacon-chain.md?plain=1#L210) that transforms every $(x,y)$ coordinate into another $(y,s)$ coordinate in a one-to-one fashion (see figure below).
 
-<img src='https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/feistelround.png' alt='Feistel round'>
+![Feistel round](https://raw.githubusercontent.com/asn-d6/consensus-specs/23ce85b0a42ff43571ba362341359b5d2a5d76fc/specs/whisk/images/feistelround.png)
 
 The $F$ function is a bijective nonlinear mapping, which is $y\rightarrow y^3\bmod{128}$ in our case.
 
