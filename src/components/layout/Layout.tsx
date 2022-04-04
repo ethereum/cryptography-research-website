@@ -10,7 +10,7 @@ export const Layout: FC = ({ children }) => {
       {/* TODO: add ETH icon, favicon, sitemap, metatags */}
       <Header />
 
-      <Container maxW='container.md' px={6} py={16}>
+      <Container maxW={{ base: 'container.md', xl2: 'container.lg' }} px={6} py={16}>
         <Stack mb={24}>{children}</Stack>
 
         <Footer />
