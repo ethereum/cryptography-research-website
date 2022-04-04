@@ -60,7 +60,7 @@ export const Header: FC = () => {
                   mr={3}
                   isExternal
                 >
-                  bounties
+                  bounties ↗
                 </Link>
               </NextLink>
             </WrapItem>
