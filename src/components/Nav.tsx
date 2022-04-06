@@ -1,6 +1,5 @@
 import {
   Box,
-  Center,
   Divider,
   Drawer,
   DrawerBody,
@@ -78,19 +77,20 @@ export const Nav: FC = () => {
           <DrawerContent>
             <DrawerBody bgGradient='linear(to-br, brand.footer.bgGradient.start 10%, brand.footer.bgGradient.end 100%)'>
               <Stack h='100%' justifyContent='center' alignItems='center'>
-                <Stack spacing={6}>
-                  {NAV_LINKS.map(({ href, text }, idx) => (
-                    <Box key={href} py={1}>
-                      <Link key={href} href={href}>
-                        <Text textAlign='center' fontSize='lg'>
+                <Stack spacing={0} divider={<Divider borderColor='gray.100' opacity={1} w={80} />}>
+                  {NAV_LINKS.map(({ href, text }) => (
+                    <NextLink key={href} href={href} passHref>
+                      <Link
+                        href={href}
+                        _hover={{ textDecoration: 'none', color: 'gray.800' }}
+                        color='gray.500'
+                        onClick={onClose}
+                      >
+                        <Text textAlign='center' fontSize='lg' py={6}>
                           {text}
                         </Text>
                       </Link>
-
-                      <Center display={isLastItem(idx, NAV_LINKS.length) ? 'none' : 'block'}>
-                        <Divider borderColor='gray.100' opacity={1} w={80} mt={6} mb={-2} />
-                      </Center>
-                    </Box>
+                    </NextLink>
                   ))}
                 </Stack>
               </Stack>
