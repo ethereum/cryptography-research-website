@@ -11,7 +11,9 @@ export const Layout: FC = ({ children }) => {
       <Header />
 
       <Container maxW={{ base: 'container.md', xl2: 'container.lg' }} px={6} py={16}>
-        <Stack mb={24}>{children}</Stack>
+        <Stack mt={{ base: 4, xl: 12 }} mb={24}>
+          {children}
+        </Stack>
 
         <Footer />
       </Container>
