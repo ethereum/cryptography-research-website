@@ -11,7 +11,7 @@ export const CloseIcon = createIcon({
         width={36}
         height={3}
         transform='rotate(45 2.33252 0.711426)'
-        fill='#000'
+        fill='#1a202c'
       />
       <rect
         x={27.7881}
@@ -19,7 +19,7 @@ export const CloseIcon = createIcon({
         width={36}
         height={3}
         transform='rotate(135 27.7881 2.83252)'
-        fill='#000'
+        fill='#1a202c'
       />
     </svg>
   )
