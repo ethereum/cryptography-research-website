@@ -7,7 +7,6 @@ export const Layout: FC = ({ children }) => {
   return (
     <>
       {/* TODO: active link color */}
-      {/* TODO: add ETH icon, favicon, sitemap, metatags */}
       <Header />
 
       <Container maxW={{ base: 'container.md', xl2: 'container.lg' }} px={6} py={16}>

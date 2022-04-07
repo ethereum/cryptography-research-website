@@ -1,10 +1,8 @@
-import { Post } from '../types';
-
-export const sortByDate = (a: Post, b: Post) => {
-  if (a.frontmatter.date < b.frontmatter.date) {
+export const sortByDate = (a: JSX.Element, b: JSX.Element) => {
+  if (a.props.date < b.props.date) {
     return 1;
   }
-  if (a.frontmatter.date > b.frontmatter.date) {
+  if (a.props.date > b.props.date) {
     return -1;
   }
 

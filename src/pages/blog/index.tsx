@@ -1,14 +1,15 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Flex, Heading, HStack, Link, Stack } from '@chakra-ui/react';
-import NextLink from 'next/link';
+import { Heading, Stack } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 // import TweetEmbed from 'react-tweet-embed';
 
+import { ExternalPost, InternalPost } from '../../components/UI';
+
 import { getParsedDate, sortByDate } from '../../utils';
 
-import { Post } from '../../types';
+import { MarkdownPost } from '../../types';
 
 export const getStaticProps: GetStaticProps = async context => {
   // get list of files from the posts folder
@@ -35,10 +36,34 @@ export const getStaticProps: GetStaticProps = async context => {
 };
 
 interface Props {
-  posts: Post[];
+  posts: MarkdownPost[];
 }
 
+// add here the list of external blog posts, with title, date and link
+const externalLinks = [
+  {
+    title: 'Ethereum Merge: Run the majority client at your own peril!',
+    date: '2022-03-24',
+    link: 'https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html'
+  }
+];
+
 const Blog: NextPage<Props> = ({ posts }) => {
+  const internalPosts = posts.map(post => {
+    //extract slug and frontmatter
+    const { slug, frontmatter } = post;
+    //extract frontmatter properties
+    const { title, date } = frontmatter;
+    const parsedDate = getParsedDate(date);
+
+    //JSX for individual blog listing
+    return <InternalPost key={slug} date={date} slug={slug} title={title} />;
+  });
+
+  const externalPosts = externalLinks.map(({ date, link, title }) => (
+    <ExternalPost key={link} date={date} link={link} title={title} />
+  ));
+
   return (
     <>
       <Head>
@@ -52,36 +77,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
           Blog
         </Heading>
 
-        <Stack spacing={2}>
-          {posts.sort(sortByDate).map(post => {
-            //extract slug and frontmatter
-            const { slug, frontmatter } = post;
-            //extract frontmatter properties
-            const { title, date } = frontmatter;
-            const parsedDate = getParsedDate(date);
-
-            //JSX for individual blog listing
-            return (
-              <article key={title}>
-                <Heading as='h3' size='xs' fontWeight={400} mb={1}>
-                  {parsedDate}
-                </Heading>
-
-                <NextLink href={`blog/${slug}`} passHref>
-                  <Link
-                    href={`blog/${slug}`}
-                    color='brand.lightblue'
-                    _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                  >
-                    <Heading as='h1' mb={4} size='md' fontWeight={500}>
-                      {title}
-                    </Heading>
-                  </Link>
-                </NextLink>
-              </article>
-            );
-          })}
-        </Stack>
+        <Stack spacing={2}>{internalPosts.concat(externalPosts).sort(sortByDate)}</Stack>
 
         {/* <HStack spacing={8} alignItems='flex-start' wrap='wrap'>
           <TweetEmbed tweetId='1506958509195374598' />
