@@ -17,3 +17,6 @@ export const NAV_LINKS = [
   { href: TEAM_URL, text: 'team' },
   { href: EVENTS_URL, text: 'events' }
 ];
+
+// metadata
+export const HEAD_TITLE = 'Ethereum Foundation Cryptography Research';
