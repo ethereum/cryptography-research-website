@@ -16,7 +16,7 @@ export const Header: FC = () => {
       <Container maxW={{ base: 'container.xl2', xl2: 'container.xl' }}>
         <Flex justifyContent='space-between' px={{ base: 2, md: 8 }} pt={6}>
           <Box mr={{ base: 8, md: 0 }} onClick={() => router.push(HOME_URL)} cursor='pointer'>
-            <Image src={EFlogo} alt='Ethereum Foundation logo' height={55} width={161} />
+            <Image src={EFlogo} alt='Ethereum Foundation logo' height={55} width={161} priority />
           </Box>
 
           <Nav />
