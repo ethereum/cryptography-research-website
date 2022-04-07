@@ -10,6 +10,7 @@ import rehypeRaw from 'rehype-raw';
 import { Heading } from '@chakra-ui/react';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
+import { PageMetadata } from '../../components/UI';
 import { PostTheme } from '../../components/styles/';
 
 import { getParsedDate } from '../../utils';
@@ -57,22 +58,27 @@ const Post: NextPage<Props> = ({ frontmatter, content }) => {
   const parsedDate = getParsedDate(date);
 
   return (
-    <main>
-      <Heading as='h1' mb={1}>
-        {title}
-      </Heading>
+    <>
+      {/* TODO: add description to post */}
+      <PageMetadata title={title} description='' />
 
-      <Heading as='h2' size='xs' fontWeight={400} mb={10} color='gray.500'>
-        {author} | {parsedDate}
-      </Heading>
+      <main>
+        <Heading as='h1' mb={1}>
+          {title}
+        </Heading>
 
-      <ReactMarkdown
-        components={ChakraUIRenderer(PostTheme)}
-        children={content}
-        remarkPlugins={[gfm, remarkMath]}
-        rehypePlugins={[rehypeKatex, rehypeRaw]}
-      />
-    </main>
+        <Heading as='h2' size='xs' fontWeight={400} mb={10} color='gray.500'>
+          {author} | {parsedDate}
+        </Heading>
+
+        <ReactMarkdown
+          components={ChakraUIRenderer(PostTheme)}
+          children={content}
+          remarkPlugins={[gfm, remarkMath]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
+        />
+      </main>
+    </>
   );
 };
 
