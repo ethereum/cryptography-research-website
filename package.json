@@ -16,6 +16,7 @@
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/libre-franklin": "^4.5.5",
     "chakra-ui-markdown-renderer": "^4.0.0",
     "focus-visible": "^5.2.0",
     "framer-motion": "^6",

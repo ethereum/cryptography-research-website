@@ -5,6 +5,11 @@ import Head from 'next/head';
 import { Layout } from '../components/layout';
 
 import '../styles/globals.css';
+import '@fontsource/libre-franklin/200.css';
+import '@fontsource/libre-franklin/300.css';
+import '@fontsource/libre-franklin/400.css';
+import '@fontsource/libre-franklin/700.css';
+
 import 'katex/dist/katex.min.css'; // `rehype-katex` does not import the CSS for you
 import 'focus-visible/dist/focus-visible';
 

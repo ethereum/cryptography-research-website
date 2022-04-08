@@ -1,11 +1,11 @@
-import { breakpoints } from './foundations/breakpoints';
 import { extendTheme } from '@chakra-ui/react';
 
-import { colors } from './foundations';
+import { breakpoints, colors, fonts } from './foundations';
 
 const overrides = {
   breakpoints,
-  colors
+  colors,
+  fonts
 };
 
 export default extendTheme(overrides);
