@@ -67,7 +67,7 @@ const Post: NextPage<Props> = ({ frontmatter, content }) => {
           {title}
         </Heading>
 
-        <Heading as='h2' size='xs' fontWeight={400} mb={10} color='gray.500'>
+        <Heading as='h2' size='xs' fontWeight={400} mb={16} color='gray.500'>
           {author} | {parsedDate}
         </Heading>
 

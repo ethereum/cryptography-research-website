@@ -28,7 +28,11 @@ export const Nav: FC = () => {
 
   return (
     <>
-      <Stack mb={{ base: 2, md: 10 }} alignItems='flex-end' display={{ base: 'none', md: 'block' }}>
+      <Stack
+        mb={{ base: 2, md: 10, xl: 0 }}
+        alignItems='flex-end'
+        display={{ base: 'none', md: 'block' }}
+      >
         <Wrap listStyleType='none' ml={0}>
           {NAV_LINKS.map(({ href, text }, idx) => (
             <WrapItem display='inline' key={href}>
