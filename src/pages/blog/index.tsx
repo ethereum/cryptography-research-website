@@ -42,10 +42,30 @@ interface Props {
 // add here the list of external blog posts, with title, date and link
 const externalLinks = [
   {
-    title: 'Ethereum Merge: Run the majority client at your own peril!',
-    date: '2022-03-24',
-    link: 'https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html'
-  }
+    title: 'Whisk: A practical shuffle-based SSLE protocol for Ethereum',
+    date: '2022-01-13',
+    link: 'https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763',
+  },
+  {
+    title: 'Inner Product Arguments',
+    date: '2021-06-27',
+    link: 'https://dankradfeist.de/ethereum/2021/07/27/inner-product-arguments.html',
+  },
+  {
+    title: 'PCS multiproofs using random evaluation',
+    date: '2021-06-18',
+    link: 'https://dankradfeist.de/ethereum/2021/06/18/pcs-multiproofs.html',
+  },
+  {
+    title: 'VDF Proving with SnarkPack',
+    date: '2020-07-16',
+    link: 'https://ethresear.ch/t/vdf-proving-with-snarkpack/10096/1',
+  },
+  {
+    title: 'KZG polynomial commitments',
+    date: '2020-06-16',
+    link: 'https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html',
+  },
 ];
 
 const Blog: NextPage<Props> = ({ posts }) => {
