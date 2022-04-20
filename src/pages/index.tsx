@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
       <main>
         <Heading as='h1' mb={10}>
-          Welcome to Cryptography Research at the Ethereum Foundation
+          Cryptography Research at the Ethereum Foundation
         </Heading>
 
         <Text>
