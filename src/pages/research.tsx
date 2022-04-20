@@ -11,10 +11,6 @@ const Research: NextPage = () => {
       <PageMetadata title='Research' description='' />
 
       <main>
-        <Heading as='h1' mb={10}>
-          Research
-        </Heading>
-
         <ResearchArea subtitle='Polynomial and vector commitments' mb={10}>
           <Publication
             title='Halo Infinite: Proof-Carrying Data from Additive Polynomial Commitments'
