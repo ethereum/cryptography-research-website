@@ -20,3 +20,6 @@ export const NAV_LINKS = [
 
 // metadata
 export const HEAD_TITLE = 'Ethereum Foundation Cryptography Research';
+
+// posts
+export const POSTS_DIR = 'src/posts';

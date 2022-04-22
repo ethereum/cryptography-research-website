@@ -10,15 +10,16 @@ import { ExternalPost, InternalPost, PageMetadata } from '../../components/UI';
 import { getParsedDate, sortByDate } from '../../utils';
 
 import { MarkdownPost } from '../../types';
+import { POSTS_DIR } from '../../constants';
 
 export const getStaticProps: GetStaticProps = async context => {
   // get list of files from the posts folder
-  const files = fs.readdirSync('src/posts');
+  const files = fs.existsSync(POSTS_DIR) ? fs.readdirSync(POSTS_DIR) : [];
 
   // get frontmatter & slug from each post
   const posts = files.map(fileName => {
     const slug = fileName.replace('.md', '');
-    const readFile = fs.readFileSync(`src/posts/${fileName}`, 'utf-8');
+    const readFile = fs.readFileSync(`${POSTS_DIR}${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
 
     return {
@@ -44,28 +45,28 @@ const externalLinks = [
   {
     title: 'Whisk: A practical shuffle-based SSLE protocol for Ethereum',
     date: '2022-01-13',
-    link: 'https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763',
+    link: 'https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763'
   },
   {
     title: 'Inner Product Arguments',
     date: '2021-06-27',
-    link: 'https://dankradfeist.de/ethereum/2021/07/27/inner-product-arguments.html',
+    link: 'https://dankradfeist.de/ethereum/2021/07/27/inner-product-arguments.html'
   },
   {
     title: 'PCS multiproofs using random evaluation',
     date: '2021-06-18',
-    link: 'https://dankradfeist.de/ethereum/2021/06/18/pcs-multiproofs.html',
+    link: 'https://dankradfeist.de/ethereum/2021/06/18/pcs-multiproofs.html'
   },
   {
     title: 'VDF Proving with SnarkPack',
     date: '2020-07-16',
-    link: 'https://ethresear.ch/t/vdf-proving-with-snarkpack/10096/1',
+    link: 'https://ethresear.ch/t/vdf-proving-with-snarkpack/10096/1'
   },
   {
     title: 'KZG polynomial commitments',
     date: '2020-06-16',
-    link: 'https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html',
-  },
+    link: 'https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html'
+  }
 ];
 
 const Blog: NextPage<Props> = ({ posts }) => {

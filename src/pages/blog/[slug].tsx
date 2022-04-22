@@ -15,10 +15,20 @@ import { PostTheme } from '../../components/styles/';
 
 import { getParsedDate } from '../../utils';
 
+import { POSTS_DIR } from '../../constants';
+
 // generating the paths for each post
 export const getStaticPaths: GetStaticPaths = () => {
+  // check if any .md post file exists, don't generate the paths otherwise
+  if (!fs.existsSync(POSTS_DIR)) {
+    return {
+      paths: [],
+      fallback: false
+    };
+  }
+
   // get list of all files from our posts directory
-  const files = fs.readdirSync('src/posts');
+  const files = fs.readdirSync(POSTS_DIR);
   // generate a path for each one
   const paths = files.map(fileName => ({
     params: {
@@ -35,7 +45,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 // generate the static props for the page
 export const getStaticProps: GetStaticProps = async context => {
   const slug = context.params?.slug as string;
-  const fileName = fs.readFileSync(`src/posts/${slug}.md`, 'utf-8');
+  const fileName = fs.readFileSync(`${POSTS_DIR}/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
 
   return {
