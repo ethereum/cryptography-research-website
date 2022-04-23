@@ -13,8 +13,12 @@ interface Props {
 export const Publication: FC<Props> = ({ title, authors, conference, link, children }) => {
   return (
     <Stack>
-      <Text mb={-1}>
-        {title}. <em>{authors}.</em> {conference}{' '}
+      <Text mb={-1}>{title}.</Text>
+      <Text fontSize='sm'>
+        <em>{authors}.</em>
+      </Text>
+      <Text fontSize='sm'>
+        {conference}{' '}
         <Link
           href={link}
           color='brand.lightblue'

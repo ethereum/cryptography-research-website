@@ -111,69 +111,40 @@ const Research: NextPage = () => {
         </ResearchArea>
 
         <ResearchArea subtitle='Verifiable delay functions and random beacons' mb={10}>
-          <Stack>
-            <Box mb={-1}>
-              <Text mb={4}>
-                Not So Slowth: Invertible VDF for Ethereum and others.{' '}
-                <em>Dmitry Khovratovich, Mary Maller, Pratyush Ranjan Tiwari.</em> 2021.{' '}
-                <Link
-                  href='https://khovratovich.github.io/MinRoot/minroot.pdf'
-                  color='brand.lightblue'
-                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                  isExternal
-                >
-                  PDF.
-                </Link>
-              </Text>
+          <Publication
+            title='Not So Slowth: Invertible VDF for Ethereum and others'
+            authors='Dmitry Khovratovich, Mary Maller, Pratyush Ranjan Tiwari'
+            conference={'2021.'}
+            link='https://khovratovich.github.io/MinRoot/minroot.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We give a protocol for Asynchronous Distributed Key Generation (A-DKG) that is
+                optimally resilient (can withstand {<InlineMath math={'f \\leq n/3'} />} faulty
+                parties), has a constant expected number of rounds, has{' '}
+                {<InlineMath math={'\\tilde{\\mathcal{O}}(n^3)'} />} expected communication
+                complexity, and assumes only the existence of a PKI. Prior to our work, the best
+                A-DKG protocols required {<InlineMath math={'\\Omega(n)'} />} expected number of
+                rounds, and {<InlineMath math={'\\Omega(n^4)'} />} expected communication.
+              </em>
+            </Text>
 
-              <Text>
-                Reaching Consensus for Asynchronous Distributed Key Generation.{' '}
-                <em>
-                  Ittai Abraham, Philipp Jovanovic, Mary Maller, Sarah Meiklejohn, Gilad Stern, Alin
-                  Tomescu.
-                </em>{' '}
-                <strong>PODC 2021.</strong>{' '}
-                <Link
-                  href='https://arxiv.org/pdf/2102.09041.pdf'
-                  color='brand.lightblue'
-                  _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                  isExternal
-                >
-                  PDF.
-                </Link>
-              </Text>
-            </Box>
-
-            <Abstract>
-              <Text mb={4} fontSize='sm'>
-                <em>
-                  We give a protocol for Asynchronous Distributed Key Generation (A-DKG) that is
-                  optimally resilient (can withstand {<InlineMath math={'f \\leq n/3'} />} faulty
-                  parties), has a constant expected number of rounds, has{' '}
-                  {<InlineMath math={'\\tilde{\\mathcal{O}}(n^3)'} />} expected communication
-                  complexity, and assumes only the existence of a PKI. Prior to our work, the best
-                  A-DKG protocols required {<InlineMath math={'\\Omega(n)'} />} expected number of
-                  rounds, and {<InlineMath math={'\\Omega(n^4)'} />} expected communication.
-                </em>
-              </Text>
-
-              <Text fontSize='sm'>
-                <em>
-                  Our A-DKG protocol relies on several building blocks that are of independent
-                  interest. We define and design a Proposal Election (PE) protocol that allows
-                  parties to retrospectively agree on a valid proposal after enough proposals have
-                  been sent from different parties. With constant probability the elected proposal
-                  was proposed by a nonfaulty party. In building our PE protocol, we design a
-                  Verifiable Gather protocol which allows parties to communicate which proposals
-                  they have and have not seen in a verifiable manner. The final building block to
-                  our A-DKG is a Validated Asynchronous Byzantine Agreement (VABA) protocol. We use
-                  our PE protocol to construct a VABA protocol that does not require leaders or an
-                  asynchronous DKG setup. Our VABA protocol can be used more generally when it is
-                  not possible to use threshold signatures.
-                </em>
-              </Text>
-            </Abstract>
-          </Stack>
+            <Text fontSize='sm'>
+              <em>
+                Our A-DKG protocol relies on several building blocks that are of independent
+                interest. We define and design a Proposal Election (PE) protocol that allows parties
+                to retrospectively agree on a valid proposal after enough proposals have been sent
+                from different parties. With constant probability the elected proposal was proposed
+                by a nonfaulty party. In building our PE protocol, we design a Verifiable Gather
+                protocol which allows parties to communicate which proposals they have and have not
+                seen in a verifiable manner. The final building block to our A-DKG is a Validated
+                Asynchronous Byzantine Agreement (VABA) protocol. We use our PE protocol to
+                construct a VABA protocol that does not require leaders or an asynchronous DKG
+                setup. Our VABA protocol can be used more generally when it is not possible to use
+                threshold signatures.
+              </em>
+            </Text>
+          </Publication>
 
           <Publication
             title='Aggregatable Distributed Key Generation'
