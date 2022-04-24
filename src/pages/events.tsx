@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from '@chakra-ui/react';
+import { Heading, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 import { PageMetadata } from '../components/UI';
@@ -20,11 +20,22 @@ const Events: NextPage = () => {
           </Heading>
 
           <Text>
-            <strong>Open Problems in Ethereum Research at Eurocrypt 2021:</strong> This workshop
-            brought the most interesting and challenging open cryptographic questions that Ethereum
-            faces to the attention of academia. We covered a large spectrum of research topics, such
-            as multisignatures, commitments, verifiable delay functions, secure computation,
-            zk-friendly hash functions and more. Event webpage.
+            <Text>
+              <Link
+                href='https://sites.google.com/view/cryptofrontier21'
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                isExternal
+              >
+                <strong>Open Problems in Ethereum Research at Eurocrypt 2021:</strong>
+              </Link>{' '}
+              MEV; secret leader election; verifiable delay functions; zkEVM; sharding; and
+              proof-of-custody.
+            </Text>
+            This workshop brought the most interesting and challenging open cryptographic questions
+            that Ethereum faces to the attention of academia. We covered a large spectrum of
+            research topics, such as multisignatures, commitments, verifiable delay functions,
+            secure computation, zk-friendly hash functions and more.
           </Text>
         </Stack>
       </main>
