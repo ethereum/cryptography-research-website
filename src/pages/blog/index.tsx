@@ -82,7 +82,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
   });
 
   const externalPosts = externalLinks.map(({ date, link, title }) => (
-    <ExternalPost key={link} date={date} link={link} title={title} />
+    <ExternalPost key={link} date={date} link={link} title={`${title} ↗`} />
   ));
 
   return (

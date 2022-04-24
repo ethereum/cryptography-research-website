@@ -86,6 +86,11 @@ const externalLinks = [
 ];
 ```
 
+## How to deploy changes succesfully
+
+- **Locally**: **Make sure the site builds** locally, otherwise the build will break and the new version of the site (e.g.: adding a new post) will not be generated. To be sure of this, run the `yarn build` command locally and check that get no errors.
+- **On GitHub**: check that the `Deploy Preview` passes succesfully.
+
 ### Notes
 
 - Dates should follow the `yyyy-mm-dd` format (for both internal and external posts), like `date: '2022-03-16'`
