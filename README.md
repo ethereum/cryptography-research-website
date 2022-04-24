@@ -73,7 +73,7 @@ The site uses [KaTeX](https://katex.org) to render LaTeX/math and inside `/resea
 
 The site supports both _internal_ and _external_ blog posts.
 
-- **Internal posts**: to add a new one, just create a new markdown file under `/posts`. The name of the file should follow the [kebab case](https://www.theserverside.com/definition/Kebab-case) convention, as it will be used to generate the url to the post. You also have to add some [Front Matter](https://frontmatter.codes/docs/markdown) metadata, like the post `title`, `author(s)` and `date`, which are required.
+- **Internal posts**: to add a new one, just create a new markdown (`.md`) file under `src/posts` (make sure first this directory exists, otherwise create it first, under `/src`). The name of the file should follow the [kebab case](https://www.theserverside.com/definition/Kebab-case) convention, as it will be used to generate the url to the post. You also have to add some [Front Matter](https://frontmatter.codes/docs/markdown) metadata, like the post `title`, `author(s)` and `date`, which are required.
 - **External posts**: you can also link to an external post from the `/blog` page by appending an object with the required data (`title`, `date`, `link`) to the `externalLinks` list from the `src/pages/blog/index.tsx` file. See the example below:
 
 ```
