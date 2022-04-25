@@ -48,6 +48,11 @@ const externalLinks = [
     link: 'https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763'
   },
   {
+    title: 'Introducing Bandersnatch: a fast elliptic curve built over the BLS12-381 scalar field'
+    date: '2021-06-29',
+    link: 'https://ethresear.ch/t/introducing-bandersnatch-a-fast-elliptic-curve-built-over-the-bls12-381-scalar-field/9957'
+  },
+  {
     title: 'Inner Product Arguments',
     date: '2021-06-27',
     link: 'https://dankradfeist.de/ethereum/2021/07/27/inner-product-arguments.html'
