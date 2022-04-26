@@ -176,6 +176,23 @@ const Research: NextPage = () => {
               </em>
             </Text>
           </Publication>
+          
+          <Publication
+            title='Verifiable Delay Functions from Supersingular Isogenies and Pairings'
+            authors='Luca De Feo, Simon Masson, Christophe Petit, Antonio Sanso'
+            conference={<strong>Asiacrypt 2019.</strong>}
+            link='https://eprint.iacr.org/2019/166.pdf'
+          >
+            <Text fontSize='sm'>
+              <em>
+                We present two new Verifiable Delay Functions (VDF) based on assumptions 
+                from elliptic curve cryptography. We discuss both the advantages and some 
+                drawbacks of our constructions, we study their security and we demonstrate 
+                their practicality with a proof-of-concept implementation. 
+              </em>
+            </Text>
+          </Publication>
+          
         </ResearchArea>
 
         <ResearchArea subtitle='Zero-Knowledge Proofs' mb={10}>
