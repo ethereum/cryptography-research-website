@@ -181,7 +181,7 @@ const Research: NextPage = () => {
             title='Verifiable Delay Functions from Supersingular Isogenies and Pairings'
             authors='Luca De Feo and Simon Masson and Christophe Petit and Antonio Sanso'
             conference={<strong>Asiacrypt 2019.</strong>}
-            link='https://eprint.iacr.org/2019/166'
+            link='https://eprint.iacr.org/2019/166.pdf'
           >
             <Text fontSize='sm'>
               <em>
