@@ -16,6 +16,21 @@ const Events: NextPage = () => {
 
         <Stack mb={6}>
           <Heading as='h2' size='lg' fontWeight={600} mb={2}>
+            Cryptographic Frontier 2022, Trondheim
+          </Heading>
+
+          <Text>
+            <Link
+              href='https://sites.google.com/view/cryptographic-frontier-2022/'
+              color='brand.lightblue'
+              _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+              isExternal
+            >
+              <strong>Open Problems in Decentralized Computation at Eurocrypt 2022:</strong>
+            </Link>{' '}
+            this workshop brings the most interesting and challenging open cryptographic questions that Ethereum, Filecoin and other blockchain systems face, to the attention of academia.  We will cover a large spectrum of research topics, such as vector commitments, SNARKs, shuffles, authenticated data structures and more. We will start the day with an update on to the problems discussed at last year's workshop.
+          </Text>
+          <Heading as='h2' size='lg' fontWeight={600} mb={2}>
             Cryptographic Frontier 2021, Zagreb
           </Heading>
 
