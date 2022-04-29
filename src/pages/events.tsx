@@ -19,7 +19,7 @@ const Events: NextPage = () => {
             Cryptographic Frontier 2022, Trondheim
           </Heading>
 
-          <Text>
+          <Text mb={10}>
             <Link
               href='https://sites.google.com/view/cryptographic-frontier-2022/'
               color='brand.lightblue'
