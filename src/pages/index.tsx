@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <PageMetadata
         title='Home'
-        description='Research into cryptographic protocols that are useful within the greater Ethereum community.'
+        description='Cryptography research group at the Ethereum Foundation.'
       />
 
       <main>
