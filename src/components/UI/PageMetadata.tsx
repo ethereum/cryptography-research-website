@@ -17,42 +17,35 @@ export const PageMetadata: FC<Props> = ({ title, description }) => {
       <meta name='title' content={`${title} | ${HEAD_TITLE}`} />
       <meta name='description' content={description} />
       <meta name='application-name' content={HEAD_TITLE} />
-      {/* TODO: add image */}
-      {/* <meta
-        name='image'
-        content='https://esp.ethereum.foundation/images/homepage-hero-mobile.png'
-      /> */}
+      <meta name='image' content='https://crypto.ethereum.org/images/ef-logo-white-bg.png' />
       {/* OpenGraph */}
       <meta property='og:title' content={`${title} | ${HEAD_TITLE}`} />
       <meta property='og:description' content={description} />
       <meta property='og:type' content='website' />
       <meta property='og:site_name' content={HEAD_TITLE}></meta>
-      <meta property='og:url' content='https://esp.ethereum.foundation/' />
-      {/* <meta
-        property='og:image'
-        content='https://esp.ethereum.foundation/images/homepage-hero-mobile.png'
-      /> */}
-      {/* <meta
+      <meta property='og:url' content='https://crypto.ethereum.org/' />
+      <meta property='og:image' content='https://crypto.ethereum.org/images/ef-logo-white-bg.png' />
+      <meta
         property='og:image:url'
-        content='https://esp.ethereum.foundation/images/homepage-hero-mobile.png'
-      /> */}
-      {/* <meta
+        content='https://crypto.ethereum.org/images/ef-logo-white-bg.png'
+      />
+      <meta
         property='og:image:secure_url'
-        content='https://esp.ethereum.foundation/images/homepage-hero-mobile.png'
-      /> */}
+        content='https://crypto.ethereum.org/images/ef-logo-white-bg.png'
+      />
       <meta property='og:image:alt' content={HEAD_TITLE} />
       <meta property='og:image:type' content='image/png' />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta property='twitter:url' content='https://esp.ethereum.foundation/' />
-      {/* <meta name='twitter:creator' content='@EF_ESP' />
-      <meta name='twitter:site' content='@EF_ESP' /> */}
+      <meta property='twitter:url' content='https://crypto.ethereum.org/' />
+      <meta name='twitter:creator' content='@ethdotorg' />
+      <meta name='twitter:site' content='@ethdotorg' />
       <meta name='twitter:title' content={HEAD_TITLE} />
       <meta name='twitter:description' content={description} />
-      {/* <meta
+      <meta
         name='twitter:image'
-        content='https://esp.ethereum.foundation/images/homepage-hero-mobile.png'
-      /> */}
+        content='https://crypto.ethereum.org/images/ef-logo-white-bg.png'
+      />
     </Head>
   );
 };
