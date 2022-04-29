@@ -15,7 +15,7 @@ const Research: NextPage = () => {
           <Publication
             title='Halo Infinite: Proof-Carrying Data from Additive Polynomial Commitments'
             authors='Dan Boneh, Justin Drake, Ben Fisch, Ariel Gabizon'
-            conference={<strong>Crypto 2021.</strong>}
+            conference={'Crypto 2021.'}
             link='https://eprint.iacr.org/2020/1536.pdf'
           >
             <Text mb={4} fontSize='sm'>
@@ -56,7 +56,7 @@ const Research: NextPage = () => {
             title='Aggregatable subvector commitments for stateless cryptocurrencies'
             authors='Alin Tomescu, Ittai Abraham, Vitalik Buterin, Justin Drake, Dankrad Feist, Dmitry
             Khovratovich'
-            conference={<strong>SCN 2020.</strong>}
+            conference={'SCN 2020.'}
             link='https://eprint.iacr.org/2020/527.pdf'
           >
             <Text fontSize='sm'>
@@ -150,7 +150,7 @@ const Research: NextPage = () => {
             title='Aggregatable Distributed Key Generation'
             authors='Kobi Gurkan, Philipp Jovanovic, Mary Maller, Sarah Meiklejohn, Gilad Stern, Alin
             Tomescu'
-            conference={<strong>Eurocrypt 2021.</strong>}
+            conference={'Eurocrypt 2021.'}
             link='https://eprint.iacr.org/2021/005.pdf'
           >
             <Text fontSize='sm'>
@@ -176,30 +176,29 @@ const Research: NextPage = () => {
               </em>
             </Text>
           </Publication>
-          
+
           <Publication
             title='Verifiable Delay Functions from Supersingular Isogenies and Pairings'
             authors='Luca De Feo, Simon Masson, Christophe Petit, Antonio Sanso'
-            conference={<strong>Asiacrypt 2019.</strong>}
+            conference={'Asiacrypt 2019.'}
             link='https://eprint.iacr.org/2019/166.pdf'
           >
             <Text fontSize='sm'>
               <em>
-                We present two new Verifiable Delay Functions (VDF) based on assumptions 
-                from elliptic curve cryptography. We discuss both the advantages and some 
-                drawbacks of our constructions, we study their security and we demonstrate 
-                their practicality with a proof-of-concept implementation. 
+                We present two new Verifiable Delay Functions (VDF) based on assumptions from
+                elliptic curve cryptography. We discuss both the advantages and some drawbacks of
+                our constructions, we study their security and we demonstrate their practicality
+                with a proof-of-concept implementation.
               </em>
             </Text>
           </Publication>
-          
         </ResearchArea>
 
         <ResearchArea subtitle='Zero-Knowledge Proofs' mb={10}>
           <Publication
             title='SnarkPack: Practical SNARK Aggregation'
             authors='Nicolas Gailly, Mary Maller, Anca Nitulescu'
-            conference={<strong>FC 2022.</strong>}
+            conference={'FC 2022.'}
             link='https://eprint.iacr.org/2021/529.pdf'
           >
             <Text mb={4} fontSize='sm'>
@@ -246,7 +245,7 @@ const Research: NextPage = () => {
           <Publication
             title='Proofs for inner pairing products and applications'
             authors='Benedikt Bünz, Mary Maller, Pratyush Mishra, Nirvan Tyagi, Psi Vesely'
-            conference={<strong>Asiacrypt 2021.</strong>}
+            conference={'Asiacrypt 2021.'}
             link='https://eprint.iacr.org/2019/1177.pdf'
           >
             <Text mb={4} fontSize='sm'>
@@ -298,7 +297,7 @@ const Research: NextPage = () => {
           <Publication
             title='Snarky Ceremonies'
             authors='Markulf Kohlweiss, Mary Maller, Janno Siim, Mikhail Volkhov'
-            conference={<strong>Asiacrypt 2021.</strong>}
+            conference={'Asiacrypt 2021.'}
             link='https://eprint.iacr.org/2021/219.pdf'
           >
             <Text mb={4} fontSize='sm'>
@@ -332,7 +331,7 @@ const Research: NextPage = () => {
           <Publication
             title='T5: Hashing Five Inputs with Three Compression Calls'
             authors='Yevgeniy Dodis, Dmitry Khovratovich, Nicky Mouha, Mridul Nandi'
-            conference={<strong>ITC 2021.</strong>}
+            conference={'ITC 2021.'}
             link='https://eprint.iacr.org/2021/373.pdf'
           >
             <Text mb={4} fontSize='sm'>
@@ -420,7 +419,7 @@ const Research: NextPage = () => {
           <Publication
             title='Reputable List Curation from Decentralized Voting'
             authors='Elizabeth Crites, Mary Maller, Sarah Meiklejohn, Rebekah Mercer'
-            conference={<strong>PETS 2020.</strong>}
+            conference={'PETS 2020.'}
             link='https://eprint.iacr.org/2020/709.pdf'
           >
             <Text fontSize='sm'>
