@@ -28,7 +28,7 @@ const Events: NextPage = () => {
             >
               <strong>Open Problems in Decentralized Computation at Eurocrypt 2022:</strong>
             </Link>{' '}
-            this workshop brings the most interesting and challenging open cryptographic questions that Ethereum, Filecoin and other blockchain systems face, to the attention of academia.  We will cover a large spectrum of research topics, such as vector commitments, SNARKs, shuffles, authenticated data structures and more. We will start the day with an update on to the problems discussed at last year's workshop.
+            this workshop brings the most interesting and challenging open cryptographic questions that Ethereum, Filecoin and other blockchain systems face, to the attention of academia.  We will cover a large spectrum of research topics, such as vector commitments, SNARKs, shuffles, authenticated data structures and more. We will start the day with an update on to the problems discussed at last year&apos;s workshop.
           </Text>
           <Heading as='h2' size='lg' fontWeight={600} mb={2}>
             Cryptographic Frontier 2021, Zagreb
