@@ -74,7 +74,7 @@ const Team: NextPage = () => {
               >
                 <strong>George Kadianakis.</strong>
               </Link>{' '}
-              Elliptic curves; zero-knowledge proofs; and protocol implementations.
+              Secret leader election; sharding; protocol design and implementation.
             </Text>
           </Stack>
 
