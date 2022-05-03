@@ -1,4 +1,5 @@
 export * from './Abstract';
+export * from './Event';
 export * from './ExternalPost';
 export * from './Footer';
 export * from './Header';
