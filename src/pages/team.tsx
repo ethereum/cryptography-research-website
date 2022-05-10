@@ -6,8 +6,10 @@ import { PageMetadata } from '../components/UI';
 const Team: NextPage = () => {
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Team' description='' />
+      <PageMetadata
+        title='Team'
+        description='About the team behind cryptography research at the Ethereum Foundation.'
+      />
 
       <main>
         <Heading as='h1' mb={10}>

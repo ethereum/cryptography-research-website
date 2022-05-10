@@ -7,8 +7,10 @@ import { PageMetadata } from '../components/UI/';
 const Bounties: NextPage = () => {
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Bounties' description='' />
+      <PageMetadata
+        title='Bounties'
+        description='Find Ethereum bounties related to cryptography. '
+      />
 
       <main>
         <Heading as='h1' mb={10}>

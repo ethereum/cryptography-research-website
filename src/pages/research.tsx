@@ -7,8 +7,10 @@ import { Abstract, PageMetadata, Publication, ResearchArea } from '../components
 const Research: NextPage = () => {
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Research' description='' />
+      <PageMetadata
+        title='Research'
+        description='Explore the cryptography research and papers published by the Ethereum Foundation'
+      />
 
       <main>
         <ResearchArea subtitle='Polynomial and vector commitments' mb={10}>

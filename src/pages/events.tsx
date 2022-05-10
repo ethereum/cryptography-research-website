@@ -6,8 +6,10 @@ import { Event, PageMetadata } from '../components/UI';
 const Events: NextPage = () => {
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Events' description='' />
+      <PageMetadata
+        title='Events'
+        description='View upcoming and past cryptography events in the Ethereum ecosystem.'
+      />
 
       <main>
         <Heading as='h1' mb={10}>
