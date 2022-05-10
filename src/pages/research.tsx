@@ -1,8 +1,8 @@
-import { Box, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import { InlineMath } from 'react-katex';
 import type { NextPage } from 'next';
 
-import { Abstract, PageMetadata, Publication, ResearchArea } from '../components/UI';
+import { PageMetadata, Publication, ResearchArea } from '../components/UI';
 
 const Research: NextPage = () => {
   return (

@@ -1,4 +1,4 @@
-import { Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Heading, Stack } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 import { Event, PageMetadata } from '../components/UI';
