@@ -1,14 +1,16 @@
-import { Box, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import { InlineMath } from 'react-katex';
 import type { NextPage } from 'next';
 
-import { Abstract, PageMetadata, Publication, ResearchArea } from '../components/UI';
+import { PageMetadata, Publication, ResearchArea } from '../components/UI';
 
 const Research: NextPage = () => {
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Research' description='' />
+      <PageMetadata
+        title='Research'
+        description='Explore the cryptography research and papers published by the Ethereum Foundation'
+      />
 
       <main>
         <ResearchArea subtitle='Polynomial and vector commitments' mb={10}>

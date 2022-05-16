@@ -1,14 +1,15 @@
 import { Heading, Link, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import { PageMetadata } from '../components/UI/';
 
 const Bounties: NextPage = () => {
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Bounties' description='' />
+      <PageMetadata
+        title='Bounties'
+        description='Find Ethereum bounties related to cryptography. '
+      />
 
       <main>
         <Heading as='h1' mb={10}>
