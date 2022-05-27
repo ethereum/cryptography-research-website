@@ -194,6 +194,33 @@ const Research: NextPage = () => {
               </em>
             </Text>
           </Publication>
+
+          <Publication
+            title='Post-Quantum Verifiable Random Function from Symmetric Primitives in PoS Blockchain'
+            authors='Maxime Buser, Rafael Dowsley, Muhammed F. Esgin, Shabnam Kasra Kermanshahi, Veronika Kuchta, Joseph K. Liu, Raphael Phan, and Zhenfei Zhang'
+            conference={'ESORICS 2022.'}
+            link='https://eprint.iacr.org/2021/302.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+              Verifiable Random Functions (VRFs) play a key role in Proof-of-Stake blockchains 
+              such as Algorand to achieve highly scalable consensus, but currently deployed VRFs 
+              lack post-quantum security, which is crucial for future-readiness of blockchain systems. 
+              This work presents the first quantum-safe VRF scheme based on symmetric primitives. 
+              Our main proposal is a practical many-time quantum-safe VRF construction, X-VRF, 
+              based on the XMSS signature scheme. An innovation of our work is to use the state of 
+              the blockchain to counter the undesired stateful nature of XMSS by constructing a 
+              blockchain-empowered VRF. While increasing the usability of XMSS, our technique also 
+              enforces honest behavior when creating an X-VRF output so as to satisfy the fundamental 
+              uniqueness property of VRFs. We show how X-VRF can be used in the Algorand setting to 
+              extend it to a quantum-safe blockchain and provide four instances of X-VRF with different 
+              key life-time. Our extensive performance evaluation, analysis and implementation indicate 
+              the effectiveness of our proposed constructions in practice. Particularly, we demonstrate 
+              that X-VRF is the most efficient quantum-safe VRF with a maximum proof size of 3 KB and 
+              a possible TPS of 449 for a network of thousand nodes.
+              </em>
+            </Text>
+          </Publication>
         </ResearchArea>
 
         <ResearchArea subtitle='Zero-Knowledge Proofs' mb={10}>
