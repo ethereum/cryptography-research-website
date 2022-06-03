@@ -76,7 +76,7 @@ const Team: NextPage = () => {
               >
                 <strong>George Kadianakis.</strong>
               </Link>{' '}
-              Secret leader election; sharding; protocol design and implementation.
+              Shuffling ZKPs; polynomial commitments; protocol design and implementation.
             </Text>
           </Stack>
 
