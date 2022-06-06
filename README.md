@@ -97,6 +97,14 @@ const externalLinks = [
 ];
 ```
 
+### How to add images to a local post
+
+Image files should be placed inside `/public/images/` and the path to the image will be referenced as `/images/filename`. For example, we can insert the EF logo in a post by using
+
+```
+![EF logo](/images/ef-logo-bg-white.png "EF logo")
+```
+
 ## How to deploy changes succesfully
 
 - **Locally**: **Make sure the site builds** locally, otherwise the build will break and the new version of the site (e.g.: adding a new post) will not be generated. To be sure of this, run the `yarn build` command locally and check that you get no errors.
