@@ -105,6 +105,8 @@ Image files should be placed inside `/public/images/` and the path to the image 
 ![EF logo](/images/ef-logo-bg-white.png "EF logo")
 ```
 
+Take into account that images are automatically centered, no need to add extra HTML.
+
 ## How to deploy changes succesfully
 
 - **Locally**: **Make sure the site builds** locally, otherwise the build will break and the new version of the site (e.g.: adding a new post) will not be generated. To be sure of this, run the `yarn build` command locally and check that you get no errors.
