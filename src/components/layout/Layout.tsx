@@ -15,7 +15,7 @@ export const Layout: FC = ({ children }) => {
         px={{ base: 6, md: 16, lg: 8, xl: 10 }}
         py={{ base: 16, lg: 12 }}
       >
-        <Stack mt={{ base: 4, xl: 12 }} mb={24}>
+        <Stack mt={{ base: 4, xl: 12 }} mb={32}>
           {children}
         </Stack>
 
