@@ -92,8 +92,10 @@ const Blog: NextPage<Props> = ({ posts }) => {
 
   return (
     <>
-      {/* TODO: add description */}
-      <PageMetadata title='Blog' description='' />
+      <PageMetadata
+        title='Blog'
+        description='View latest posts from the Ethereum Foundation Cryptography Research team.'
+      />
 
       <main>
         <Heading as='h1' mb={10}>

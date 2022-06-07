@@ -1,5 +1,6 @@
 ---
 title: 'Groth-Sahai Proofs Are Not That Scary'
+description: 'Groth-Sahai (GS) proofs are a zero-knowledge proving technique. We will walk through an example GS proof accessible to a general cryptographic audience.'
 author: 'Mikhail Volkhov, Dimitris Kolonelos, Dmitry Khovratovich, Mary Maller'
 date: '2022-06-06'
 ---
