@@ -77,7 +77,7 @@ export const PostTheme = {
   img: (img: any) => {
     return (
       <Stack my={12} alignItems='center'>
-        <Image src={img.src} alt={img.alt} maxW='70%' h='auto' />
+        <Image src={img.src} alt={img.alt} maxW={{ base: '100%', md: '70%' }} h='auto' />
       </Stack>
     );
   },
