@@ -19,7 +19,8 @@ export const NAV_LINKS = [
 ];
 
 // metadata
-export const HEAD_TITLE = 'Ethereum Foundation Cryptography Research';
+export const HEAD_TITLE_LONG = 'Ethereum Foundation Cryptography Research';
+export const HEAD_TITLE_SHORT = 'EF Cryptography Research';
 
 // posts
 export const POSTS_DIR = 'src/posts';

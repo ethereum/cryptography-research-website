@@ -80,10 +80,15 @@ Metadata example:
 ```
 ---
 title: 'VDF Proving with SnarkPack'
+description 'Some awesome description for social media snippets, under 160 characters'
 author: 'Mary Maller'
 date: '2022-03-16'
 ---
 ```
+
+Post titles should be under 60 characters. [Learn more on title tags](https://moz.com/learn/seo/title-tag).
+
+Post descriptions should be under 160 characters. [Learn more on meta descriptions](https://moz.com/learn/seo/meta-description).
 
 - **External posts**: you can also link to an external post from the `/blog` page by appending an object with the required data (`title`, `date`, `link`) to the `externalLinks` list from the `src/pages/blog/index.tsx` file. See the example below:
 

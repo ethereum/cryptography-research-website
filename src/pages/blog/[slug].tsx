@@ -64,13 +64,12 @@ interface Props {
 }
 
 const Post: NextPage<Props> = ({ frontmatter, content }) => {
-  const { title, author, date } = frontmatter;
+  const { title, author, date, description } = frontmatter;
   const parsedDate = getParsedDate(date);
 
   return (
     <>
-      {/* TODO: add description to post */}
-      <PageMetadata title={title} description='' />
+      <PageMetadata title={title} description={description} />
 
       <main>
         <Heading as='h1' mb={1}>
