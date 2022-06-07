@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Head from 'next/head';
 
-import { HEAD_TITLE } from '../../constants';
+import { HEAD_TITLE_LONG, HEAD_TITLE_SHORT } from '../../constants';
 
 interface Props {
   title: string;
@@ -9,6 +9,8 @@ interface Props {
 }
 
 export const PageMetadata: FC<Props> = ({ title, description }) => {
+  const HEAD_TITLE = title.length > 20 ? HEAD_TITLE_SHORT : HEAD_TITLE_LONG;
+
   return (
     <Head>
       <title>
