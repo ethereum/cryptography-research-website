@@ -126,7 +126,7 @@ const Team: NextPage = () => {
           <Stack>
             <Text>
               <Link
-                href='https://www.nds.ruhr-uni-bochum.de/chair/people/asanso/'
+                href='https://www.intothesymmetry.com/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
                 isExternal
