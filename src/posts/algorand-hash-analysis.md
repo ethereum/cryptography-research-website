@@ -64,7 +64,9 @@ Note that since both $z$ and $z'$ are 0 in $a_1$  they sum to 0 in it. The numbe
 
 $$
 \sum f_A(\mathbf{x}_{i})+f_A(\mathbf{y}_i)=0\;\Leftrightarrow\;
-f_A(\mathbf{x}) = f_A(\mathbf{y})$$
+f_A(\mathbf{x}) = f_A(\mathbf{y})
+$$
+
 i.e. a collision.
 
 Overall the collision attack costs $2^{98}$ (it is not necessary to work on all the lists simultaneously) and thus the overall security of the subset sum hash is at most 98 bits.
