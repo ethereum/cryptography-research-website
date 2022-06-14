@@ -61,6 +61,7 @@ $$
 Note that since both $z$ and $z'$ are 0 in $a_1$  they sum to 0 in it. The number of partial collisions between $L_{2j+1}$ and $L_{2j+2}$ is $2^{96+96-96}=2^{96}$. Store the results in 8 lists $L_k$.
 * We now find $2^{96}$ partial collisions between pairs of lists in $a_3$ and obtain 4 lists. Then proceed the same way with $a_4$  and get two lists.
 * Find a single collision between the two lists in $a_5$ and $a_6$ at cost $2^{96}$. It yields
+
 $$
 \sum f_A(\mathbf{x}_{i})+f_A(\mathbf{y}_i)=0\;\Leftrightarrow\;
 f_A(\mathbf{x}) = f_A(\mathbf{y})$$
