@@ -1,6 +1,6 @@
 ---
 title: 'Cryptanalysis of the Algorand Subset-Sum Hash Function'
-description 'Algorand hash function is not collision resistant'
+description: 'Algorand hash function is not collision resistant'
 author: 'Dmitry Khovratovich'
 date: '2022-06-14'
 ---
