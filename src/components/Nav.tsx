@@ -42,7 +42,6 @@ export const Nav: FC = () => {
                   _hover={{ textDecoration: 'none', color: 'gray.800' }}
                   color='gray.500'
                   mr={isLastItem(idx, NAV_LINKS.length) ? 0 : 3}
-                  isExternal={href === BOUNTIES_URL ? true : false}
                 >
                   {text}
                 </Link>

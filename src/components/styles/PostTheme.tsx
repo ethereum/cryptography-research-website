@@ -26,7 +26,7 @@ export const PostTheme = {
   },
   h3: ({ children }: any) => {
     return (
-      <Heading as='h3' fontSize='24px' fontWeight={600} mt={10} mb={5}>
+      <Heading as='h3' fontSize='2xl' fontWeight={600} mt={10} mb={5}>
         {children}
       </Heading>
     );
