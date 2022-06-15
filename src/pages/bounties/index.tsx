@@ -18,7 +18,7 @@ const Bounties: NextPage = () => {
           Bounties
         </Heading>
 
-        <Stack justifyContent='center' alignItems='center'>
+        <Stack>
           <Bounty
             url={BOUNTIES_MIMC_HASH_URL}
             title='MiMC Hash Challenge'

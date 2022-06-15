@@ -13,7 +13,6 @@ export const Bounty: FC<Props> = ({ url, title, postedBy, totalBounty, children 
     <Link href={url} _hover={{ textDecoration: 'none' }}>
       <Stack
         border='2px solid #718096'
-        maxW={{ base: 'xl', md: '2xl' }}
         borderRadius='lg'
         px={6}
         py={8}
