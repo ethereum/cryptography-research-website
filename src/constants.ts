@@ -24,4 +24,4 @@ export const HEAD_TITLE_SHORT = 'EF Cryptography Research';
 export const POSTS_DIR = 'src/posts';
 
 // bounties
-export const BOUNTIES_MIMC_HASH_URL = '/bounties/mimc-hash';
+export const BOUNTIES_MIMC_HASH_URL = '/bounties/mimc-hash-challenge';

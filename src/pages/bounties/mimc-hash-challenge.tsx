@@ -16,9 +16,9 @@ import {
 } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
-import { PageMetadata } from '../../components/UI/';
+import { PageMetadata } from '../../components/UI';
 
-const Bounties: NextPage = () => {
+const MiMCHashChallenge: NextPage = () => {
   return (
     <>
       <PageMetadata
@@ -319,4 +319,4 @@ const Bounties: NextPage = () => {
   );
 };
 
-export default Bounties;
+export default MiMCHashChallenge;
