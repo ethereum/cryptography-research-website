@@ -132,7 +132,7 @@ const MiMCHashChallenge: NextPage = () => {
               <Text>Rewards will be given for the following results:</Text>
 
               <Stack>
-                <TableContainer>
+                <TableContainer border='1px solid #EDF2F7' borderRadius='md'>
                   <Table variant='simple'>
                     <Thead>
                       <Tr>
@@ -165,7 +165,7 @@ const MiMCHashChallenge: NextPage = () => {
                   BN254
                 </Heading>
 
-                <TableContainer>
+                <TableContainer border='1px solid #EDF2F7' borderRadius='md'>
                   <Table variant='simple'>
                     <Thead>
                       <Tr>
@@ -206,7 +206,7 @@ const MiMCHashChallenge: NextPage = () => {
                   BLS12-381
                 </Heading>
 
-                <TableContainer>
+                <TableContainer border='1px solid #EDF2F7' borderRadius='md'>
                   <Table variant='simple'>
                     <Thead>
                       <Tr>
