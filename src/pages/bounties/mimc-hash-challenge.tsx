@@ -1,15 +1,12 @@
 import {
-  Center,
   Heading,
   Link,
   Stack,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
   Text,
-  Tfoot,
   Th,
   Thead,
   Tr
@@ -73,7 +70,7 @@ const MiMCHashChallenge: NextPage = () => {
 
             <Stack spacing={4}>
               <Text>
-                In 2017 Ethereum added support for BN254, a pairing-friendly elliptic-curve, via the
+                In 2017 Ethereum added support for BN254, a pairing-friendly elliptic-curve, via the{' '}
                 <Link
                   href='https://github.com/ethereum/EIPs/blob/master/EIPS/eip-609.md'
                   color='brand.lightblue'

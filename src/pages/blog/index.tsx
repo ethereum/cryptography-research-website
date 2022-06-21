@@ -2,7 +2,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { Heading, Stack } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
 // import TweetEmbed from 'react-tweet-embed';
 
 import { ExternalPost, InternalPost, PageMetadata } from '../../components/UI';

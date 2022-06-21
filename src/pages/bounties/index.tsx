@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 import { Bounty, PageMetadata } from '../../components/UI/';
 
-import { BOUNTIES_MIMC_HASH_URL } from '../../constants';
+import { BOUNTIES_MIMC_HASH_URL, LEGENDRE_PRF_URL } from '../../constants';
 
 const Bounties: NextPage = () => {
   return (
@@ -18,7 +18,17 @@ const Bounties: NextPage = () => {
           Bounties
         </Heading>
 
-        <Stack>
+        <Stack spacing={4}>
+          <Bounty
+            url={LEGENDRE_PRF_URL}
+            title='Legendre PRF Bounties'
+            postedBy='Ethereum Foundation'
+            totalBounty='$31,000 USD and 31 ETH'
+          >
+            We are interested in how resistant the Legendre pseudo-random function is to key
+            recovery attacks, as well as any other interesting results on the Legendre PRF.
+          </Bounty>
+
           <Bounty
             url={BOUNTIES_MIMC_HASH_URL}
             title='MiMC Hash Challenge'
