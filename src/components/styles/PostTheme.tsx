@@ -86,7 +86,7 @@ export const PostTheme = {
   },
   pre: ({ children }: any) => {
     return (
-      <Stack my={4}>
+      <Stack my={4} overflowX='scroll'>
         <pre>{children}</pre>
       </Stack>
     );
@@ -102,6 +102,7 @@ export const PostTheme = {
         borderRadius={3}
         fontFamily='Menlo,Monaco,Consolas,"Courier New",monospace'
         fontSize='sm'
+        overflowX='scroll'
       >
         {code.children[0]}
       </Text>
