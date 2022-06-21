@@ -36,7 +36,7 @@ Similarly, the evaluation of this PRF can be proved efficiently in ZKP over $$\m
 
 ## Bounties
 
-Because of its suitability for MPCs, the Legendre PRF is used in a construction for the Ethereum 2.0 protocol. In order to encourage research in this PRF, we announced some bounties at Crypto'19. See [bounties](bounties).
+Because of its suitability for MPCs, the Legendre PRF is used in a construction for the Ethereum 2.0 protocol. In order to encourage research in this PRF, we announced some bounties at Crypto'19. See [bounties](/bounties/legendre-prf/algorithmic-bounties).
 
 ## Further reading
 
