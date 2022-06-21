@@ -23,5 +23,13 @@ export const HEAD_TITLE_SHORT = 'EF Cryptography Research';
 // posts
 export const POSTS_DIR = 'src/posts';
 
-// bounties
+// bounties data sources
+export const BOUNTIES_DATA_SOURCE = 'src/bounties-data-source';
+export const LEGENDRE_PRF_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/legendre-prf`;
+
+// bounties URLs
 export const BOUNTIES_MIMC_HASH_URL = '/bounties/mimc-hash-challenge';
+export const LEGENDRE_PRF_URL = '/bounties/legendre-prf';
+export const LEGENDRE_PRF_BOUNTIES_URL = '/bounties/legendre-prf/algorithmic-bounties';
+export const LEGENDRE_PRF_CONCRETE_INSTANCES_BOUNTIES_URL =
+  '/bounties/legendre-prf/concrete-instances-bounties';
