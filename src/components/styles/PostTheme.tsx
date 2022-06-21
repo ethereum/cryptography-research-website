@@ -5,6 +5,8 @@ import {
   ListItem,
   OrderedList,
   Stack,
+  Table,
+  TableContainer,
   Text,
   UnorderedList
 } from '@chakra-ui/react';
@@ -69,6 +71,7 @@ export const PostTheme = {
         color='brand.lightblue'
         _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
         href={href}
+        isExternal={href.startsWith('http') ? true : false}
       >
         {children}
       </Link>
@@ -83,7 +86,7 @@ export const PostTheme = {
   },
   pre: ({ children }: any) => {
     return (
-      <Stack>
+      <Stack my={4}>
         <pre>{children}</pre>
       </Stack>
     );
@@ -92,14 +95,23 @@ export const PostTheme = {
     return (
       <Text
         as={!!code.inline ? 'span' : 'p'}
-        p={1}
-        bg='gray.100'
+        px='4px'
+        py='2px'
+        color='#c7254e'
+        bg='#f9f2f4'
         borderRadius={3}
-        fontFamily='mono'
+        fontFamily='Menlo,Monaco,Consolas,"Courier New",monospace'
         fontSize='sm'
       >
         {code.children[0]}
       </Text>
+    );
+  },
+  table: ({ children }: any) => {
+    return (
+      <TableContainer my={10} border='1px solid #EDF2F7' borderRadius='md'>
+        <Table variant='simple'>{children}</Table>
+      </TableContainer>
     );
   }
 };
