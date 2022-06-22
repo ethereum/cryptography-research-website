@@ -8,19 +8,17 @@ import gfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
+// import rehypeSlug from 'rehype-slug';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
 import { PageMetadata } from '../../../components/UI';
 import { PostTheme } from '../../../components/styles';
 
-import { LEGENDRE_PRF_DATA_SOURCE } from '../../../constants';
+import { RSA_DATA_SOURCE } from '../../../constants';
 
 // generate the static props for the page
 export const getStaticProps: GetStaticProps = async () => {
-  const fileName = fs.readFileSync(
-    `${LEGENDRE_PRF_DATA_SOURCE}/concrete-instances-bounties.md`,
-    'utf-8'
-  );
+  const fileName = fs.readFileSync(`${RSA_DATA_SOURCE}/concrete-instance-bounties.md`, 'utf-8');
   const { content } = matter(fileName);
 
   return {
@@ -34,17 +32,17 @@ interface Props {
   content: string;
 }
 
-const ConcreteInstancesBounties: NextPage<Props> = ({ content }) => {
+const RSAConcreteInstanceBounties: NextPage<Props> = ({ content }) => {
   return (
     <>
       <PageMetadata
-        title='Legendre PRF Bounties for concrete instances'
-        description='Bounties on breaking the Legendre PRF.'
+        title='RSA adaptive root bounty instances'
+        description='Bounties for breaking RSA Assumptions.'
       />
 
       <main>
         <Heading as='h1' mb={20}>
-          Legendre PRF Bounties for concrete instances
+          RSA adaptive root bounty instances
         </Heading>
 
         <ReactMarkdown
@@ -58,4 +56,4 @@ const ConcreteInstancesBounties: NextPage<Props> = ({ content }) => {
   );
 };
 
-export default ConcreteInstancesBounties;
+export default RSAConcreteInstanceBounties;

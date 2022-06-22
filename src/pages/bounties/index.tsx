@@ -3,7 +3,12 @@ import type { NextPage } from 'next';
 
 import { Bounty, PageMetadata } from '../../components/UI/';
 
-import { LEGENDRE_PRF_URL, MIMC_HASH_BOUNTIES_URL, ZK_HASH_BOUNTIES_URL } from '../../constants';
+import {
+  LEGENDRE_PRF_URL,
+  MIMC_HASH_BOUNTIES_URL,
+  RSA_URL,
+  ZK_HASH_BOUNTIES_URL
+} from '../../constants';
 
 const Bounties: NextPage = () => {
   return (
@@ -19,6 +24,17 @@ const Bounties: NextPage = () => {
         </Heading>
 
         <Stack spacing={4}>
+          <Bounty
+            url={RSA_URL}
+            title='RSA Bounties'
+            postedBy='Ethereum Foundation'
+            totalBounty='$28,000 USD and 29 ETH'
+          >
+            For the Verifiable Delay Function (VDF) project, the RSA Low Order and Adaptive Root
+            assumptions have come into spotlight as they are required for the two VDF proof
+            construction. Several bounties are available for proving or disproving the assumptions.
+          </Bounty>
+
           <Bounty
             url={LEGENDRE_PRF_URL}
             title='Legendre PRF Bounties'
