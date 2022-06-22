@@ -1,6 +1,6 @@
 # Legendre PRF bounty smart contract instructions
 
-If you have found the solution on one of our bounties on [Legendre instances](/bounties/legendre-prf/concrete-instances-bounties), here is how you can claim your bounty.
+If you have found the solution on one of our bounties on [Legendre instances](/bounties/legendre-prf/concrete-instance-bounties), here is how you can claim your bounty.
 
 ## Requirements
 
