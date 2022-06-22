@@ -104,4 +104,4 @@ We expect that a variant with $s$ bits of security to withstand attacks of compl
 
 ## Contact
 
-[Dmitry Khovratovich](mailto:dmitry.khovratovich@ethereum.org)
+[dmitry.khovratovich@ethereum.org](mailto:dmitry.khovratovich@ethereum.org)

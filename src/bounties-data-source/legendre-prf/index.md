@@ -56,4 +56,4 @@ Because of its suitability for MPCs, the Legendre PRF is used in a construction 
 
 ## Contact
 
-[dankrad .at. ethereum .dot. org](dankrad%20.at.%20ethereum%20.dot.%20org)
+[dankrad .at. ethereum .dot. org](mailto:dankrad%20.at.%20ethereum%20.dot.%20org)

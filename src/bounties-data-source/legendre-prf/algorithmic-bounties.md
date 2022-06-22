@@ -32,7 +32,7 @@ $$
 [^3]: This will be judged by the cryptographers of the Ethereum Foundation Cryptography Research team and cannot be appealed
 [^4]: An improvement $$g(n)$$ on a function $$f(n)$$ is by more than a polylog factor if $$f(n)/g(n)=\Omega(\log^m(n))$$ for all $$m\in\mathbf{N}$$.
 
-The first two bounties are for the first entry that beats the given bounds. Please send submissions to Dankrad Feist ([dankrad .at. ethereum .dot. org](dankrad%20.at.%20ethereum%20.dot.%20org)).
+The first two bounties are for the first entry that beats the given bounds. Please send submissions to Dankrad Feist ([dankrad .at. ethereum .dot. org](mailto:dankrad%20.at.%20ethereum%20.dot.%20org)).
 
 ## Computational hardness assumptions
 

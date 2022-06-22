@@ -38,4 +38,4 @@ Code for playing with the contract and testing claim/redeem transactions can be 
 
 ## Help
 
-Email [dankrad .at. ethereum .dot. org](dankrad%20.at.%20ethereum%20.dot.%20org) if you need any help redeeming the bounties.
+Email [dankrad .at. ethereum .dot. org](mailto:dankrad%20.at.%20ethereum%20.dot.%20org) if you need any help redeeming the bounties.

@@ -8,6 +8,7 @@ import gfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
+import rehypeSlug from 'rehype-slug';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
 import { PageMetadata } from '../../../components/UI';
@@ -35,7 +36,7 @@ const LegendrePrfBounties: NextPage<Props> = ({ content }) => {
   return (
     <>
       <PageMetadata
-        title='Legendre PRF algorithmic bounties'
+        title='Legendre PRF algorithmic Bounties'
         description='Bounties on breaking the Legendre PRF.'
       />
 
@@ -48,7 +49,7 @@ const LegendrePrfBounties: NextPage<Props> = ({ content }) => {
           components={ChakraUIRenderer(PostTheme)}
           children={content}
           remarkPlugins={[gfm, remarkMath]}
-          rehypePlugins={[rehypeKatex, rehypeRaw]}
+          rehypePlugins={[rehypeKatex, rehypeRaw, rehypeSlug]}
         />
       </main>
     </>

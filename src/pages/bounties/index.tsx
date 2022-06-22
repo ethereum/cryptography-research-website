@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 import { Bounty, PageMetadata } from '../../components/UI/';
 
-import { BOUNTIES_MIMC_HASH_URL, LEGENDRE_PRF_URL } from '../../constants';
+import { LEGENDRE_PRF_URL, MIMC_HASH_BOUNTIES_URL, ZK_HASH_BOUNTIES_URL } from '../../constants';
 
 const Bounties: NextPage = () => {
   return (
@@ -30,7 +30,7 @@ const Bounties: NextPage = () => {
           </Bounty>
 
           <Bounty
-            url={BOUNTIES_MIMC_HASH_URL}
+            url={MIMC_HASH_BOUNTIES_URL}
             title='MiMC Hash Challenge'
             postedBy='Ethereum Foundation and Protocol Labs'
             totalBounty='$20,000 USD per challenge'
@@ -38,6 +38,15 @@ const Bounties: NextPage = () => {
             The Ethereum Foundation and Protocol Labs are offering rewards for finding collisions in
             MiMCSponge, a sponge construction instantiated with MiMC-Feistel over a prime field,
             targeting 128-bit and 80-bit security, on one of two fields described below.
+          </Bounty>
+
+          <Bounty
+            url={ZK_HASH_BOUNTIES_URL}
+            title='ZK Hash Function Cryptanalysis Bounties'
+            postedBy='Ethereum Foundation'
+            totalBounty='$200,000 USD'
+          >
+            Help us understand the security of new hash functions better.
           </Bounty>
         </Stack>
       </main>

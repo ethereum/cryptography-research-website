@@ -36,13 +36,13 @@ const ZKHash: NextPage<Props> = ({ content }) => {
   return (
     <>
       <PageMetadata
-        title='ZK Hash Function Cryptanalysis bounties'
+        title='ZK Hash Function Cryptanalysis Bounties'
         description='Help us understand the security of new hash functions better.'
       />
 
       <main>
         <Heading as='h1' mb={20}>
-          ZK Hash Function Cryptanalysis bounties
+          ZK Hash Function Cryptanalysis Bounties
         </Heading>
 
         <ReactMarkdown

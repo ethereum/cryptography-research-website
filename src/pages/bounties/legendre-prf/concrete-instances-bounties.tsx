@@ -38,13 +38,13 @@ const ConcreteInstancesBounties: NextPage<Props> = ({ content }) => {
   return (
     <>
       <PageMetadata
-        title='Legendre PRF bounties for concrete instances'
+        title='Legendre PRF Bounties for concrete instances'
         description='Bounties on breaking the Legendre PRF.'
       />
 
       <main>
         <Heading as='h1' mb={20}>
-          Legendre PRF bounties for concrete instances
+          Legendre PRF Bounties for concrete instances
         </Heading>
 
         <ReactMarkdown
