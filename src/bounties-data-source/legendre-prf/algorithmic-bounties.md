@@ -57,7 +57,7 @@ At Devcon5, further bounties for concrete instances of the Legendre PRF were ann
 | 100 bits   | 60 bits  | 8 ETH  |         |
 | 148 bits   | 108 bits | 16 ETH |         |
 
-For each of the challenges, $$2^{20}$$ bits of output from the Legendre PRF are available [here](/bounties/legendre-prf/concrete-instances-bounties). To claim one of these bounties, you must find the correct key that generates the outputs.
+For each of the challenges, $$2^{20}$$ bits of output from the Legendre PRF are available [here](/bounties/legendre-prf/concrete-instance-bounties). To claim one of these bounties, you must find the correct key that generates the outputs.
 
 [^5]: This was originally set as 44--128 bits of security, but has been reduced to 24--108 due to the Beullens algorithm.
 
