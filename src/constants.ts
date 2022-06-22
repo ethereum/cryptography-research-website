@@ -26,6 +26,7 @@ export const POSTS_DIR = 'src/posts';
 // bounties data sources
 export const BOUNTIES_DATA_SOURCE = 'src/bounties-data-source';
 export const LEGENDRE_PRF_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/legendre-prf`;
+export const ZK_HASH_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/zk-hash.md`;
 
 // bounties URLs
 export const BOUNTIES_MIMC_HASH_URL = '/bounties/mimc-hash-challenge';
