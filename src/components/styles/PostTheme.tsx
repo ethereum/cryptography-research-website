@@ -49,14 +49,14 @@ export const PostTheme = {
   },
   ol: ({ children }: any) => {
     return (
-      <OrderedList ml={8} mb={10}>
+      <OrderedList ml={8} mt={2} mb={10}>
         {children}
       </OrderedList>
     );
   },
   ul: ({ children }: any) => {
     return (
-      <UnorderedList ml={8} mb={10}>
+      <UnorderedList ml={8} mt={2} mb={10}>
         {children}
       </UnorderedList>
     );
