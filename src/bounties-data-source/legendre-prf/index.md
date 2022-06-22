@@ -2,7 +2,9 @@
 
 The Legendre pseudo-random function is a one-bit PRF $$\mathbb{F}_p \rightarrow \{0,1\}$$ defined using the [Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol):
 
-$$ \displaystyle L\_{p, K}(x) = \left\lceil\frac{1}{2}\left( \left(\frac{K + x}{p}\right) + 1\right)\right\rceil $$
+$$
+\displaystyle L\_{p, K}(x) = \left\lceil\frac{1}{2}\left( \left(\frac{K + x}{p}\right) + 1\right)\right\rceil
+$$
 
 There are also variants of Legendre PRF with a higher degree, which replaces $$K+x$$ above with a univariate polynomial $$f_K(x)$$ of degree two or more, where $$K$$ represents its coefficients.
 

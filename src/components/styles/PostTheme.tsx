@@ -21,7 +21,7 @@ export const PostTheme = {
   },
   h2: ({ children }: any) => {
     return (
-      <Heading as='h2' size='lg' fontWeight={600} mt={10} mb={5}>
+      <Heading as='h2' fontSize='3xl' fontWeight={600} mt={10} mb={5}>
         {children}
       </Heading>
     );
@@ -35,14 +35,14 @@ export const PostTheme = {
   },
   h4: ({ children }: any) => {
     return (
-      <Heading as='h4' size='md' fontWeight={600} mt={10} mb={5}>
+      <Heading as='h4' fontSize='xl' fontWeight={600} mt={10} mb={5}>
         {children}
       </Heading>
     );
   },
   p: ({ children }: any) => {
     return (
-      <Text mb={4} size='sm'>
+      <Text mb={4} fontSize='md'>
         {children}
       </Text>
     );

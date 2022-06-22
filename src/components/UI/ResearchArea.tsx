@@ -8,7 +8,7 @@ interface Props {
 export const ResearchArea: FC<Props & StackProps> = ({ subtitle, children, ...props }) => {
   return (
     <Stack {...props}>
-      <Heading as='h2' size='lg' fontWeight={600} mb={2}>
+      <Heading as='h2' fontSize='3xl' fontWeight={600} mb={2}>
         {subtitle}
       </Heading>
 
