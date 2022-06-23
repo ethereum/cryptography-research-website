@@ -16,7 +16,7 @@ export const Bounty: FC<Props> = ({ url, title, postedBy, totalBounty, children 
         borderRadius='lg'
         px={6}
         py={8}
-        _hover={{ borderColor: 'brand.blue', boxShadow: 'lg' }}
+        _hover={{ borderColor: 'brand.blue', boxShadow: '2px 2px 6px #f38b75' }}
       >
         <Heading as='h2' fontSize='xl' fontWeight={600} mb={2.5}>
           {title}

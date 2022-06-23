@@ -38,7 +38,7 @@ The RSA VDF depends critically on the sequentiality of modular squaring. To this
 
 ### $5,000
 
-- Prove that for all $$n \geq 128$$, **SUM** on $$n$$-bit inputs requires depth at least $$4 \log_2(n)$$. (That is, prove the "reasonable hypothesis" stated immediately after Theorem 2 of the paper. This $5,000 bounty is in addition to the $5,000 bounty above.)
+- Prove that for all $$n \geq 128$$, **SUM** on $$n$$-bit inputs requires depth at least $$4 \log_2(n)$$. (That is, prove the "reasonable hypothesis" stated immediately after Theorem 2 of the paper. This $$\$5,000$$ bounty is in addition to the $$\$5,000$$ bounty above.)
 
 ### $2,000
 

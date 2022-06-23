@@ -24,13 +24,13 @@ We expect that a variant with $s$ bits of security to withstand attacks of compl
 
 [Reference implementation and bounty instances.](https://extgit.iaik.tugraz.at/krypto/zkfriendlyhashzoo/-/tree/master/bounties/src/rescue_prime)
 
-| Category | Parameters        | Security Level (bits) | Bounty             |
-| -------- | ----------------- | --------------------- | ------------------ |
-| ~~Easy~~ | $\sout{N=4, m=3}$ | $\sout{25}$           | $$\sout{\$2,000}$$ |
-| Easy     | $N=6, m=2$        | $25$                  | $$\$4,000$$        |
-| Medium   | $N=7, m=2$        | $29$                  | $$\$6,000$$        |
-| Hard     | $N=5, m=3$        | $30$                  | $$\$12,000$$       |
-| Hard     | $N=8, m=2$        | $33$                  | $$\$26,000$$       |
+| Category | Parameters        | Security Level (bits) | Bounty     |
+| -------- | ----------------- | --------------------- | ---------- |
+| ~~Easy~~ | $\sout{N=4, m=3}$ | ~~25~~                | ~~$2,000~~ |
+| Easy     | $N=6, m=2$        | 25                    | $4,000     |
+| Medium   | $N=7, m=2$        | 29                    | $6,000     |
+| Hard     | $N=5, m=3$        | 30                    | $12,000    |
+| Hard     | $N=8, m=2$        | 33                    | $26,000    |
 
 ## Feistel-MIMC
 
@@ -48,13 +48,13 @@ The initial parameters were broken and were replaced.
 
 [Reference implementation and bounty instances.](https://extgit.iaik.tugraz.at/krypto/zkfriendlyhashzoo/-/tree/master/bounties/src/feistel_mimc)
 
-| Category | Parameters        | Security Level (bits) | Bounty             |
-| -------- | ----------------- | --------------------- | ------------------ |
-| ~~Easy~~ | $\sout{N=4, m=3}$ | $\sout{25}$           | $$\sout{\$2,000}$$ |
-| Easy     | $N=6, m=2$        | $25$                  | $$\$4,000$$        |
-| Medium   | $N=7, m=2$        | $29$                  | $$\$6,000$$        |
-| Hard     | $N=5, m=3$        | $30$                  | $$\$12,000$$       |
-| Hard     | $N=8, m=2$        | $33$                  | $$\$26,000$$       |
+| Category | Parameters        | Security Level (bits) | Bounty     |
+| -------- | ----------------- | --------------------- | ---------- |
+| ~~Easy~~ | $\sout{N=4, m=3}$ | ~~25~~                | ~~$2,000~~ |
+| Easy     | $N=6, m=2$        | 25                    | $4,000     |
+| Medium   | $N=7, m=2$        | 29                    | $6,000     |
+| Hard     | $N=5, m=3$        | 30                    | $12,000    |
+| Hard     | $N=8, m=2$        | 33                    | $26,000    |
 
 ## Poseidon
 
@@ -73,13 +73,13 @@ The initial parameters were broken and were replaced.
 
 [Reference implementation and bounty instances.](https://extgit.iaik.tugraz.at/krypto/zkfriendlyhashzoo/-/tree/master/bounties/src/poseidon)
 
-| Category   | Parameters     | Security Level (bits) | Bounty             |
-| ---------- | -------------- | --------------------- | ------------------ |
-| ~~Easy~~   | $\sout{RP=3}$  | $\sout{8}$            | $$\sout{\$2,000}$$ |
-| ~~Easy~~   | $\sout{RP=8}$  | $\sout{16}$           | $$\sout{\$4,000}$$ |
-| ~~Medium~~ | $\sout{RP=13}$ | $\sout{24}$           | $$\sout{\$6,000}$$ |
-| Hard       | $RP=19$        | $32$                  | $$\$12,000$$       |
-| Hard       | $RP=24$        | $40$                  | $$\$26,000$$       |
+| Category   | Parameters     | Security Level (bits) | Bounty     |
+| ---------- | -------------- | --------------------- | ---------- |
+| ~~Easy~~   | $\sout{RP=3}$  | ~~8~~                 | ~~$2,000~~ |
+| ~~Easy~~   | $\sout{RP=8}$  | ~~16~~                | ~~$4,000~~ |
+| ~~Medium~~ | $\sout{RP=13}$ | ~~24~~                | ~~$6,000~~ |
+| Hard       | $RP=19$        | 32                    | $12,000    |
+| Hard       | $RP=24$        | 40                    | $26,000    |
 
 ## Reinforced Concrete
 
@@ -96,11 +96,11 @@ We expect that a variant with $s$ bits of security to withstand attacks of compl
 
 [Reference implementation and bounty instances.](https://extgit.iaik.tugraz.at/krypto/zkfriendlyhashzoo/-/tree/master/bounties/src/reinforced_concrete)
 
-| Category | Parameters               | Security Level (bits) | Bounty       |
-| -------- | ------------------------ | --------------------- | ------------ |
-| Easy     | $p=281474976710597$      | $24$                  | $$\$4,000$$  |
-| Hard     | $p=72057594037926839$    | $28$                  | $$\$6,000$$  |
-| Hard     | $p=18446744073709551557$ | $32$                  | $$\$12,000$$ |
+| Category | Parameters               | Security Level (bits) | Bounty  |
+| -------- | ------------------------ | --------------------- | ------- |
+| Easy     | $p=281474976710597$      | 24                    | $4,000  |
+| Hard     | $p=72057594037926839$    | 28                    | $6,000  |
+| Hard     | $p=18446744073709551557$ | 32                    | $12,000 |
 
 ## Contact
 
