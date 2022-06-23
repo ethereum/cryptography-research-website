@@ -104,7 +104,7 @@ const externalLinks = [
 
 ### How to add images to a local post
 
-Image files should be placed inside `/public/images/` and the path to the image will be referenced as `/images/filename`. For example, we can insert the EF logo in a post by using
+Image files should be placed inside `/public/images/` and the path to the image will be referenced as `/images/${filename}`. For example, we can insert the EF logo in a post by using
 
 ```
 ![EF logo](/images/ef-logo-bg-white.png "EF logo")
@@ -116,6 +116,12 @@ Take into account that images are automatically centered, no need to add extra H
 
 - **Locally**: **Make sure the site builds** locally, otherwise the build will break and the new version of the site (e.g.: adding a new post) will not be generated. To be sure of this, run the `yarn build` command locally and check that you get no errors.
 - **On GitHub**: check that the `Deploy Preview` passes succesfully.
+
+## Bounties pages
+
+The source files (`.md`) for the bounties pages are located at `/src/bounties-data-source`. If you need to update the content from a certain bounty, just modify the corresponding file. LaTeX/math is also supported here.
+
+For a better organization, images used in bounties pages are placed inside `/public/images/bounties/` and the path to the image have to be referenced as `/images/bounties/${filename}` (check `/src/bounties-data-source/rsa/assumptions.md` as example).
 
 ### Notes
 
