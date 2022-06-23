@@ -61,8 +61,8 @@ export const PostTheme = {
       </UnorderedList>
     );
   },
-  li: ({ children }: any) => {
-    return <ListItem>{children}</ListItem>;
+  li: ({ children, id }: any) => {
+    return <ListItem id={id}>{children}</ListItem>;
   },
   a: ({ children, href }: any) => {
     return (

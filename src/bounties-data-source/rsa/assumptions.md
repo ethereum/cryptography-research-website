@@ -79,8 +79,8 @@ Remarks:
 - For $$r = 1$$ the definition is identical to the standard Strong RSA Assumption.
 - For $$r = 2$$, the adversary
   is efficiently able to take square roots. In class groups of imaginary quadratic order taking
-  square roots is easy [1].
-- In $$r$$-th order class groups taking $$r$$-th roots is easy [1].
+  square roots is easy[^1].
+- In $$r$$-th order class groups taking $$r$$-th roots is easy[^1].
 
 ### Adaptive Root Assumption
 
@@ -196,8 +196,8 @@ The **Factoring** assumption states that for random primes $$p,q$$ it is difficu
 
 ### Nontrivial reductions
 
-- The Factoring assumption implies the Discrete Logarithm assumption in an RSA group. [2]
-- The Strong RSA assumption is equivalent to the Fractional Root Assumption in the group of quadratic residues modulo $$N$$. [3]
+- The Factoring assumption implies the Discrete Logarithm assumption in an RSA group.[^2]
+- The Strong RSA assumption is equivalent to the Fractional Root Assumption in the group of quadratic residues modulo $$N$$.[^3]
 
 ### Generic Group Model
 
@@ -206,11 +206,11 @@ A generic group algorithm is a program that performs only group operations and e
 It is crucial that a generic group algorithm does not have access to the internal representation of group elements, which are integers in RSA.
 Most RSA assumptions hold in the Generic Group Model.
 
-- The Strong RSA assumption holds in the Generic Group Model. [4]
+- The Strong RSA assumption holds in the Generic Group Model.[^4]
 
 This implies that the RSA assumption is hard too. The Factoring assumption can not be formulated in the Generic Group Model as the group size is unknown to the algorithm.
 
-- The Adaptive Root assumption holds in the Generic Group Model. [1]
+- The Adaptive Root assumption holds in the Generic Group Model.[^1]
 
 However, these results give little insight to the actual security of RSA assumptions, as most existing RSA attacks use the integer form of the group elements. For example, computing the Jacobi symbol (see below) in an RSA group is easy despite being provably hard in the Generic Group Model.
 
@@ -218,9 +218,9 @@ However, these results give little insight to the actual security of RSA assumpt
 
 Here we consider algorithms that are given the unit ring element $$1$$ and a single ring element $$x$$ as input and are supposed to output some element $$y$$. They can query the ring oracle using multiplication, division, and addition queries on the already known ring elements, and see if the oracle outputs a previously known element. Effectively these algorithms compute rational polynomial functions of $$x$$.
 
-- If there is a generic ring algorithm that computes $$f(x)$$ such that $$f(x)\equiv 0 \bmod{n}$$ on a non-negligible fraction of points then one can derive a factoring algorithm. [6]
+- If there is a generic ring algorithm that computes $$f(x)$$ such that $$f(x)\equiv 0 \bmod{n}$$ on a non-negligible fraction of points then one can derive a factoring algorithm.[^6]
 
-- If there is an generic ring algorithm that breaks the Strong RSA assumption by outputting rational functions $$u=\frac{f(x)}{g(x)}$$ and $$l=\frac{h(x)}{q(x)}$$, then $$N$$ can be factored with the same complexity. [7]
+- If there is an generic ring algorithm that breaks the Strong RSA assumption by outputting rational functions $$u=\frac{f(x)}{g(x)}$$ and $$l=\frac{h(x)}{q(x)}$$, then $$N$$ can be factored with the same complexity.[^7]
 
 ### Pseudo-freeness
 
@@ -232,38 +232,45 @@ Informally, a group is pseudo-free if no efficient algorithm can find a non-triv
 
 - Assume that $$N$$ is the product of two safe primes. Then the Strong RSA assumption is equivalent to the RSA group being pseudo-free. [9, 10]
 
-- The Order assumption holds in a pseudo-free group. [8]
+- The Order assumption holds in a pseudo-free group.[^8]
 
-- The Diffie-Hellman assumption holds for a non-negligible fraction of bases $$g$$ in a pseudo-free group. [9]
+- The Diffie-Hellman assumption holds for a non-negligible fraction of bases $$g$$ in a pseudo-free group.[^9]
 
 Therefore, the Strong RSA assumption implies the Order assumption if $$N$$ is the product of two safe primes. The situation when the Strong RSA assumption holds but the Adaptive Root assumption does not hold may thus only happen if the order of $$w$$ in the Adaptive Root assumption is unknown but roots are computable.
 
-## References
+[^1]:
+    Benedikt Bunz, Ben Fisch, and Alan Szepieniec. Transparent snarks from dark compilers. Cryptology
+    ePrint Archive, Report 2019/1229, 2019. [https://eprint.iacr.org/2019/1229](https://eprint.iacr.org/2019/1229).
 
-[1] Benedikt Bunz, Ben Fisch, and Alan Szepieniec. Transparent snarks from dark compilers. Cryptology
-ePrint Archive, Report 2019/1229, 2019. [https://eprint.iacr.org/2019/1229](https://eprint.iacr.org/2019/1229).
+[^2]:
+    Eric Bach. Discrete logarithms and factoring. Computer Science Division, University of California
+    Berkeley, 1984. Available at [https://www2.eecs.berkeley.edu/Pubs/TechRpts/1984/CSD-84-186.pdf](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1984/CSD-84-186.pdf).
 
-[2] Eric Bach. Discrete logarithms and factoring. Computer Science Division, University of California
-Berkeley, 1984. Available at [https://www2.eecs.berkeley.edu/Pubs/TechRpts/1984/CSD-84-186.pdf](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1984/CSD-84-186.pdf).
+[^3]:
+    Ronald Cramer and Victor Shoup. Signature schemes based on the strong RSA assumption. In ACM
+    Conference on Computer and Communications Security, pages 46–51. ACM, 1999.
 
-[3] Ronald Cramer and Victor Shoup. Signature schemes based on the strong RSA assumption. In ACM
-Conference on Computer and Communications Security, pages 46–51. ACM, 1999.
+[^4]:
+    Ivan Damgård and Maciej Koprowski. Generic lower bounds for root extraction and signature schemes
+    in general groups. In EUROCRYPT, volume 2332 of Lecture Notes in Computer Science, pages 256--271. Springer, 2002.
 
-[4] Ivan Damgård and Maciej Koprowski. Generic lower bounds for root extraction and signature schemes
-in general groups. In EUROCRYPT, volume 2332 of Lecture Notes in Computer Science, pages 256--271. Springer, 2002.
+[^5]:
+    Divesh Aggarwal and Ueli M. Maurer. Breaking RSA generically is equivalent to factoring. In
+    EUROCRYPT, volume 5479 of Lecture Notes in Computer Science, pages 36–53. Springer, 2009.
 
-[5] Divesh Aggarwal and Ueli M. Maurer. Breaking RSA generically is equivalent to factoring. In
-EUROCRYPT, volume 5479 of Lecture Notes in Computer Science, pages 36–53. Springer, 2009.
+[^6]:
+    Divesh Aggarwal, Ueli Maurer, and Igor Shparlinski. The equivalence of strong rsa and factoring in
+    the generic ring model of computation. 2011. Available at [https://hal.inria.fr/inria-00607256/](https://hal.inria.fr/inria-00607256/)
+    document.
 
-[6] Divesh Aggarwal, Ueli Maurer, and Igor Shparlinski. The equivalence of strong rsa and factoring in
-the generic ring model of computation. 2011. Available at [https://hal.inria.fr/inria-00607256/](https://hal.inria.fr/inria-00607256/)
-document.
+[^7]:
+    Daniele Micciancio. The RSA group is pseudo-free. In EUROCRYPT, volume 3494 of Lecture Notes
+    in Computer Science, pages 387–403. Springer, 2005.
 
-[7] Daniele Micciancio. The RSA group is pseudo-free. In EUROCRYPT, volume 3494 of Lecture Notes
-in Computer Science, pages 387–403. Springer, 2005.
+[^8]:
+    Ronald L. Rivest. On the notion of pseudo-free groups. In TCC, volume 2951 of Lecture Notes in
+    Computer Science, pages 505–521. Springer, 2004.
 
-[8] Ronald L. Rivest. On the notion of pseudo-free groups. In TCC, volume 2951 of Lecture Notes in
-Computer Science, pages 505–521. Springer, 2004.
-
-[9] Shingo Hasegawa, Shuji Isobe, Hiroki Shizuya, and Katsuhiro Tashiro. On the pseudo-freeness and
-the CDH assumption. Int. J. Inf. Sec., 8(5):347–355, 2009.
+[^9]:
+    Shingo Hasegawa, Shuji Isobe, Hiroki Shizuya, and Katsuhiro Tashiro. On the pseudo-freeness and
+    the CDH assumption. Int. J. Inf. Sec., 8(5):347–355, 2009.
