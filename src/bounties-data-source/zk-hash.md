@@ -14,11 +14,11 @@ where $Perm$ is the inner sponge permutation (bijective mapping) of the hash fun
 
 [Design spec.](https://www.esat.kuleuven.be/cosic/publications/article-3259.pdf)
 
-- $p=18446744073709551557 \text{\textasciitilde} 2^64$
+- $p=18446744073709551557 \text{\textasciitilde} 2^{64}$
 - $m=3$
 - $alpha=3$
 - Number of rounds: $N$
-- Brute force attack complexity: $2^64$
+- Brute force attack complexity: $2^{64}$
 
 We expect that a variant with $s$ bits of security to withstand attacks of complexity up to $2^{1.5s}$ time (function calls) and memory.
 
@@ -36,11 +36,11 @@ We expect that a variant with $s$ bits of security to withstand attacks of compl
 
 [Design spec.](https://eprint.iacr.org/2016/492.pdf)
 
-- $p=18446744073709551557 \text{\textasciitilde} 2^64$
+- $p=18446744073709551557 \text{\textasciitilde} 2^{64}$
 - $alpha=3$
 - **Task:** find $X,Y$ such that $Feistel\text{\textendash}MiMC(X,0)=(Y,0)$
 - Number of rounds: $r$
-- Brute force attack complexity: $2^64$
+- Brute force attack complexity: $2^{64}$
 
 We expect that a variant with $s$ bits of security to withstand attacks of complexity up to $2^{2s}$ time (function calls) and memory.
 
@@ -60,12 +60,12 @@ The initial parameters were broken and were replaced.
 
 [Design spec.](https://eprint.iacr.org/2019/458.pdf)
 
-- $p=18446744073709551557 \text{\textasciitilde} 2^64$
+- $p=18446744073709551557 \text{\textasciitilde} 2^{64}$
 - $d=3$
 - $t=3$
 - Number of full rounds: $RF=8$
 - Number of partial rounds $RP$ varies (see below)
-- Brute force attack complexity: $2^64$
+- Brute force attack complexity: $2^{64}$
 
 We expect that a variant with $s$ bits of security to withstand attacks of complexity up to $2^{s+37}$ time (function calls) and memory.
 
