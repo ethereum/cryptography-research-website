@@ -1,8 +1,8 @@
 ---
-title: 'Cryptanalysis of the Algorand Subset-Sum Hash Function'
-description: 'Algorand hash function is not collision resistant'
+title: 'Cryptanalysis of the Algorand Subset-Sum Hash Function (UPDATED 25th June 2022)'
+description: 'K-tree attack on the Algorand hash function'
 author: 'Dmitry Khovratovich'
-date: '2022-06-14'
+date: '2022-06-25'
 ---
 
 ## 1. Introduction
@@ -69,4 +69,26 @@ $$
 
 i.e. a collision.
 
-Overall the collision attack costs $2^{98}$ (it is not necessary to work on all the lists simultaneously) and thus the overall security of the subset sum hash is at most 98 bits.
+Overall the collision attack costs $2^{98}$ time (it is not necessary to work on all the lists simultaneously) and thus the overall security of the subset sum hash is at most 98 bits in the time cost model.
+
+
+# UPDATE (25 June 2022)
+
+## 4. Bug in Section 3 and its fix
+
+The Algorand team has kindly reported us a flaw in Section 3. Concretely, if one merges $f_A(\mathbf{x}_i)$ and $\mathbf{y}_i$ in the first step of the attack than due to the linearity of $f_A$ the number of possible pairs is $3^{64}$ rather than $4^{64}$, which makes the search for $2^{96}$ partial collisions more expensive.
+
+The simple fix to this flaw is to merge instead $f_A(\mathbf{x}_1)$ with $f_A(\mathbf{x}_2)$, then $f_A(\mathbf{x}_3)$ with $f_A(\mathbf{x}_4)$, so that the inputs activate different scalars in $A$. When repeating for $f_A(\mathbf{y}_i)$, one should target different collision bits to avoid having $\mathbf{x}=\mathbf{y}$. The rest of the attack remains the same with the same complexity estimate.
+
+
+## 5. Algorand internal analysis
+
+In response to our original post, the Algorand team has published an [internal analysis](https://github.com/algorand/go-sumhash/blob/3ba719a3de9ed604040aa81c0288aa2feda8ebae/cryptanalysis/merging-trees-ss.pdf). The report investigates the complexity of the Wagner attack implemented on a quantum computer. For collision search the report estimates  the quantum attack complexity as $2^{108}$ time and $2^{40}$ memory. The same document also gives the complexity of the classical Wagner attack as $2^{107}$ time and $2^{85}$ memory, which is a variation (another point on the  time-area tradeoff curve) of our attack in Section 3, assuming our bugfix above.
+
+
+## Acknowledgements
+
+We thank Chris Peikert for fruitful discussions that has led to the attack refinements.
+
+
+
