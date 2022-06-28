@@ -1,3 +1,8 @@
+---
+title: 'ZK Hash Function Cryptanalysis Bounties'
+description: 'Help us understand the security of new hash functions better.'
+---
+
 ## Terms
 
 **Task:** find $X1,X2,Y1,Y2$ such that $\displaystyle Perm(X1,X2,0)=(Y1,Y2,0)$

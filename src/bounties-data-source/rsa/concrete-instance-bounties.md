@@ -1,4 +1,11 @@
+---
+title: 'RSA adaptive root bounty instances'
+description: 'Bounties for breaking RSA Assumptions.'
+---
+
 To improve the cryptanalysis of new RSA assumptions needed for Verifiable Delay Functions (VDFs), in addition to the [previous paper bounties](/bounties/rsa/bounties), the Ethereum Foundation announced the following bounties for solving concrete instances of the [adaptive root problem](/bounties/rsa/assumptions) at the Stanford Blockchain Conference 2020:
+
+## Challenges
 
 ### Challenge 0 -- CLAIMED
 

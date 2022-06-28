@@ -1,3 +1,8 @@
+---
+title: 'Cash for breaking RSA assumptions'
+description: 'Recent developments require some new assumptions about RSA to be validated. The Ethereum Foundation has created some bounties.'
+---
+
 ![Relations between RSA assumptions](/images/bounties/RSA-ref.svg)
 
 The Ethereum Foundation is offering 28,000 USD and 29 ETH in a bounty program to test the validity of two recent RSA assumptions: the **adaptive root assumption** and the **low order assumption**.

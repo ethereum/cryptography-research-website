@@ -1,5 +1,6 @@
 export * from './Abstract';
 export * from './Bounty';
+export * from './BountyCard';
 export * from './Event';
 export * from './ExternalPost';
 export * from './Footer';

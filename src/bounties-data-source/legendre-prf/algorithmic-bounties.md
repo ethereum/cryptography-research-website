@@ -1,3 +1,8 @@
+---
+title: 'Legendre PRF algorithmic Bounties'
+description: 'Bounties on breaking the Legendre PRF.'
+---
+
 ## The Legendre PRF
 
 The Legendre pseudo-random function is a one-bit PRF $$\mathbb{F}_p \rightarrow \{0,1\}$$ defined using the Legendre symbol:

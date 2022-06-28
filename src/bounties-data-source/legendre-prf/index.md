@@ -1,4 +1,11 @@
-# The Legendre PRF
+---
+title: 'The Legendre PRF'
+description: 'We are interested in how resistant the Legendre pseudo-random function is to key recovery attacks, as well as any other interesting results on the Legendre PRF.'
+---
+
+The Legendre pseudo-random function is a PRF that is extremely well suited for secure multi-party computation (MPC) and zero-knowledge proofs (ZKP) over arithmetic circuits.
+
+For bounties on breaking the Legendre PRF, please see [bounties](/bounties/legendre-prf/algorithmic-bounties) for algorithmic bounties and [here](/bounties/legendre-prf/concrete-instance-bounties) for concrete key recovery puzzles.
 
 The Legendre pseudo-random function is a one-bit PRF $$\mathbb{F}_p \rightarrow \{0,1\}$$ defined using the [Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol):
 

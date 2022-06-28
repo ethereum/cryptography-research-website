@@ -1,7 +1,7 @@
 import { Heading, Stack } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
-import { Bounty, PageMetadata } from '../../components/UI/';
+import { BountyCard, PageMetadata } from '../../components/UI/';
 
 import {
   LEGENDRE_PRF_URL,
@@ -24,7 +24,7 @@ const Bounties: NextPage = () => {
         </Heading>
 
         <Stack spacing={4}>
-          <Bounty
+          <BountyCard
             url={RSA_URL}
             title='RSA Bounties'
             postedBy='Ethereum Foundation'
@@ -33,9 +33,9 @@ const Bounties: NextPage = () => {
             For the Verifiable Delay Function (VDF) project, the RSA Low Order and Adaptive Root
             assumptions have come into spotlight as they are required for the two VDF proof
             construction. Several bounties are available for proving or disproving the assumptions.
-          </Bounty>
+          </BountyCard>
 
-          <Bounty
+          <BountyCard
             url={LEGENDRE_PRF_URL}
             title='Legendre PRF Bounties'
             postedBy='Ethereum Foundation'
@@ -43,9 +43,9 @@ const Bounties: NextPage = () => {
           >
             We are interested in how resistant the Legendre pseudo-random function is to key
             recovery attacks, as well as any other interesting results on the Legendre PRF.
-          </Bounty>
+          </BountyCard>
 
-          <Bounty
+          <BountyCard
             url={MIMC_HASH_BOUNTIES_URL}
             title='MiMC Hash Challenge'
             postedBy='Ethereum Foundation and Protocol Labs'
@@ -54,16 +54,16 @@ const Bounties: NextPage = () => {
             The Ethereum Foundation and Protocol Labs are offering rewards for finding collisions in
             MiMCSponge, a sponge construction instantiated with MiMC-Feistel over a prime field,
             targeting 128-bit and 80-bit security, on one of two fields described below.
-          </Bounty>
+          </BountyCard>
 
-          <Bounty
+          <BountyCard
             url={ZK_HASH_BOUNTIES_URL}
             title='ZK Hash Function Cryptanalysis Bounties'
             postedBy='Ethereum Foundation'
             totalBounty='$200,000 USD'
           >
             Help us understand the security of new hash functions better.
-          </Bounty>
+          </BountyCard>
         </Stack>
       </main>
     </>

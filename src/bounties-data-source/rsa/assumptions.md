@@ -1,3 +1,8 @@
+---
+title: 'RSA assumptions'
+description: 'Cash for RSA assumptions.'
+---
+
 ![Relations between RSA assumptions](/images/bounties/RSA-ref.svg)
 
 ## Definitions

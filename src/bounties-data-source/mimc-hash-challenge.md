@@ -1,3 +1,8 @@
+---
+title: 'MiMC Hash Challenge Bounty'
+description: 'Rewards for finding collisions in MiMCSponge, a sponge construction instantiated with MiMC-Feistel over a prime field, targeting 128-bit and 80-bit security.'
+---
+
 The [Ethereum Foundation](https://ethereum.org/en/) and [Protocol Labs](https://protocol.ai/) are offering rewards for finding collisions in MiMCSponge, a [sponge construction](https://en.wikipedia.org/wiki/Sponge_function) instantiated with MiMC-Feistel over a prime field, targeting 128-bit and 80-bit security, on one of two fields described below.
 
 ## Introduction

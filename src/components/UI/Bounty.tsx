@@ -1,40 +1,41 @@
-import { Heading, Link, Stack, Text } from '@chakra-ui/react';
+/* eslint-disable react/no-children-prop */
+import { Heading } from '@chakra-ui/react';
 import { FC } from 'react';
+import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
+
+import { PageMetadata } from '.';
+import { PostTheme } from '../styles';
 
 interface Props {
-  url: string;
   title: string;
-  postedBy: string;
-  totalBounty: string;
+  description: string;
+  content: string;
 }
 
-export const Bounty: FC<Props> = ({ url, title, postedBy, totalBounty, children }) => {
+const Bounty: FC<Props> = ({ title, description, content }) => {
   return (
-    <Link href={url} _hover={{ textDecoration: 'none' }}>
-      <Stack
-        border='2px solid #718096'
-        borderRadius='lg'
-        px={6}
-        py={8}
-        _hover={{ borderColor: 'brand.blue', boxShadow: '2px 2px 6px #f38b75' }}
-      >
-        <Heading as='h2' fontSize='xl' fontWeight={600} mb={2.5}>
+    <>
+      <PageMetadata title={title} description={description} />
+
+      <main>
+        <Heading as='h1' mb={20}>
           {title}
         </Heading>
 
-        <Stack>
-          <Text mb={4}>{children}</Text>
-        </Stack>
-
-        <Stack>
-          <Text lineHeight={1.1}>
-            <strong>Posted By:</strong> {postedBy}
-          </Text>
-          <Text lineHeight={1.1}>
-            <strong>Total Bounty:</strong> {totalBounty}
-          </Text>
-        </Stack>
-      </Stack>
-    </Link>
+        <ReactMarkdown
+          components={ChakraUIRenderer(PostTheme)}
+          children={content}
+          remarkPlugins={[gfm, remarkMath]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
+        />
+      </main>
+    </>
   );
 };
+
+export default Bounty;

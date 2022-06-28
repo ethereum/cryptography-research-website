@@ -1,4 +1,7 @@
-# Legendre PRF bounty smart contract instructions
+---
+title: 'Legendre PRF bounty smart contract instructions'
+description: 'Bounties on breaking the Legendre PRF.'
+---
 
 If you have found the solution on one of our bounties on [Legendre instances](/bounties/legendre-prf/concrete-instance-bounties), here is how you can claim your bounty.
 

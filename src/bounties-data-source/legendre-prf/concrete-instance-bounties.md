@@ -1,3 +1,8 @@
+---
+title: 'Legendre PRF Bounties for concrete instances'
+description: 'Bounties on breaking the Legendre PRF.'
+---
+
 In addition to the [algorithmic bounties](/bounties/legendre-prf/algorithmic-bounties) announced at CRYPTO'19 in order to improve the state of cryptanalysis of the Legendre PRF, the Ethereum Foundation also wants to encourage concrete algorithmic development. In total, there are five key recovery challenges for the Legendre PRF -- if you can find the key belonging to the output bits below, you will be rewarded the bounties.
 
 ## Redeeming the bounties

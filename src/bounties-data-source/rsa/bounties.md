@@ -1,6 +1,13 @@
+---
+title: 'RSA Bounties'
+description: 'Bounties for breaking RSA Assumptions.'
+---
+
 For more explanation on the assumptions, please see [RSA assumptions](/bounties/rsa/assumptions).
 
 To improve the cryptanalysis of new RSA assumptions needed for Verifiable Delay Functions (VDFs), the Ethereum Foundation announced the following bounties at Real World Crypto 2020:
+
+## Bounties
 
 ### $10,000
 
