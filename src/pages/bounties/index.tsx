@@ -28,7 +28,7 @@ const Bounties: NextPage = () => {
             url={RSA_URL}
             title='RSA Bounties'
             postedBy='Ethereum Foundation'
-            totalBounty='$28,000 USD and 29 ETH'
+            totalBounty='$28,000 USD and 28 ETH'
           >
             For the Verifiable Delay Function (VDF) project, the RSA Low Order and Adaptive Root
             assumptions have come into spotlight as they are required for the two VDF proof
@@ -39,7 +39,7 @@ const Bounties: NextPage = () => {
             url={LEGENDRE_PRF_URL}
             title='Legendre PRF Bounties'
             postedBy='Ethereum Foundation'
-            totalBounty='$31,000 USD and 31 ETH'
+            totalBounty='$29,000 USD and 24 ETH'
           >
             We are interested in how resistant the Legendre pseudo-random function is to key
             recovery attacks, as well as any other interesting results on the Legendre PRF.

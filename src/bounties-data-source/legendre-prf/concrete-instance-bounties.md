@@ -11,8 +11,6 @@ The smart contract for redeeming the bounties is now live at [0x64af032181669383
 
 You can find instructions on claiming the bounties using the smart contract [here](/bounties/legendre-prf/smart-contract-instructions).
 
-These bounties are open until December 31, 2020.
-
 ### Test challenge
 
 ```

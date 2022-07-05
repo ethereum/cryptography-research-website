@@ -22,20 +22,15 @@ $$
 
 ### $ 6,000
 
-&nbsp;&nbsp;For a classical key recovery algorithm improving on the algorithm by Kaluđerović, Kleinjung and Kostić ($$ O (p \log(p) \log(\log(p))/M^2)$$ Legendre evaluations where $$M$$ is the number of PRF queries needed) algorithm by more than a polylog[^4] factor, using a sub-exponential, i.e. $$M=2^{(\log p)^c}$$ for $$0<c<1$$ number of queries.[^1] [^2]
+&nbsp;&nbsp;For a classical key recovery algorithm improving on the algorithm by Kaluđerović, Kleinjung and Kostić ($$ O (p \log(p) \log(\log(p))/M^2)$$ Legendre evaluations where $$M$$ is the number of PRF queries needed) algorithm by more than a polylog[^3] factor, using a sub-exponential, i.e. $$M=2^{(\log p)^c}$$ for $$0<c<1$$ number of queries.[^1] [^2]
 
 ### $ 3,000
 
-&nbsp;&nbsp;For a classical PRF distinguishing algorithm against the Legendre PRF that has an error probability bounded away from $$1/3$$ and is faster than direct use of the Kaluđerović, Kleinjung, and Kostić key recovery attacks, by more than a polylog factor[^4], using a sub-exponential, i.e. $$M = 2^{(\log p )^c}$$ for 0 < c < 1 number of queries.
-
-### $ 2,000
-
-&nbsp;&nbsp;For the most interesting paper on the Legendre PRF in the next year (ends 01 May 2022).[^3]
+&nbsp;&nbsp;For a classical PRF distinguishing algorithm against the Legendre PRF that has an error probability bounded away from $$1/3$$ and is faster than direct use of the Kaluđerović, Kleinjung, and Kostić key recovery attacks, by more than a polylog factor[^3], using a sub-exponential, i.e. $$M = 2^{(\log p )^c}$$ for 0 < c < 1 number of queries.
 
 [^1]: In all cases, probabilistic algorithms are also considered if they improve on the probabilistic versions of the known algorithms. Only classical (non-quantum) algorithms are permitted for the algorithm bounties.
 [^2]: For this bounty, we also consider any algorithm that can distinguish a $$2^{(\log p)^c}$$ bit length output of the Legendre PRF from a random bit string with advantage $$>0.1$$
-[^3]: This will be judged by the cryptographers of the Ethereum Foundation Cryptography Research team and cannot be appealed
-[^4]: An improvement $$g(n)$$ on a function $$f(n)$$ is by more than a polylog factor if $$f(n)/g(n)=\Omega(\log^m(n))$$ for all $$m\in\mathbf{N}$$.
+[^3]: An improvement $$g(n)$$ on a function $$f(n)$$ is by more than a polylog factor if $$f(n)/g(n)=\Omega(\log^m(n))$$ for all $$m\in\mathbf{N}$$.
 
 The first two bounties are for the first entry that beats the given bounds. Please send submissions to Dankrad Feist ([dankrad .at. ethereum .dot. org](mailto:dankrad%20.at.%20ethereum%20.dot.%20org)).
 
