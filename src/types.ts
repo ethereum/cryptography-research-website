@@ -10,3 +10,10 @@ export type ExternalPost = {
   date: string;
   link: string;
 };
+
+export interface MarkdownBounty {
+  frontmatter: {
+    [key: string]: any;
+  };
+  content: string;
+}

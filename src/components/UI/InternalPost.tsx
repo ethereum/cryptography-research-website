@@ -15,7 +15,7 @@ export const InternalPost: FC<Props> = ({ date, slug, title }) => {
 
   return (
     <article key={title}>
-      <Heading as='h3' size='xs' fontWeight={400} mb={1}>
+      <Heading as='h3' fontSize='sm' fontWeight={400} mb={1}>
         {parsedDate}
       </Heading>
 
@@ -25,7 +25,7 @@ export const InternalPost: FC<Props> = ({ date, slug, title }) => {
           color='brand.lightblue'
           _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
         >
-          <Heading as='h1' mb={4} size='md' fontWeight={500}>
+          <Heading as='h1' mb={4} fontSize='xl' fontWeight={500}>
             {title}
           </Heading>
         </Link>
