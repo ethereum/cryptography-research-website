@@ -50,4 +50,4 @@ Reference code for MiMCSponge on BN254 exists in the [circomlib](https://github.
 
 ## Submissions
 
-Submissions should be sent to [mimc-challenge@ethereum.org](mimc-challenge@ethereum.org), and rewards will be given in USD, ETH or DAI. Submissions can not be anonymous.
+Submissions should be sent to [mimc-challenge@ethereum.org](mailto:mimc-challenge@ethereum.org), and rewards will be given in USD, ETH or DAI. Submissions can not be anonymous.
