@@ -5,12 +5,12 @@ author: 'Chelsea Komlo'
 date: '2022-08-05'
 ---
 
-In this post, we discuss differences in the security assumptions underpinning four Schnorr threshold signature schemes.  In particular, we will review the two-round FROST signing protocol by Komlo and Goldberg [1] that we refer to as FROST1, as well as an optimized variant FROST2 by Crites, Komlo, and Maller [2].  We refer to these schemes in conjunction as FROST 1/2.  We contrast these schemes with two three-round signing protocols: SimpleTSig, also by Crites, Komlo, and Maller [2], as well as the three-round scheme by Lindell [3], which we call Lindell22.
+In this post, we discuss differences in the security assumptions underpinning four Schnorr threshold signature schemes.  In particular, we will review the two-round FROST signing protocol by Komlo and Goldberg[^1] that we refer to as FROST1, as well as an optimized variant FROST2 by Crites, Komlo, and Maller[^2].  We refer to these schemes in conjunction as FROST 1/2.  We contrast these schemes with two three-round signing protocols: SimpleTSig, also by Crites, Komlo, and Maller[^2], as well as the three-round scheme by Lindell[^3], which we call Lindell22.
 
 **TLDR.**
 - **FROST1/2 requires One-More Discrete Logarithm (OMDL) and Programmable Random Oracle Model (PROM) assumptions.**
 - **SimpleTSig can be proven using only discrete logarithm (DLP) and PROM assumptions.**
-- **Lindell22 can be proven using only DLP+PROM. The protocol employs the Fischlin Transform [7] in lieu of Schnorr signatures for proofs of knowledge.**
+- **Lindell22 can be proven using only DLP+PROM. The protocol employs the Fischlin Transform[^7] in lieu of Schnorr signatures for proofs of knowledge.**
 
 These assumptions refer only to the security of threshold signing and not to the distributed key generation process.  Thanks to Elizabeth Crites and Mary Maller for feedback on this post.
 
@@ -34,7 +34,7 @@ A security assumption simply states the assumed hardness to an adversary of some
 
   - **Discrete Logarithm Problem (DLP).** Considered to be a "standard assumption" in cryptography. The problem is simple: given some challenge $Y$ that is in a group $G$ where $g$ is a generator of $G$, output the discrete logarithm relation $x$ between $Y$ and $g$, where $Y = g^x$.
 
-  - **One More Discrete Logarithm Assumption (OMDL).** OMDL was first introduced by Bellare et al. [8] and proven secure in [9], and can be as follows: given  $\ell +1$ discrete logarithm challenges $X_0 = g^{\alpha_0}, X_1 = g^{\alpha_1}, \dots,  X_\ell = g^{\alpha_\ell}$ and access to a discrete logarithm solution oracle $\mathcal{O}_\text{dlsol} (X_i) \rightarrow \alpha_i$ which can be queried up to $\ell$ times, the challenge is to output  $\ell+1$ discrete logarithm solutions $\alpha_i$ for all $i \in \{ 0, \ldots, \ell\}$.
+  - **One More Discrete Logarithm Assumption (OMDL).** OMDL was first introduced by Bellare et al.[^8] and proven secure[^9], and can be as follows: given  $\ell +1$ discrete logarithm challenges $X_0 = g^{\alpha_0}, X_1 = g^{\alpha_1}, \dots,  X_\ell = g^{\alpha_\ell}$ and access to a discrete logarithm solution oracle $\mathcal{O}_\text{dlsol} (X_i) \rightarrow \alpha_i$ which can be queried up to $\ell$ times, the challenge is to output  $\ell+1$ discrete logarithm solutions $\alpha_i$ for all $i \in \{ 0, \ldots, \ell\}$.
 
 While perhaps not considered a "standard" assumption in the same way that plain Computational Diffie-Hellman (CDH) or other problems that reduce to simply a single discrete logarithm assumption, OMDL underpins the security of many cryptographic schemes in theory and in practice, such as blind signatures.
 
@@ -50,13 +50,13 @@ Yes, we are! Finally getting to that.
 
 The reason we wanted to write this post is because there has been some debate about the security of two-round Schnorr threshold signature schemes (FROST1/2) and how they compare to less efficient three-round Schnorr threshold signature schemes. We'll review these schemes now, and clarify their resulting security next.
 
-**FROST1** was introduced by Komlo and Goldberg in 2020 [1]. In that work, they did two things. They introduced 1)  a Distributed Key Generation (DKG) protocol that is a minor improvement upon the Pedersen DKG [4] that we will call PedPop, as well as 2) a novel two-round threshold signing protocol that is secure against ROS attacks [5] that we refer to as FROST1.
+**FROST1** was introduced by Komlo and Goldberg in 2020[^1]. In that work, they did two things. They introduced 1)  a Distributed Key Generation (DKG) protocol that is a minor improvement upon the Pedersen DKG[^4] that we will call PedPop, as well as 2) a novel two-round threshold signing protocol that is secure against ROS attacks[^5] that we refer to as FROST1.
 
-**FROST2** is an optimized variant of FROST1 by introduced by Crites, Komlo, and Maller in 2021 [2], and reduces the number of exponentiations required for signing operations and verification from linear in the number of signers to constant.
+**FROST2** is an optimized variant of FROST1 by introduced by Crites, Komlo, and Maller in 2021[^2], and reduces the number of exponentiations required for signing operations and verification from linear in the number of signers to constant.
 
-**SimpleTSig** is a three-round threshold signature scheme also introduced by Crites, Komlo, and Maller in [2], and is the threshold analogue of a three-round multisignature scheme called SimpleMuSig, presented in the same work [2].
+**SimpleTSig** is a three-round threshold signature scheme also introduced by Crites, Komlo, and Maller[^2], and is the threshold analogue of a three-round multisignature scheme called SimpleMuSig, presented in the same work[^2].
 
-**Lindell22** is a three-round threshold signing protocol introduced by Lindell in 2022 [3].
+**Lindell22** is a three-round threshold signing protocol introduced by Lindell in 2022[^3].
 
 We next show that for threshold signing, SimpleTSig and Lindell22 require the weakest assumptions of all of these schemes. FROST1/2 requires sightly stronger assumptions due to OMDL. However, as mentioned before, OMDL underpins many existing cryptosystems such as blind signatures.
 
@@ -70,7 +70,7 @@ We now describe three different key generation mechanisms, all of which can be u
 
 **[Standard Model] Pedersen.**   The security of the Pedersen DKG when used as key generation for FROST1, FROST2, SimpleTSig, or Lindell22 relies on at least half of the participants being honest and the underlying signature scheme being secure.
 
-**[KEA+PROM] PedPop.** An efficient two-round DKG introduced by Komlo and Goldberg along with FROST1. PedPop is simply Pedersen DKG, with the additional step where each participant additionally publishes a Schnorr signature during the first round to prove knowledge of their secret key material.  This extra step ensures that security holds given any threshold of honest parties.  The security of PedPop when used as key generation for FROST2 and SimpleTSig was demonstrated in [2]. Note that KEA is required for the environment to extract the adversary's secret keys in the proof of security; alternatively, the Fischlin transform could be used in lieu of Schnorr as the proof of possession (and so would be only in the PROM). See further discussion in Part 9.
+**[KEA+PROM] PedPop.** An efficient two-round DKG introduced by Komlo and Goldberg along with FROST1. PedPop is simply Pedersen DKG, with the additional step where each participant additionally publishes a Schnorr signature during the first round to prove knowledge of their secret key material.  This extra step ensures that security holds given any threshold of honest parties.  The security of PedPop when used as key generation for FROST2 and SimpleTSig was demonstrated[^2]. Note that KEA is required for the environment to extract the adversary's secret keys in the proof of security; alternatively, the Fischlin transform could be used in lieu of Schnorr as the proof of possession (and so would be only in the PROM). See further discussion in Part 9.
 
 **[Standard Model] Gennaro et al.** A three-round DKG that is secure in the standard model.
 
@@ -82,9 +82,9 @@ FROST1/2 signing can be proven using:
   1. One-More Discrete Logarithm Assumption (OMDL)
   2. Programmable Random Oracle Model (PROM)
 
-By reducing to OMDL, the environment does not need to rely on extracting secret information from the adversary during its simulation of signing; the adversary is simply required to output a valid forgery. The use of two nonces and the randomizing factor in FROST allows for a true reduction to OMDL, unlike prior related multisignature schemes that had subtle flaws in their attempt to an OMDL reduction  [12],
+By reducing to OMDL, the environment does not need to rely on extracting secret information from the adversary during its simulation of signing; the adversary is simply required to output a valid forgery. The use of two nonces and the randomizing factor in FROST allows for a true reduction to OMDL, unlike prior related multisignature schemes that had subtle flaws in their attempt to an OMDL reduction[^12],
 
-The proof for FROST1 in [1] required a heuristic assumption and so could not prove these properties directly. The proof for FROST2 in [2] provides a direct proof for FROST2 with PedPop as the key generation protocol. Proofs for FROST1 and FROST2 in a recent paper by Bellare, Tessaro, and Zhu [11] employ an abstraction of key generation, and so demonstrate a direct reduction to PROM+OMDL.
+The proof for FROST1[^1] required a heuristic assumption and so could not prove these properties directly. The proof for FROST2[^2] provides a direct proof for FROST2 with PedPop as the key generation protocol. Proofs for FROST1 and FROST2 in a recent paper by Bellare, Tessaro, and Zhu[^11] employ an abstraction of key generation, and so demonstrate a direct reduction to PROM+OMDL.
 
 
 ## Part Six: Which assumptions does three-round SimpleTSig signing rely on?
@@ -118,7 +118,7 @@ Why is this transform necessary? In summary, it ensures that in the proof of sec
 
 KEA simply defines an extractor that is assumed to be able to extract the correct values, given the constraints described above. Hence, this assumption is non-falsifiable and therefore considered a strong assumption.
 
-Notably, KEA and Fischlin are often interchangable for protocols that require online extraction for proofs of possession. Lindell22 employs the Fischlin Transform (and hence is in the PROM), but could easily instead employ KEA. The proof for PedPop in [2] assumes KEA, but alternatively, could use Fischlin.
+Notably, KEA and Fischlin are often interchangable for protocols that require online extraction for proofs of possession. Lindell22 employs the Fischlin Transform (and hence is in the PROM), but could easily instead employ KEA. The proof for PedPop[^2] assumes KEA, but alternatively, could use Fischlin.
 
 Forking+rewinding is how the unforgeability of Schnorr signatures is proven to reduce to the hardness of discrete log in the programmable ROM, when Fiat-Shamir is employed. We describe in more detail this reduction at the end of this post. However, while the proof of *unforgeability* for Schnorr signatures incurs acceptable tightness loss when forking+rewinding is used, the same is not true when Schnorr signatures are employed as proofs of possession (PoP) and the environment must *extract* secret information from the adversary, as is the case in PedPop and Lindell22. In the extractability case, the tightness loss incurred is instead *exponential*.  Hence why in the PoP setting where extractability is required, either KEA or Fischlin must instead be employed.
 
@@ -137,29 +137,29 @@ Thanks, and happy threshold signing!
 
 
 
-[1] https://eprint.iacr.org/2020/852
+[^1]: https://eprint.iacr.org/2020/852
 
-[2] https://eprint.iacr.org/2021/1375
+[^2]: https://eprint.iacr.org/2021/1375
 
-[3] https://eprint.iacr.org/2022/374
+[^3]: https://eprint.iacr.org/2022/374
 
-[4] https://www.cs.cornell.edu/courses/cs754/2001fa/129.PDF
+[^4]: https://www.cs.cornell.edu/courses/cs754/2001fa/129.PDF
 
-[5] https://eprint.iacr.org/2020/945
+[^5]: https://eprint.iacr.org/2020/945
 
-[6] https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.134.6445&rep=rep1&type=pdf
+[^6]: https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.134.6445&rep=rep1&type=pdf
 
-[7] https://www.iacr.org/archive/crypto2005/36210148/36210148.pdf
+[^7]: https://www.iacr.org/archive/crypto2005/36210148/36210148.pdf
 
-[8] https://eprint.iacr.org/2001/002
+[^8]: https://eprint.iacr.org/2001/002
 
-[9] https://eprint.iacr.org/2021/866
+[^9]: https://eprint.iacr.org/2021/866
 
-[10] https://eprint.iacr.org/2004/008
+[^10]: https://eprint.iacr.org/2004/008
 
-[11] https://eprint.iacr.org/2022/833
+[^11]: https://eprint.iacr.org/2022/833
 
-[12] https://eprint.iacr.org/2018/417
+[^12]: https://eprint.iacr.org/2018/417
 
 
 
