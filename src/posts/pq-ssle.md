@@ -63,7 +63,7 @@ A way to solve discrete log equivalence proof (DLEQ NIZK) in the CSIDH is provid
 
 ## Conclusion
 
-In this blog post we shortly analyzed a possible replacement of **Whisk** in the Post Quantum setting. We achieved this employing the commutative supersingular isogeny (CSIDH) setting. We have seen that a direct translation from DLOG to VHHS is indeed possible with some limitations. The derived Post Quantum Whisk Protocol is restricted to the *fraud proof version* due the lack of NIZK proof of shuffle in the isogeny setting. The current [zero-knowledge proving system](https://ethresear.ch/t/provable-single-secret-leader-election/7971) is an adaptation of the [Bayer-Groth shuffle argument](http://www0.cs.ucl.ac.uk/staff/J.Groth/MinimalShuffle.pdf) but is currently out of reach for isogeny based cryptography. We hope this blog post stimulates researchers to look into this open problem.
+In this blog post we briefly analyzed a possible replacement of **Whisk** in the Post Quantum setting. We achieved this employing the commutative supersingular isogeny (CSIDH) setting. We have seen that a direct translation from DLOG to VHHS is indeed possible with some limitations. The derived Post Quantum Whisk Protocol is restricted to the *fraud proof version* due the lack of NIZK proof of shuffle in the isogeny setting. The current [zero-knowledge proving system](https://ethresear.ch/t/provable-single-secret-leader-election/7971) is an adaptation of the [Bayer-Groth shuffle argument](http://www0.cs.ucl.ac.uk/staff/J.Groth/MinimalShuffle.pdf) but is currently out of reach for isogeny based cryptography. We hope this blog post stimulates researchers to look into this open problem.
 
 ## Acknowledgement
 
