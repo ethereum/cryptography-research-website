@@ -42,6 +42,11 @@ interface Props {
 // add here the list of external blog posts, with title, date and link
 const externalLinks = [
   {
+    title: 'A Universal Verification Equation for Data Availability Sampling',
+    date: '2022-08-04',
+    link: 'https://ethresear.ch/t/a-universal-verification-equation-for-data-availability-sampling/13240'
+  },
+  {
     title: 'Whisk: A practical shuffle-based SSLE protocol for Ethereum',
     date: '2022-01-13',
     link: 'https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763'
