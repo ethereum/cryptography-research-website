@@ -1,3 +1,10 @@
+---
+title: 'Towards practical post quantum Single Secret Leader Election (SSLE) - Part 1'
+description: 'Discussing a possible post quantum SSLE solution'
+author: 'Antonio Sanso'
+date: '2022-08-30'
+---
+
 # Towards practical post quantum Single Secret Leader Election (SSLE) - Part 1
 
 ## Introduction
