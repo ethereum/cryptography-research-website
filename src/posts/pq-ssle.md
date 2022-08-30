@@ -5,8 +5,6 @@ author: 'Antonio Sanso'
 date: '2022-08-30'
 ---
 
-# Towards practical post quantum Single Secret Leader Election (SSLE) - Part 1
-
 ## Introduction
 
 [Single Secret Leader Election](https://eprint.iacr.org/2020/025.pdf) (*SSLE* from now on) is an important research problem the cryptographic community has been researching on. The *SSLE* protocols allow a set of users to elect a leader ensuring that the identity of the winner remains secret until he decides to reveal himself.
