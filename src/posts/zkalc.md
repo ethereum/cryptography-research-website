@@ -57,18 +57,14 @@ More complicated operations like MSMs and pairing products are amortized and the
 
 For such operations, we [collect benchmark data](https://github.com/asn-d6/zkalc/blob/main/backend/arkworks/benches/bench_arkworks.rs#L52) for various sizes. For example, consider the figure below which displays the benchmark data from a $\mathbb G_1$ MSM operation for sizes from $2$ to $2^{21}$ (both axis are in log scale):
 
-<div style="width: 1150px;height: 340px;">
 <img src="/images/posts/zkalc/points.svg" alt="benchmark data points"/>
-</div>
 
 
 To answer user queries within the benchmark range, we perform [polynomial interpolation](https://www.youtube.com/watch?v=yQsDxOdn1hk) over the benchmark data.
 
 That is, for each pair of benchmark data $(x_i, f(x_i))$ and $(x_{i+1}, f(x_{i+1}))$ we trace the line [that goes through both points](https://github.com/asn-d6/zkalc/blob/main/frontend/lib/estimates.js#L26). We end up with a piecewise function that covers the entire benchmark range, as we can see in the figure below:
 
-<div style="width: 1150px;height: 340px;">
 <img src="/images/posts/zkalc/interpolation.svg" alt="interpolation inside the benchmark range"/>
-</div>
 
 
 For user queries outside of the benchmarking range we [extrapolate](https://en.wikipedia.org/wiki/Extrapolation) via non-linear least squares. To make things more exciting we decided that it should be done... in [Javascript](https://github.com/asn-d6/zkalc/blob/main/frontend/lib/estimates.js) inside your browser.
@@ -77,9 +73,7 @@ In the specific case of MSMs, Pippenger's complexity is [well known](https://jbo
 
 Here is an illustration of the extrapolation behavior of $\mathbb G_1$ MSM outside of the benchmarking range (that is, after $2^{21}$):
 
-<div style="width: 1150px;height: 340px;">
 <img src="/images/posts/zkalc/extrapolation.svg" alt="extrapolation outside the benchmark range"/>
-</div>
 
 We do not expect extrapolation to faithfully follow the benchmarks. We believe however that the estimates provide a rough idea of how long an algorithm will take.
 
