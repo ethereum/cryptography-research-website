@@ -5,13 +5,9 @@ author: 'George Kadianakis, Michele Orrù'
 date: '2023-01-16'
 ---
 
-<center>
 <a href="https://zka.lc">
 <img src="/images/posts/zkalc/zkalc_psychedelic.png" alt="psychedelic protocol descriptions with zkalc logo" width="700"/>
 </a>
-</center>
-
-# [zkalc](https://zka.lc) is a cryptographic calculator!
 
 [zkalc](https://zka.lc) helps you calculate how much time cryptographic operations take on a real computer.
 
