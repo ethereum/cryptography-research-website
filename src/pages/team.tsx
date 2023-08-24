@@ -140,6 +140,20 @@ const Team: NextPage = () => {
           <Stack>
             <Text>
               <Link
+                href='https://sites.google.com/view/arantxazapico'
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                isExternal
+              >
+                <strong>Arantxa Zapico.</strong>
+              </Link>{' '}
+              Zero-knowledge proofs; lookup arguments, vector commitments.
+            </Text>
+          </Stack>          
+
+          <Stack>
+            <Text>
+              <Link
                 href='https://zhenfeizhang.github.io/material/aboutme/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
