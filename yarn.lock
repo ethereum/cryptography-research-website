@@ -1218,9 +1218,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001283:
-  version "1.0.30001319"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001319.tgz#eb4da4eb3ecdd409f7ba1907820061d56096e88f"
-  integrity sha512-xjlIAFHucBRSMUo1kb5D4LYgcN1M45qdKP++lhqowDpwJwGkpIRTt5qQqnhxjj1vHcI7nrJxWhCC1ATrCEBTcw==
+  version "1.0.30001524"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001524.tgz#1e14bce4f43c41a7deaeb5ebfe86664fe8dadb80"
+  integrity sha512-Jj917pJtYg9HSJBF95HVX3Cdr89JUyLT4IZ8SvM5aDRni95swKgYi3TgYLH5hnGfPE/U1dg6IfZ50UsIlLkwSA==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -2893,9 +2893,9 @@ ms@^2.1.1:
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
 nanoid@^3.1.30:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
-  integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
+  integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
 natural-compare@^1.4.0:
   version "1.4.0"

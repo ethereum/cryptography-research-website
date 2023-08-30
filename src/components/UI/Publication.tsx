@@ -6,11 +6,12 @@ import { Abstract } from './Abstract';
 interface Props {
   title: string;
   authors: string;
-  conference: string;
+  conference?: string;
+  year?: number;
   link: string;
 }
 
-export const Publication: FC<Props> = ({ title, authors, conference, link, children }) => {
+export const Publication: FC<Props> = ({ title, authors, conference, year, link, children }) => {
   return (
     <Stack>
       <Text mb={-1} fontWeight='bold'>
@@ -20,7 +21,7 @@ export const Publication: FC<Props> = ({ title, authors, conference, link, child
         <em>{authors}.</em>
       </Text>
       <Text fontSize='sm'>
-        {conference}{' '}
+        {conference ? conference : `${year}.`}{' '}
         <Link
           href={link}
           color='brand.lightblue'
