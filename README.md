@@ -127,6 +127,57 @@ The source files (`.md`) for the bounties pages are located at `/src/bounties-da
 
 For a better organization, images used in bounties pages are placed inside `/public/images/bounties/` and the path to the image have to be referenced as `/images/bounties/${filename}` (check `/src/bounties-data-source/rsa/assumptions.md` as example).
 
+## How to add a new entry (Publication) on Research page
+
+The best way is to just follow the current `Publication` structure you can find in `/src/pages/research.tsx` and use any other existent entry as example. For publications that are not associated to a conference, just use the `year` prop, with a numeric value, like the example below:
+
+```
+<Publication
+  title='Fast amortized KZG proofs'
+  authors='Dankrad Feist, Dmitry Khovratovich'
+  year={2023}
+  link='https://eprint.iacr.org/2023/033'
+>
+  <Text mb={4} fontSize='sm'>
+    <em>
+      In this note we explain how to compute n KZG proofs for a polynomial of degree d in
+      time superlinear of (n+d). Our technique is used in lookup arguments and vector
+      commitment schemes.
+    </em>
+  </Text>
+</Publication>
+```
+
+For publications associated to a conference, use the `conference` property instead, with a text value. Don't use `year` in this case, just include it as part of the `conference` value, as you can see in the example below:
+
+```
+<Publication
+  title='Aggregatable subvector commitments for stateless cryptocurrencies'
+  authors='Alin Tomescu, Ittai Abraham, Vitalik Buterin, Justin Drake, Dankrad Feist, Dmitry
+  Khovratovich'
+  conference='SCN 2020.'
+  link='https://eprint.iacr.org/2020/527.pdf'
+>
+  <Text fontSize='sm'>
+    <em>
+      An aggregatable subvector commitment (aSVC) scheme is a vector commitment (VC)
+      scheme that can aggregate multiple proofs into a single, small subvector proof. In
+      this paper, we formalize aSVCs and give a construction from constant-sized
+      polynomial commitments. Our construction is unique in that it has linear-sized
+      public parameters, it can compute all constant-sized proofs in quasilinear time, it
+      updates proofs in constant time and it can aggregate multiple proofs into a
+      constant-sized subvector proof. Furthermore, our concrete proof sizes are small due
+      to our use of pairing-friendly groups. We use our aSVC to obtain a payments-only
+      stateless cryptocurrency with very low communication and computation overheads.
+      Specifically, our constant-sized, aggregatable proofs reduce each block&apos;s proof
+      overhead to a single group element, which is optimal. Furthermore, our subvector
+      proofs speed up block verification and our smaller public parameters further reduce
+      block size.
+    </em>
+  </Text>
+</Publication>
+```
+
 ### Notes
 
 - Dates should follow the `yyyy-mm-dd` format (for both internal and external posts), like `date: '2022-03-16'`
