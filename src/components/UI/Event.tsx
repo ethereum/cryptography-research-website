@@ -4,9 +4,10 @@ import { FC } from 'react';
 interface Props {
   conference: string;
   workshop: string;
+  url: string;
 }
 
-export const Event: FC<Props> = ({ conference, workshop, children }) => {
+export const Event: FC<Props> = ({ conference, workshop, children, url }) => {
   return (
     <Stack>
       <Heading as='h2' fontSize='3xl' fontWeight={600} mb={2}>
@@ -15,7 +16,7 @@ export const Event: FC<Props> = ({ conference, workshop, children }) => {
 
       <Text mb={10}>
         <Link
-          href='https://sites.google.com/view/cryptographic-frontier-2022/'
+          href={url}
           color='brand.lightblue'
           _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
           isExternal
