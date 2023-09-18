@@ -25,6 +25,8 @@ const Events: NextPage = () => {
                The purpose of this gathering was to collectively delve into the intricacies of MinRoot and assess its potential implications for the Ethereum ecosystem. 
                Preliminary analysis was conducted by Gaetan Leurent, Maria Naya Plasencia, and Stefano Tessaro. At the event, the researchers were divided into three groups,
                each tasked with different aspects of MinRoot's evaluation. The resulting report serves as a comprehensive joint summary, presenting the culmination of the researchers' intensive efforts during the event.
+
+               <a href="https://crypto.ethereum.org/events/minrootanalysis2023.pdf">Report (PDF, 18 September 2023)</a>.
           </Event>
           <Event
             conference='Cryptographic Frontier 2022, Trondheim'
