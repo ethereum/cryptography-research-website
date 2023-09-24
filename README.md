@@ -178,6 +178,26 @@ For publications associated to a conference, use the `conference` property inste
 </Publication>
 ```
 
+## How to add a new entry on Events page
+
+Follow the current `Event` structure you can find in `/src/pages/events.tsx` and use any other existent entry as example, like the example below:
+
+```
+<Event
+  conference='Cryptographic Frontier 2022, Trondheim'
+  workshop='Open Problems in Decentralized Computation at Eurocrypt 2022'
+  url='https://sites.google.com/view/cryptographic-frontier-2022/'
+>
+  this workshop brings the most interesting and challenging open cryptographic questions
+  that Ethereum, Filecoin and other blockchain systems face, to the attention of academia.
+  We will cover a large spectrum of research topics, such as vector commitments, SNARKs,
+  shuffles, authenticated data structures and more. We will start the day with an update
+  on to the problems discussed at last year&apos;s workshop.
+</Event>
+```
+
+Be sure to provide a value for `conference`, `workshop` and the correct `url`.
+
 ### Notes
 
 - Dates should follow the `yyyy-mm-dd` format (for both internal and external posts), like `date: '2022-03-16'`
