@@ -3,12 +3,7 @@ import type { NextPage } from 'next';
 
 import { BountyCard, PageMetadata } from '../../components/UI/';
 
-import {
-  LEGENDRE_PRF_URL,
-  MIMC_HASH_BOUNTIES_URL,
-  RSA_URL,
-  ZK_HASH_BOUNTIES_URL
-} from '../../constants';
+import { MIMC_HASH_BOUNTIES_URL, ZK_HASH_BOUNTIES_URL } from '../../constants';
 
 const Bounties: NextPage = () => {
   return (
@@ -24,27 +19,6 @@ const Bounties: NextPage = () => {
         </Heading>
 
         <Stack spacing={4}>
-          <BountyCard
-            url={RSA_URL}
-            title='RSA Bounties'
-            postedBy='Ethereum Foundation'
-            totalBounty='$28,000 USD and 28 ETH'
-          >
-            For the Verifiable Delay Function (VDF) project, the RSA Low Order and Adaptive Root
-            assumptions have come into spotlight as they are required for the two VDF proof
-            construction. Several bounties are available for proving or disproving the assumptions.
-          </BountyCard>
-
-          <BountyCard
-            url={LEGENDRE_PRF_URL}
-            title='Legendre PRF Bounties'
-            postedBy='Ethereum Foundation'
-            totalBounty='$29,000 USD and 24 ETH'
-          >
-            We are interested in how resistant the Legendre pseudo-random function is to key
-            recovery attacks, as well as any other interesting results on the Legendre PRF.
-          </BountyCard>
-
           <BountyCard
             url={MIMC_HASH_BOUNTIES_URL}
             title='MiMC Hash Challenge'
