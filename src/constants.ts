@@ -25,17 +25,13 @@ export const POSTS_DIR = 'src/posts';
 
 // bounties data sources
 export const BOUNTIES_DATA_SOURCE = 'src/bounties-data-source';
-export const LEGENDRE_PRF_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/legendre-prf`;
 export const ZK_HASH_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/zk-hash.md`;
-export const RSA_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/rsa`;
 export const MIMC_HASH_DATA_SOURCE = `${BOUNTIES_DATA_SOURCE}/mimc-hash-challenge.md`;
 
 // bounties URLs
 export const MIMC_HASH_BOUNTIES_URL = '/bounties/mimc-hash-challenge';
-export const LEGENDRE_PRF_URL = '/bounties/legendre-prf';
 export const LEGENDRE_PRF_BOUNTIES_URL = '/bounties/legendre-prf/algorithmic-bounties';
 export const LEGENDRE_PRF_CONCRETE_INSTANCES_BOUNTIES_URL =
   '/bounties/legendre-prf/concrete-instance-bounties';
 export const ZK_HASH_BOUNTIES_URL = '/bounties/zk-hash';
-export const RSA_URL = '/bounties/rsa';
 export const RSA_ASSUMPTIONS_URL = '/bounties/rsa/assumptions';
