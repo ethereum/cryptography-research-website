@@ -13,22 +13,90 @@ const Research: NextPage = () => {
       />
 
       <main>
-        <ResearchArea subtitle='Polynomial and Vector Commitments' mb={10}>
+        <ResearchArea subtitle='Data Availability Sampling' mb={10}>
+
+        <Publication
+            title='FRIDA: Data Availability Sampling from FRI'
+            authors='Mathias Hall-Andersen, Mark Simkin, Benedikt Wagner'
+            conference='Crypto 2024'
+            link='https://eprint.iacr.org/2024/248.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                As blockchains like Ethereum continue to grow, clients with limited resources can no longer store the entire chain. 
+                Light nodes that want to use the blockchain, without verifying that it is in a good state overall, can just download the block headers without the corresponding block contents. 
+                As those light nodes may eventually need some of the block contents, they would like to ensure that they are in principle available.
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+                Data availability sampling, introduced by Bassam et al., is a process that allows light nodes to check the availability of data without download it. 
+                In a recent effort, Hall-Andersen, Simkin, and Wagner have introduced formal definitions and analyzed several constructions. 
+                While their work thoroughly lays the formal foundations for data availability sampling, the constructions are either prohibitively expensive, use a trusted setup, or have a download complexity for light clients scales with a square root of the data size.
+              </em>
+            </Text>
+            <Text fontSize='sm'>
+              <em>
+              In this work, we make a significant step forward by proposing an efficient data availability sampling scheme without a trusted setup and only polylogarithmic overhead. 
+              To this end, we find a novel connection with interactive oracle proofs of proximity (IOPPs). 
+              Specifically, we prove that any IOPP meeting an additional consistency criterion can be turned into an erasure code commitment, and then, leveraging a compiler due to Hall-Andersen, Simkin, and Wagner, into a data availability sampling scheme. 
+              This new connection enables data availability to benefit from future results on IOPPs. 
+              We then show that the widely used FRI IOPP satisfies our consistency criterion and demonstrate that the resulting data availability sampling scheme outperforms the state-of-the-art asymptotically and concretely in multiple parameters.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='Foundations of Data Availability Sampling'
+            authors='Mathias Hall-Andersen, Mark Simkin, Benedikt Wagner'
+            link='https://eprint.iacr.org/2023/1079.pdf'
+            year={2023}
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                Towards building more scalable blockchains, an approach known as data availability
+                sampling (DAS) has emerged over the past few years. Even large blockchains like
+                Ethereum are planning to eventually deploy DAS to improve their scalability. In a
+                nutshell, DAS allows the participants of a network to ensure the full availability
+                of some data without any one participant downloading it entirely. Despite the
+                significant practical interest that DAS has received, there are currently no formal
+                definitions for this primitive, no security notions, and no security proofs for any
+                candidate constructions. For a cryptographic primitive that may end up being widely
+                deployed in large real-world systems, this is a rather unsatisfactory state of
+                affairs.
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+                In this work, we initiate a cryptographic study of data availability sampling. To
+                this end, we define data availability sampling precisely as a clean cryptographic
+                primitive. Then, we show how data availability sampling relates to erasure codes. We
+                do so by defining a new type of commitment schemes which naturally generalizes
+                vector commitments and polynomial commitments. Using our framework, we analyze
+                existing constructions and prove them secure. In addition, we give new constructions
+                which are based on weaker assumptions, computationally more efficient, and do not
+                rely on a trusted setup, at the cost of slightly larger communication complexity.
+                Finally, we evaluate the trade-offs of the different constructions.
+              </em>
+            </Text>
+          </Publication>
+
           <Publication
             title='Fast amortized KZG proofs'
             authors='Dankrad Feist, Dmitry Khovratovich'
             year={2023}
             link='https://eprint.iacr.org/2023/033'
           >
-            <Text mb={4} fontSize='sm'>
+            <Text fontSize='sm'>
               <em>
-                In this note we explain how to compute n KZG proofs for a polynomial of degree d in
-                time superlinear of (n+d). Our technique is used in lookup arguments and vector
-                commitment schemes.
+                In this note we explain how to compute n KZG proofs for a polynomial of degree d in time superlinear of (n + d). 
+                Our technique is used in lookup arguments and vector commitment schemes.
               </em>
             </Text>
           </Publication>
-
+      
           <Publication
             title='Halo Infinite: Proof-Carrying Data from Additive Polynomial Commitments'
             authors='Dan Boneh, Justin Drake, Ben Fisch, Ariel Gabizon'
@@ -127,7 +195,173 @@ const Research: NextPage = () => {
           </Publication>
         </ResearchArea>
 
+        <ResearchArea subtitle='Leader Election' mb={10}>
+
+        <Publication
+            title='Jackpot: Non-Interactive Aggregatable Lotteries'
+            authors='Nils Fleischhacker, Mathias Hall-Andersen, Mark Simkin, Benedikt Wagner'
+            link='https://eprint.iacr.org/2023/1570.pdf'
+            year={2023}
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                In proof-of-stake blockchains, liveness is ensured by repeatedly selecting random groups of parties as leaders, who are then in charge of proposing new blocks and driving consensus forward, among all their participants. 
+                The lotteries that elect those leaders need to ensure that adversarial parties are not elected disproportionately often and that an adversary can not tell who was elected before those parties decide to speak, as this would potentially allow for denial-of-service attacks. 
+                Whenever an elected party speaks, it needs to provide a winning lottery ticket, which proves that the party did indeed win the lottery. 
+                Current solutions require all published winning tickets to be stored individually on-chain, which introduces undesirable storage overheads. 
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+                In this work, we introduce <i>non-interactive aggregatable lotteries</i> and show how these can be constructed efficiently. 
+                Our lotteries provide the same security guarantees as previous lottery constructions, but additionally allow any third party to take a set of published winning tickets and aggregate them into one short digest. 
+                We provide a formal model of our new primitive in the universal composability framework. 
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+              As one of our main technical contributions, which may be of independent interest, we introduce aggregatable vector commitments with simulation-extractability and present a concretely efficient construction thereof in the algebraic group model in the presence of a random oracle. 
+                We show how these commitments can be used to construct non-interactive aggregatable lotteries. 
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+              We have implemented our construction, called <i>Jackpot</i>, and provide benchmarks that underline its concrete efficiency.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='Distributed Shuffling in Adversarial Environments'
+            authors='Kasper Green Larsen, Maciej Obremski, Mark Simkin'
+            conference='ITC 2023.'
+            link='https://eprint.iacr.org/2022/560.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We study mix-nets in the context of cryptocurrencies. Here we have many
+                computationally weak shufflers that speak one after another and want to jointly
+                shuffle a list of ciphertexts {<InlineMath math={'(c_1, \\ldots, c_n)'} />}. Each
+                shuffler can only permute {<InlineMath math={'k \\ll n'} />} ciphertexts at a time.
+                An adversary {<InlineMath math={'\\mathcal{A}'} />} can track some of the
+                ciphertexts and adaptively corrupt some of the shufflers.
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We present a simple protocol for shuffling the list of ciphertexts efficiently. The
+                main technical contribution of this work is to prove that our simple shuffling
+                strategy does indeed provide good anonymity guarantees and at the same time
+                terminates quickly.
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+                Our shuffling algorithm provides a strict improvement over the current shuffling
+                strategy in Ethereum's block proposer elections. Our algorithm is secure against a
+                stronger adversary, provides provable security guarantees, and is comparable in
+                efficiency to the current approach.
+              </em>
+            </Text>
+          </Publication>
+          
+          <Publication
+            title='Curdleproofs'
+            authors='Gottfried Herold, George Kadianakis, Dmitry Khovratovich, Mary Maller, Mark Simkin, Zhenfei Zhang'
+            link='https://github.com/asn-d6/curdleproofs/blob/main/doc/curdleproofs.pdf'
+            year = {2022}
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                Curdleproofs is a zero-knowledge shuffle argument which is inspired by the work of Bayer and Groth [BG12].
+                Curdleproofs has applications to secret leader elections which prevents DDOS attacks on the Ethereum Proof of Stake consensus layer.
+                Curdleproofs runs over a public coin setup in any group where the DDH assumption holds.
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+                Curdleproofs is built from well established inner product arguments and does not need a trusted setup.
+                The prover and verifier both run in linear time asymptotically which small constants because there is no reduction to NP constraints.
+                Their concrete run time is highly practical:  shuffling 252 elements requires 0.5 seconds for the prover and 25 milliseconds for the verifier on an Intel i7-8550U CPU at 1.80GHz over the BLS12-381 curve.
+                The proof size is logarithmic (dominated by <InlineMath math={'10 \\log (\\ell)'} /> for <InlineMath math={'\\ell'} /> the number of elements).
+              </em>
+            </Text>
+          </Publication>
+        </ResearchArea>
+
         <ResearchArea subtitle='Verifiable Delay Functions and Random Beacons' mb={10}>
+          
+          <Publication
+            title='Time-Based Cryptography From Weaker Assumptions: Randomness Beacons, Delay Functions and More'
+            authors='Damiano Abram, Lawrence Roy, Mark Simkin'
+            link='https://eprint.iacr.org/2024/769.pdf'
+            year='2024'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                The assumption that certain computations inherently require some sequential time has established itself as a powerful tool for cryptography. 
+                It allows for security and liveness guarantees in distributed protocols that are impossible to achieve with classical hardness assumptions. 
+                Unfortunately, many constructions from the realm of time-based cryptography are based on new and poorly understood hardness assumptions, which tend not to stand the test of time (cf. Leurent et al. 2023, Peikert & Tang 2023).
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+                In this work, we make progress on several fronts. 
+                We formally define the concept of a delay function and present a construction thereof from minimal assumptions. 
+                We show that these functions, in combination with classical cryptographic objects that satisfy certain efficiency criteria, would allow for constructing delay encryption, which is otherwise only known to exist based on a new hardness assumption about isogenies. 
+                We formally define randomness beacons as they are used in the context of blockchains, and we show that (linearly homomorphic) time-lock puzzles allow for efficiently constructing them.
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+                Our work puts time-based cryptography on a firmer theoretical footing, provides new constructions from simpler assumptions, and opens new avenues for constructing delay encryption.
+              </em>
+            </Text>
+          </Publication>
+          
+          <Publication
+            title='Cryptanalysis of Algebraic Verifiable Delay Functions'
+            authors='Alex Biryukov, Ben Fisch, Gottfried Herold, Dmitry Khovratovich, Gaëtan Leurent, María Naya-Plasencia, Benjamin Wesolowski'
+            conference='Crypto 2024'
+            link='https://eprint.iacr.org/2024/873.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                Verifiable Delay Functions (VDF) are a class of cryptographic primitives aiming to guarantee a minimum computation time, even for an adversary with massive parallel computational power. 
+                They are useful in blockchain protocols, and several practical candidates have been proposed based on exponentiation in a large finite field: Sloth++, Veedo, MinRoot. 
+                The underlying assumption of these constructions is that computing an exponentiation <InlineMath math={'x^e'} /> requires at least <InlineMath math={'\\log_2 e'} /> sequential multiplications. 
+                In this work, we analyze the security of these algebraic VDF candidates. 
+                In particular, we show that the latency of exponentiation can be reduced using parallel computation, against the preliminary assumptions.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='Towards a Quantum-Resistant Weak Verifiable Delay Function'
+            authors='Luciano Maino, Thomas Decru, Antonio Sanso'
+            conference='Latincrypt 2023'
+            link='https://eprint.iacr.org/2023/1197.pdf'
+          >
+
+            <Text fontSize='sm'>
+              <em>
+              In this paper, we present a new quantum-resistant weak Verifiable Delay Function based on a purely algebraic construction. 
+              Its delay depends on computing a large-degree isogeny between elliptic curves, whereas its verification relies on the computation of isogenies between products of two elliptic curves. 
+              One of its major advantages is its expected fast verification time. 
+              However, it is important to note that the practical implementation of our theoretical framework poses significant challenges. 
+              We examine the strengths and weaknesses of our construction, analyze its security and provide a proof-of-concept implementation.
+              </em>
+            </Text>
+          </Publication>
+          
           <Publication
             title='Origami: Fold a Plonk for Ethereum’s VDF'
             authors='Zhenfei Zhang, Ethereum Foundation'
@@ -313,6 +547,55 @@ const Research: NextPage = () => {
         </ResearchArea>
 
         <ResearchArea subtitle='Zero-Knowledge Proofs' mb={10}>
+        <Publication
+            title='Beyond the circuit: How to Minimize Foreign Arithmetic in ZKP Circuits'
+            authors='Michele Orrù, George Kadianakis, Mary Maller, Greg Zaverucha'
+            year={2024}
+            link='https://eprint.iacr.org/2024/265.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+              Zero-knowledge circuits are frequently required to prove gadgets that are not optimised for the constraint system
+              in question. A particularly daunting task is to embed foreign arithmetic such as Boolean operations, field arithmetic,
+              or public-key cryptography. We construct techniques for offloading foreign arithmetic from a zero-knowledge circuit
+              including (i) equality of discrete logarithms across different groups; (ii) scalar multiplication without requiring elliptic
+              curve operations; (iii) proving knowledge of an AES encryption. To achieve our goal, we employ techniques inherited
+              from rejection sampling and lookup protocols. We implement and provide concrete benchmarks for our protocols.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs.'
+            authors='Jens Ernstberger, Stefanos Chaliasos, George Kadianakis, Sebastian Steinhorst, Philipp Jovanovic, Arthur Gervais, Benjamin Livshits, Michele Orrù'
+            link='https://eprint.iacr.org/2023/1503.pdf'
+            year={2023}
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+              Zero-Knowledge Proofs (ZKPs), especially Succinct Non-interactive ARguments of Knowledge (SNARKs), have garnered significant attention in modern cryptographic applications. 
+              Given the multitude of emerging tools and libraries, assessing their strengths and weaknesses is nuanced and time-consuming. 
+              Often, claimed results are generated in isolation, and omissions in details render them irreproducible. 
+              The lack of comprehensive benchmarks, guidelines, and support frameworks to navigate the ZKP landscape effectively is a major barrier in the development of ZKP applications. 
+              </em>
+            </Text>
+
+            <Text  mb={4} fontSize='sm'>
+              <em>
+              In response to this need, we introduce zk-Bench, the first benchmarking framework and estimator tool designed for performance evaluation of public-key cryptography, with a specific focus on practical assessment of general-purpose ZKP systems. 
+              To simplify navigating the complex set of metrics and qualitative properties, we offer a comprehensive open-source evaluation platform, which enables the rigorous dissection and analysis of tools for ZKP development to uncover their trade-offs throughout the entire development stack; from low-level arithmetic libraries, to high-level tools for SNARK development. 
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+                Using zk-Bench, we (i) collect data across 13 different elliptic curves implemented across 9 libraries, (ii) evaluate 5 tools for ZKP development and (iii) provide a tool for estimating cryptographic protocols, instantiated for the Plonk proof system, achieving an accuracy of 6 − 32% for ZKP circuits with up to millions of gates. 
+                By evaluating zk-Bench for various hardware configurations, we find that certain tools for ZKP development favor compute-optimized hardware, while others benefit from memory-optimized hardware. 
+                We observed performance enhancements of up to 40% for memory-optimized configurations and 50% for compute-optimized configurations, contingent on the specific ZKP development tool utilized.
+              </em>
+            </Text>
+          </Publication>
+
           <Publication
             title='Baloo: Nearly Optimal Lookup Arguments'
             authors='Arantxa Zapico, Ariel Gabizon, Dmitry Khovratovich, Mary Maller, Carla Ràfols'
@@ -862,6 +1145,7 @@ const Research: NextPage = () => {
         </ResearchArea>
 
         <ResearchArea subtitle='Threshold Cryptography' mb={10}>
+
           <Publication
             title='Fully Adaptive Schnorr Threshold Signatures'
             authors='Elizabeth Crites, Chelsea Komlo, Mary Maller'
@@ -1089,6 +1373,75 @@ const Research: NextPage = () => {
         </ResearchArea>
 
         <ResearchArea subtitle='Lattice Cryptography' mb={10}>
+
+        <Publication
+            title='Threshold raccoon: Practical threshold signatures from standard lattice assumptions'
+            authors='Rafaël Del Pino, Shuichi Katsumata, Mary Maller, Fabrice Mouhartem, Thomas Prest, Markku-Juhani Saarinen'
+            conference='Eurocrypt 2024.'
+            link='https://eprint.iacr.org/2024/184.pdf'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+              Threshold signatures improve both availability and security of digital signatures by splitting the
+              signing key into N shares handed out to different parties. Later on, any subset of at least T parties can
+              cooperate to produce a signature on a given message. While threshold signatures have been extensively
+              studied in the pre-quantum setting, they remain sparse from quantum-resilient assumptions.
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'> 
+              <em>            
+                We present the first efficient lattice-based threshold signatures with signature size 13 KiB and communication cost 40 KiB per user, supporting a threshold size as large as 1024 signers. We provide an
+                accompanying high performance implementation. The security of the scheme is based on the same assumptions as Dilithium, a signature recently selected by NIST for standardisation which, as far as we
+                know, cannot easily be made threshold efficiently.
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+                All operations used during signing are due to symmetric primitives and simple lattice operations;
+                in particular our scheme does not need heavy tools such as threshold fully homomorphic encryption or
+                homomorphic trapdoor commitments as in prior constructions. The key technical idea is to use one-time
+                additive masks to mitigate the leakage of the partial signing keys through partial signatures.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='Chipmunk: Better Synchronized Multi-Signatures from Lattices'
+            authors='Nils Fleischhacker, Gottfried Herold, Mark Simkin, Zhenfei Zhang'
+            conference='CCS 2023.'
+            link='https://eprint.iacr.org/2023/1820'
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                Multi-signatures allow for compressing many signatures for the same message that were generated under independent keys into one small aggregated signature. 
+                This primitive is particularly useful for proof-of-stake blockchains, like Ethereum, where the same block is signed by many signers, who vouch for the block's validity.
+                Being able to compress all signatures for the same block into a short string significantly reduces the on-chain storage costs, which is an important efficiency metric for blockchains.
+              </em>
+            </Text>
+            <Text mb={4} fontSize='sm'>
+              <em>
+                In this work, we consider multi-signatures in the synchronized setting, where the signing algorithm takes an additional time parameter as input and it is only required that signatures for the same time step are aggregatable.
+                The synchronized setting is simpler than the general multi-signature setting, but is sufficient for most blockchain related applications, as signers are naturally synchronized by the length of the chain.
+              </em>
+            </Text>
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We present Chipmunk, a concretely efficient lattice-based multi-signature scheme in the synchronized setting that allows for signing an a-priori bounded number of messages.
+                Chipmunk allows for non-interactive aggregation of signatures and is secure against rogue-key attacks.
+                The construction is plausibly secure against quantum adversaries as our security relies on the assumed hardness of the short integer solution problem.
+              </em>
+            </Text>
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We significantly improve upon the previously best known construction in this setting by Fleischhacker, Simkin, and Zhang (CCS 2022).
+                Our aggregate signature size is 5.6x smaller and for 112 bits of security our construction allows for compressing 8192 individual signatures into a multi-signature of size around 136KB.
+                We provide a full implementation of Chipmunk and provide extensive benchmarks studying our construction's efficiency.
+              </em>
+            </Text>
+          </Publication>
+
           <Publication
             title='Squirrel: Efficient Synchronized Multi-Signatures from Lattices'
             authors='Nils Fleischhacker, Mark Simkin, Zhenfei Zhang'
@@ -1410,6 +1763,21 @@ const Research: NextPage = () => {
         </ResearchArea>
 
         <ResearchArea subtitle='Elliptic Curves, Class Groups and Isogenies' mb={10}>
+        <Publication
+            title='Breaking the decisional Diffie-Hellman problem in totally non-maximal imaginary quadratic orders'
+            authors='Antonio Sanso'
+            link='https://eprint.iacr.org/2024/201.pdf'
+            year={2024}
+          >
+
+            <Text fontSize='sm'>
+              <em>
+              This paper introduces an algorithm to efficiently break the Decisional Diffie-Hellman (DDH) assumption in totally non-maximal imaginary quadratic orders, specifically when <InlineMath math={'\\Delta_1 = 3'} />, and <InlineMath math={'f'} /> is non-prime with knowledge of a single factor. 
+              Inspired by Shanks and Dedekind's work on 3-Sylow groups, we generalize their observations to undermine DDH security.
+              </em>
+            </Text>
+          </Publication>
+          
           <Publication
             title='A note on key control in CSIDH'
             authors='Antonio Sanso, Ethereum Foundation, Ruhr Universität Bochum'
@@ -1492,6 +1860,80 @@ const Research: NextPage = () => {
         </ResearchArea>
 
         <ResearchArea subtitle='Miscellaneous'>
+
+        <Publication
+            title='Key derivable signature and its application in blockchain stealth address'
+            authors='Ruida Wang, Ziyi Li, Xianhui Lu, Zhenfei Zhang, Kunpeng Wang'
+            conference='Cybersecurity, 2024'
+            link='https://link.springer.com/content/pdf/10.1186/s42400-024-00231-x.pdf'
+          >
+            <Text fontSize='sm'>
+              <em>
+                Stealth address protocol (SAP) is widely used in blockchain to achieve anonymity. 
+                In this paper, we formalize a key derivable signature scheme (KDS) to capture the functionality and security requirements of SAP. 
+                We then propose a framework to construct key separation KDS, which follows the <i>key separation</i> principle as all existing SAP solutions to avoid the reuse of the master keys in the derivation and signature component. 
+                We also study the joint security in KDS and construct a key reusing KDS framework, which implies the first compact stealth address protocol using a single key pair. 
+                Finally, we provide instantiations based on the elliptic curve (widely used in cryptocurrencies) and on the lattice (with quantum resistance), respectively.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='Extractable Witness Encryption for KZG Commitments and Efficient Laconic OT'
+            authors='Nils Fleischhacker, Mathias Hall-Andersen, Mark Simkin'
+            link='https://eprint.iacr.org/2024/264.pdf'
+            year={2024}
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We present a concretely efficient and simple extractable witness encryption scheme for KZG polynomial commitments. 
+                It allows to encrypt a message towards a triple <InlineMath math={'(\\mathsf{com}, \\alpha, \\beta)'} />, where <InlineMath math={'\\mathsf{com}'} /> is a KZG commitment for some polynomial <InlineMath math={'f'} />. 
+                Anyone with an opening for the commitment attesting <InlineMath math={'f(\\alpha) = \\beta'} /> can decrypt, but without knowledge of a valid opening the message is computationally hidden. 
+                Our construction is simple and highly efficient. 
+                The ciphertext is only a single group element.
+                Encryption and decryption both require a single pairing evaluation and a constant number of group operations.
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+              Using our witness encryption scheme, we construct a simple and highly efficient laconic OT protocol, which significantly outperforms the state of the art in most important metrics.
+              </em>
+            </Text>
+          </Publication>
+
+          <Publication
+            title='OCash: Fully Anonymous Payments between Blockchain Light Clients'
+            authors='Adam Blatchley Hansen, Jesper Buus Nielsen, Mark Simkin'
+            link='https://eprint.iacr.org/2024/246.pdf'
+            year={2024}
+          >
+            <Text mb={4} fontSize='sm'>
+              <em>
+                We study blockchain-based provably anonymous payment systems between <i>light clients</i>.
+                Such clients interact with the blockchain through full nodes, who can see what the light clients read and write. 
+                The goal of our work is to enable light clients to perform anonymous payments, while maintaining privacy even against the full nodes through which they interact with the blockchain.
+              </em>
+            </Text>
+
+            <Text mb={4} fontSize='sm'>
+              <em>
+              We formalize the problem in the universal composability model and present a provably secure solution to it. 
+              In comparison to existing works, we are the first ones that simultaneously provide strong anonymity guarantees, provable security, and anonymity with respect to the full nodes. 
+              Along the way, we make several contributions that may be of independent interest.
+              </em>
+            </Text>
+
+            <Text fontSize='sm'>
+              <em>
+                We define and construct efficient compressible randomness beacons, which produce unpredictable values in regular intervals and allow for storing all published values in a short digest. 
+                We define and construct anonymous-coin friendly encryption schemes and we show how they can be used within anonymous payment systems. 
+                We define and construct strongly oblivious read-once map, which can be seen as a special data structure that needs to satisfy a stronger notion of obliviousness than what is usually considered. 
+                We present a new approach, which is compatible with light clients, for mitigating doublespending attacks in anonymous cryptocurrencies.
+              </em>
+            </Text>
+          </Publication>
+
           <Publication
             title='Ramen: Souper Fast Three-Party Computation for RAM Programs'
             authors='Lennart Braun, Mahak Pancholi, Rahul Rachuri, Mark Simkin'
@@ -1527,42 +1969,6 @@ const Research: NextPage = () => {
           </Publication>
 
           <Publication
-            title='Foundations of Data Availability Sampling'
-            authors='Mathias Hall-Andersen, Mark Simkin, Benedikt Wagner'
-            link='https://eprint.iacr.org/2023/1079.pdf'
-            year={2023}
-          >
-            <Text mb={4} fontSize='sm'>
-              <em>
-                Towards building more scalable blockchains, an approach known as data availability
-                sampling (DAS) has emerged over the past few years. Even large blockchains like
-                Ethereum are planning to eventually deploy DAS to improve their scalability. In a
-                nutshell, DAS allows the participants of a network to ensure the full availability
-                of some data without any one participant downloading it entirely. Despite the
-                significant practical interest that DAS has received, there are currently no formal
-                definitions for this primitive, no security notions, and no security proofs for any
-                candidate constructions. For a cryptographic primitive that may end up being widely
-                deployed in large real-world systems, this is a rather unsatisfactory state of
-                affairs.
-              </em>
-            </Text>
-
-            <Text mb={4} fontSize='sm'>
-              <em>
-                In this work, we initiate a cryptographic study of data availability sampling. To
-                this end, we define data availability sampling precisely as a clean cryptographic
-                primitive. Then, we show how data availability sampling relates to erasure codes. We
-                do so by defining a new type of commitment schemes which naturally generalizes
-                vector commitments and polynomial commitments. Using our framework, we analyze
-                existing constructions and prove them secure. In addition, we give new constructions
-                which are based on weaker assumptions, computationally more efficient, and do not
-                rely on a trusted setup, at the cost of slightly larger communication complexity.
-                Finally, we evaluate the trade-offs of the different constructions.
-              </em>
-            </Text>
-          </Publication>
-
-          <Publication
             title='Laconic Private Set-Intersection From Pairings'
             authors='Diego Aranha, Chuanwei Lin, Claudio Orlandi, Mark Simkin'
             conference='CCS 2022.'
@@ -1590,42 +1996,6 @@ const Research: NextPage = () => {
                 laconic PSI protocol by carefully implementing and optimising both our and previous
                 protocols. Our experimental results show that our protocol outperforms prior laconic
                 PSI protocols.
-              </em>
-            </Text>
-          </Publication>
-
-          <Publication
-            title='Distributed Shuffling in Adversarial Environments'
-            authors='Kasper Green Larsen, Maciej Obremski, Mark Simkin'
-            conference='ITC 2023.'
-            link='https://eprint.iacr.org/2022/560.pdf'
-          >
-            <Text mb={4} fontSize='sm'>
-              <em>
-                We study mix-nets in the context of cryptocurrencies. Here we have many
-                computationally weak shufflers that speak one after another and want to jointly
-                shuffle a list of ciphertexts {<InlineMath math={'(c_1, \\ldots, c_n)'} />}. Each
-                shuffler can only permute {<InlineMath math={'k \\ll n'} />} ciphertexts at a time.
-                An adversary {<InlineMath math={'\\mathcal{A}'} />} can track some of the
-                ciphertexts and adaptively corrupt some of the shufflers.
-              </em>
-            </Text>
-
-            <Text mb={4} fontSize='sm'>
-              <em>
-                We present a simple protocol for shuffling the list of ciphertexts efficiently. The
-                main technical contribution of this work is to prove that our simple shuffling
-                strategy does indeed provide good anonymity guarantees and at the same time
-                terminates quickly.
-              </em>
-            </Text>
-
-            <Text fontSize='sm'>
-              <em>
-                Our shuffling algorithm provides a strict improvement over the current shuffling
-                strategy in Ethereum's block proposer elections. Our algorithm is secure against a
-                stronger adversary, provides provable security guarantees, and is comparable in
-                efficiency to the current approach.
               </em>
             </Text>
           </Publication>

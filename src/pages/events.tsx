@@ -17,6 +17,16 @@ const Events: NextPage = () => {
         </Heading>
 
         <Stack mb={6} spacing={8}>
+        <Event
+            conference='Cryptographic Resilience 2023, Istanbul'
+            workshop='Cryptographic resilience within Ethereum at Devconnect 2023'
+            url='https://sites.google.com/view/cryptographicresilience/home'
+          >
+            Ethereum is increasingly reliant on cryptography.  To date we are actively using hash functions, EC-DSA signatures, BLS signatures, and we will be using polynomial commitments after the Cancun-Deneb upgrade.
+
+            This workshop highlights the current and future suggestions for cryptographic uses and questions how best to ensure Ethereum remains resilient to cryptographic attacks.  We will cover a large spectrum of topics, such as quantum resilience, long term privacy assurance, threshold cryptography and fuzzing mindsets.  We will hear from top researchers and practitioners both inside and outside of the Ethereum ecosystem.
+          </Event>
+
           <Event
             conference='MinRoot VDF event 2023, Lyon'
             workshop='Analysis of candidate sequential function MinRoot'
@@ -38,7 +48,7 @@ const Events: NextPage = () => {
           </Event>
           <Event
             conference='Cryptographic Frontier 2022, Trondheim'
-            workshop='Open Problems in Decentralized Computation at Eurocrypt 2022'
+            workshop='Open problems in decentralized computation at Eurocrypt 2022'
             url='https://sites.google.com/view/cryptographic-frontier-2022/'
           >
             this workshop brings the most interesting and challenging open cryptographic questions
@@ -50,7 +60,7 @@ const Events: NextPage = () => {
 
           <Event
             conference='Cryptographic Frontier 2021, Zagreb'
-            workshop='Open Problems in Ethereum Research at Eurocrypt 2021'
+            workshop='Open problems in Ethereum Research at Eurocrypt 2021'
             url='https://sites.google.com/view/cryptofrontier21'
           >
             this workshop brought the most interesting and challenging open cryptographic questions
