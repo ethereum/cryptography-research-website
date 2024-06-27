@@ -26,21 +26,6 @@ const Team: NextPage = () => {
           <Stack>
             <Text>
               <Link
-                href='https://twitter.com/drakefjustin'
-                color='brand.lightblue'
-                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                isExternal
-              >
-                <strong>Justin Drake.</strong>
-              </Link>{' '}
-              MEV; secret leader election; verifiable delay functions; zkEVM; sharding; and
-              proof-of-custody.
-            </Text>
-          </Stack>
-
-          <Stack>
-            <Text>
-              <Link
                 href='https://dankradfeist.de/about/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
@@ -134,6 +119,20 @@ const Team: NextPage = () => {
                 <strong>Antonio Sanso.</strong>
               </Link>{' '}
               Isogenies; elliptic curves; public key cryptography; cryptanalysis.
+            </Text>
+          </Stack>
+
+          <Stack>
+            <Text>
+              <Link
+                href='https://benedikt-wagner.dev/'
+                color='brand.lightblue'
+                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+                isExternal
+              >
+                <strong>Benedikt Wagner.</strong>
+              </Link>{' '}
+              Distributed hash tables; data availability sampling; variants of digital signatures.
             </Text>
           </Stack>
 
