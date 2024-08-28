@@ -97,20 +97,6 @@ const Team: NextPage = () => {
           <Stack>
             <Text>
               <Link
-                href='https://msimkin.github.io/'
-                color='brand.lightblue'
-                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                isExternal
-              >
-                <strong>Mark Simkin.</strong>
-              </Link>{' '}
-              Cryptographic protocols and primitives; algorithms and data structures.
-            </Text>
-          </Stack>
-
-          <Stack>
-            <Text>
-              <Link
                 href='https://www.intothesymmetry.com/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
@@ -150,19 +136,6 @@ const Team: NextPage = () => {
             </Text>
           </Stack>          
 
-          <Stack>
-            <Text>
-              <Link
-                href='https://zhenfeizhang.github.io/material/aboutme/'
-                color='brand.lightblue'
-                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                isExternal
-              >
-                <strong>Zhenfei Zhang.</strong>
-              </Link>{' '}
-              Lattice based cryptography; zero-knowledge proofs; cryptographic implementations.
-            </Text>
-          </Stack>
         </Stack>
       </main>
     </>
