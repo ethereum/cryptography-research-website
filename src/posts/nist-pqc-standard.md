@@ -63,7 +63,7 @@ As one can see, the smallest quantum-safe signature scheme requires some 666 byt
 
 ### 4.2 Verkle Tree
 
-[Verkle tree](https://vitalik.ca/general/2021/06/18/verkle.html) is build on top of the Pedersen commitment scheme and Inner Product Arguments (IPAs), which assumes discrete logarithm is hard. There exist quantum-safe alternatives to vector commitments build on top of lattices, but all of the candidates perform a few magnitudes worse than ECC based solutions. Our best candidate thus far is to move back to [Merkle Patricia tree](https://ethereum.stackexchange.com/questions/6415/eli5-how-does-a-merkle-patricia-trie-tree-work) that only relies on the hash assumption.
+[Verkle tree](https://vitalik.eth.limo/general/2021/06/18/verkle.html) is build on top of the Pedersen commitment scheme and Inner Product Arguments (IPAs), which assumes discrete logarithm is hard. There exist quantum-safe alternatives to vector commitments build on top of lattices, but all of the candidates perform a few magnitudes worse than ECC based solutions. Our best candidate thus far is to move back to [Merkle Patricia tree](https://ethereum.stackexchange.com/questions/6415/eli5-how-does-a-merkle-patricia-trie-tree-work) that only relies on the hash assumption.
 
 ### 4.3 Zero Knowledge Proofs and their applications
 
