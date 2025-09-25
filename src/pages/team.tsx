@@ -83,20 +83,6 @@ const Team: NextPage = () => {
           <Stack>
             <Text>
               <Link
-                href='https://www.marymaller.com/'
-                color='brand.lightblue'
-                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                isExternal
-              >
-                <strong>Mary Maller.</strong>
-              </Link>{' '}
-              Zero-knowledge proofs; distributed key generation; and setup ceremonies.
-            </Text>
-          </Stack>
-
-          <Stack>
-            <Text>
-              <Link
                 href='https://www.intothesymmetry.com/'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
