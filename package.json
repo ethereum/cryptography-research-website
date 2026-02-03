@@ -5,6 +5,8 @@
   "version": "1.0.0",
   "author": "Nicolás Quiroz <nicolas.quiroz@ethereum.org>",
   "scripts": {
+    "fetch": "node scripts/fetch-team-work.js",
+    "prebuild": "npm run fetch",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",

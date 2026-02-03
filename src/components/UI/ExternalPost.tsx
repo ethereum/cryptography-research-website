@@ -1,4 +1,4 @@
-import { Heading, Link } from '@chakra-ui/react';
+import { Heading, Link, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 import NextLink from 'next/link';
 
@@ -8,15 +8,16 @@ interface Props {
   date: string;
   link: string;
   title: string;
+  author?: string;
 }
 
-export const ExternalPost: FC<Props> = ({ date, link, title }) => {
+export const ExternalPost: FC<Props> = ({ date, link, title, author }) => {
   const parsedDate = getParsedDate(date);
 
   return (
     <article>
       <Heading as='h3' fontSize='sm' fontWeight={400} mb={1}>
-        {parsedDate}
+        {author && <Text as='span' fontStyle='italic'>{author} · </Text>}{parsedDate}
       </Heading>
 
       <NextLink href={link} passHref>

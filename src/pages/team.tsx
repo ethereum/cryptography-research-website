@@ -26,20 +26,6 @@ const Team: NextPage = () => {
           <Stack>
             <Text>
               <Link
-                href='https://dankradfeist.de/about/'
-                color='brand.lightblue'
-                _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-                isExternal
-              >
-                <strong>Dankrad Feist.</strong>
-              </Link>{' '}
-              Vector commitments; Verkle trees; MPCs; and zero-knowledge proofs.
-            </Text>
-          </Stack>
-
-          <Stack>
-            <Text>
-              <Link
                 href='https://dblp.org/pid/47/11389.html'
                 color='brand.lightblue'
                 _hover={{ color: 'brand.orange', textDecoration: 'underline' }}

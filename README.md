@@ -13,6 +13,9 @@ source and no patents are put on any work that we produce.
 
 This repository holds the codebase to our website, [crypto.ethereum.org](crypto.ethereum.org)
 
+Inspired by:
+https://github.com/ethereum/protocol-prototyping-site/blob/main/TEAM_MEMBERS.txt
+
 ## Stack
 
 The main stack used in the project includes:
