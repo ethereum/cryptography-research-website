@@ -1,11 +1,12 @@
 import { Heading, Link, Stack, Text } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface Props {
   url: string;
   title: string;
   postedBy: string;
   totalBounty: string;
+  children: ReactNode;
 }
 
 export const BountyCard: FC<Props> = ({ url, title, postedBy, totalBounty, children }) => {

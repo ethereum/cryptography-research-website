@@ -19,17 +19,16 @@ export const InternalPost: FC<Props> = ({ date, slug, title }) => {
         {parsedDate}
       </Heading>
 
-      <NextLink href={`blog/${slug}`} passHref>
-        <Link
-          href={`blog/${slug}`}
-          color='brand.lightblue'
-          _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-        >
-          <Heading as='h1' mb={4} fontSize='xl' fontWeight={500}>
-            {title}
-          </Heading>
-        </Link>
-      </NextLink>
+      <Link
+        as={NextLink}
+        href={`blog/${slug}`}
+        color='brand.lightblue'
+        _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+      >
+        <Heading as='h1' mb={4} fontSize='xl' fontWeight={500}>
+          {title}
+        </Heading>
+      </Link>
     </article>
   );
 };
