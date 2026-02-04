@@ -1,9 +1,13 @@
 import { Box, Container, Stack } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { Footer, Header } from '../UI';
 
-export const Layout: FC = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+
+export const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       {/* <Container maxW={{ lg: 'container.lg' }} px={0}> */}
