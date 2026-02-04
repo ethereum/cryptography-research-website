@@ -1,17 +1,25 @@
 import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 import { Heading, Stack } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
-// import TweetEmbed from 'react-tweet-embed';
 
-import { ExternalPost, InternalPost, PageMetadata } from '../../components/UI';
+import { ExternalPost, InternalPost, PageMetadata } from '../components/UI';
 
-import { getParsedDate, sortByDate } from '../../utils';
+import { sortByDate } from '../utils';
 
-import { MarkdownPost } from '../../types';
-import { POSTS_DIR } from '../../constants';
+import { MarkdownPost, WorkItem } from '../types';
+import { POSTS_DIR } from '../constants';
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async () => {
+  // Load fetched team work data
+  const teamWorkPath = path.join(process.cwd(), 'src/data/team-work-data.json');
+  let teamWork: WorkItem[] = [];
+  if (fs.existsSync(teamWorkPath)) {
+    const content = fs.readFileSync(teamWorkPath, 'utf-8');
+    teamWork = JSON.parse(content);
+  }
+
   // get list of files from the posts folder
   const files = fs.existsSync(POSTS_DIR) ? fs.readdirSync(POSTS_DIR) : [];
 
@@ -30,16 +38,18 @@ export const getStaticProps: GetStaticProps = async context => {
   // return the pages static props
   return {
     props: {
-      posts
+      posts,
+      teamWork
     }
   };
 };
 
 interface Props {
   posts: MarkdownPost[];
+  teamWork: WorkItem[];
 }
 
-// add here the list of external blog posts, with title, date and link
+// External links from the original blog page
 const externalLinks = [
   {
     title: 'A Universal Verification Equation for Data Availability Sampling',
@@ -78,46 +88,49 @@ const externalLinks = [
   }
 ];
 
-const Blog: NextPage<Props> = ({ posts }) => {
+const PostsResearch: NextPage<Props> = ({ posts, teamWork }) => {
   const internalPosts = posts.map(post => {
-    //extract slug and frontmatter
     const { slug, frontmatter } = post;
-    //extract frontmatter properties
     const { title, date } = frontmatter;
-    const parsedDate = getParsedDate(date);
 
-    //JSX for individual blog listing
     return <InternalPost key={slug} date={date} slug={slug} title={title} />;
   });
 
-  const externalPosts = externalLinks.map(({ date, link, title }) => (
+  // Convert team work items to external posts
+  const teamWorkPosts = teamWork.map(item => (
+    <ExternalPost
+      key={item.url}
+      date={item.date}
+      link={item.url}
+      title={`${item.title} ↗`}
+      author={item.authorDisplay}
+    />
+  ));
+
+  // Legacy external links from the original blog
+  const legacyExternalPosts = externalLinks.map(({ date, link, title }) => (
     <ExternalPost key={link} date={date} link={link} title={`${title} ↗`} />
   ));
+
+  // Combine all posts: internal markdown + team work + legacy external
+  const allPosts = internalPosts.concat(teamWorkPosts).concat(legacyExternalPosts);
 
   return (
     <>
       <PageMetadata
-        title='Blog'
-        description='View latest posts from the Ethereum Foundation Cryptography Research team.'
+        title='Posts & Research'
+        description='View latest posts and research from the Ethereum Foundation Cryptography Research team.'
       />
 
       <main>
         <Heading as='h1' mb={10}>
-          Blog
+          Posts & Research
         </Heading>
 
-        <Stack spacing={2}>{internalPosts.concat(externalPosts).sort(sortByDate)}</Stack>
-
-        {/* <HStack spacing={8} alignItems='flex-start' wrap='wrap'>
-          <TweetEmbed tweetId='1506958509195374598' />
-
-          <TweetEmbed tweetId='1508538717660663809' />
-
-          <TweetEmbed tweetId='1508474058748403716' />
-        </HStack> */}
+        <Stack spacing={2}>{allPosts.sort(sortByDate)}</Stack>
       </main>
     </>
   );
 };
 
-export default Blog;
+export default PostsResearch;

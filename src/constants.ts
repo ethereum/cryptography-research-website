@@ -1,7 +1,6 @@
 // site URLs
 export const HOME_URL = '/';
-export const BLOG_URL = '/blog';
-export const RESEARCH_URL = '/research';
+export const POSTS_RESEARCH_URL = '/posts-research';
 export const TEAM_URL = '/team';
 export const EVENTS_URL = '/events';
 export const BOUNTIES_URL = '/bounties';
@@ -9,8 +8,7 @@ export const BOUNTIES_URL = '/bounties';
 // nav
 export const NAV_LINKS = [
   { href: HOME_URL, text: 'home' },
-  { href: BLOG_URL, text: 'blog' },
-  { href: RESEARCH_URL, text: 'research' },
+  { href: POSTS_RESEARCH_URL, text: 'posts & research' },
   { href: BOUNTIES_URL, text: 'bounties' },
   { href: TEAM_URL, text: 'team' },
   { href: EVENTS_URL, text: 'events' }
