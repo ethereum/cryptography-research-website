@@ -6,9 +6,13 @@ import {
   AccordionPanel,
   Text
 } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
-export const Abstract: FC = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+
+export const Abstract: FC<Props> = ({ children }) => {
   return (
     <Accordion allowToggle>
       <AccordionItem border='none'>

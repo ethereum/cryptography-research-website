@@ -36,16 +36,15 @@ export const Nav: FC = () => {
         <Wrap listStyleType='none' ml={0}>
           {NAV_LINKS.map(({ href, text }, idx) => (
             <WrapItem display='inline' key={href}>
-              <NextLink href={href} passHref>
-                <Link
-                  href={href}
-                  _hover={{ textDecoration: 'none', color: 'gray.800' }}
-                  color='gray.500'
-                  mr={isLastItem(idx, NAV_LINKS.length) ? 0 : 3}
-                >
-                  {text}
-                </Link>
-              </NextLink>
+              <Link
+                as={NextLink}
+                href={href}
+                _hover={{ textDecoration: 'none', color: 'gray.800' }}
+                color='gray.500'
+                mr={isLastItem(idx, NAV_LINKS.length) ? 0 : 3}
+              >
+                {text}
+              </Link>
             </WrapItem>
           ))}
         </Wrap>
@@ -83,18 +82,18 @@ export const Nav: FC = () => {
               <Stack h='100%' justifyContent='center' alignItems='center'>
                 <Stack spacing={0} divider={<Divider borderColor='gray.100' opacity={1} w={80} />}>
                   {NAV_LINKS.map(({ href, text }) => (
-                    <NextLink key={href} href={href} passHref>
-                      <Link
-                        href={href}
-                        _hover={{ textDecoration: 'none', color: 'gray.800' }}
-                        color='gray.500'
-                        onClick={onClose}
-                      >
-                        <Text textAlign='center' fontSize='lg' py={6}>
-                          {text}
-                        </Text>
-                      </Link>
-                    </NextLink>
+                    <Link
+                      key={href}
+                      as={NextLink}
+                      href={href}
+                      _hover={{ textDecoration: 'none', color: 'gray.800' }}
+                      color='gray.500'
+                      onClick={onClose}
+                    >
+                      <Text textAlign='center' fontSize='lg' py={6}>
+                        {text}
+                      </Text>
+                    </Link>
                   ))}
                 </Stack>
               </Stack>

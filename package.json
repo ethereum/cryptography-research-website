@@ -23,9 +23,9 @@
     "focus-visible": "^5.2.0",
     "framer-motion": "^6",
     "gray-matter": "^4.0.3",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-katex": "^2.0.2",
     "react-markdown": "^8.0.1",
     "rehype-katex": "^6.0.2",
@@ -34,13 +34,15 @@
     "remark-math": "^5.1.1"
   },
   "devDependencies": {
-    "@types/node": "17.0.21",
-    "@types/react": "17.0.41",
-    "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0",
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.35",
     "eslint-config-prettier": "^8.5.0",
     "next-sitemap": "^2.5.19",
     "prettier": "^2.6.0",
-    "typescript": "4.6.2"
-  }
+    "typescript": "4.9.5"
+  },
+  "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd"
 }

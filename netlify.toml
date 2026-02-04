@@ -1,7 +1,4 @@
 [build]
-  command = "yarn build"
+  command = "pnpm build"
   publish = ".next"
-
-[build.environment]
-  NODE_VERSION = "16.14.0"
 

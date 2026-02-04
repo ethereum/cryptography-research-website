@@ -1,6 +1,5 @@
 import { Heading, Link, Text } from '@chakra-ui/react';
 import { FC } from 'react';
-import NextLink from 'next/link';
 
 import { getParsedDate } from '../../utils';
 
@@ -20,18 +19,16 @@ export const ExternalPost: FC<Props> = ({ date, link, title, author }) => {
         {author && <Text as='span' fontStyle='italic'>{author} · </Text>}{parsedDate}
       </Heading>
 
-      <NextLink href={link} passHref>
-        <Link
-          href={link}
-          color='brand.lightblue'
-          _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
-          isExternal
-        >
-          <Heading as='h1' mb={4} fontSize='xl' fontWeight={500}>
-            {title}
-          </Heading>
-        </Link>
-      </NextLink>
+      <Link
+        href={link}
+        color='brand.lightblue'
+        _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
+        isExternal
+      >
+        <Heading as='h1' mb={4} fontSize='xl' fontWeight={500}>
+          {title}
+        </Heading>
+      </Link>
     </article>
   );
 };

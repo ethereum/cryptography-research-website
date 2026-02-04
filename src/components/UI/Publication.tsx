@@ -1,5 +1,5 @@
 import { Link, Stack, Text } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { Abstract } from './Abstract';
 
@@ -9,6 +9,7 @@ interface Props {
   conference?: string;
   year?: number;
   link: string;
+  children: ReactNode;
 }
 
 export const Publication: FC<Props> = ({ title, authors, conference, year, link, children }) => {

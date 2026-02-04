@@ -1,10 +1,11 @@
 import { Heading, Link, Stack, Text } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface Props {
   conference: string;
   workshop: string;
   url: string;
+  children: ReactNode;
 }
 
 export const Event: FC<Props> = ({ conference, workshop, children, url }) => {
