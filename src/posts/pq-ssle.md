@@ -72,4 +72,4 @@ In this blog post we briefly analyzed a possible replacement of **Whisk** in the
 
 ## Acknowledgement
 
-We would like to thank Ward Beullens, Dan Boneh, Luca De Feo and George Kadianakis for for fruitful discussions and comments.
+We would like to thank Ward Beullens, Dan Boneh, Luca De Feo and George Kadianakis for fruitful discussions and comments.
