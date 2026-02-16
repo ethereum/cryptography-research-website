@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from '@chakra-ui/react';
+import { Box, Container, Flex, IconButton, useColorMode, HStack } from '@chakra-ui/react';
 import { FC } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -10,6 +10,7 @@ import { Nav } from '../Nav';
 
 export const Header: FC = () => {
   const router = useRouter();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <header>
@@ -19,7 +20,17 @@ export const Header: FC = () => {
             <Image src={EFlogo} alt='Ethereum Foundation logo' height={55} width={161} priority />
           </Box>
 
-          <Nav />
+          <HStack spacing={4}>
+            <Nav />
+            <IconButton
+              aria-label='Toggle color mode'
+              onClick={toggleColorMode}
+              variant='ghost'
+              size='sm'
+              fontSize='lg'
+              icon={<span>{colorMode === 'light' ? '🌙' : '☀️'}</span>}
+            />
+          </HStack>
         </Flex>
       </Container>
     </header>

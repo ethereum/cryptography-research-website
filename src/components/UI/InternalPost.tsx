@@ -15,14 +15,14 @@ export const InternalPost: FC<Props> = ({ date, slug, title, author }) => {
   const parsedDate = getParsedDate(date);
 
   return (
-    <Box as="article" p={4} bg="brand.bgAlt" borderRadius="md" boxShadow="sm">
+    <Box as="article" p={4} bg="bgAlt" borderRadius="md" boxShadow="sm">
       <HStack spacing={2} mb={1}>
-        <Text fontSize='sm' color="brand.textMuted">
+        <Text fontSize='sm' color="textMuted">
           {parsedDate}
         </Text>
         <Text
           fontSize="xs"
-          color="brand.textMuted"
+          color="textMuted"
           bg="#e5f5f2"
           px={2}
           py={0.5}
@@ -44,7 +44,7 @@ export const InternalPost: FC<Props> = ({ date, slug, title, author }) => {
       </Link>
 
       {author && (
-        <Text fontSize='sm' color="brand.textMuted" mt={1}>
+        <Text fontSize='sm' color="textMuted" mt={1}>
           {author}
         </Text>
       )}
