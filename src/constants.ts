@@ -10,8 +10,8 @@ export const NAV_LINKS = [
   { href: HOME_URL, text: 'home' },
   { href: POSTS_RESEARCH_URL, text: 'posts & research' },
   { href: BOUNTIES_URL, text: 'bounties' },
-  { href: TEAM_URL, text: 'team' },
-  { href: EVENTS_URL, text: 'events' }
+  { href: EVENTS_URL, text: 'events' },
+  { href: TEAM_URL, text: 'team' }
 ];
 
 // metadata

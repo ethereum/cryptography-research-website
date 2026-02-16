@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { Heading, Stack } from '@chakra-ui/react';
+import { Heading, SimpleGrid } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
 
 import { ExternalPost, InternalPost, PageMetadata } from '../components/UI';
@@ -91,9 +91,9 @@ const externalLinks = [
 const PostsResearch: NextPage<Props> = ({ posts, teamWork }) => {
   const internalPosts = posts.map(post => {
     const { slug, frontmatter } = post;
-    const { title, date } = frontmatter;
+    const { title, date, author } = frontmatter;
 
-    return <InternalPost key={slug} date={date} slug={slug} title={title} />;
+    return <InternalPost key={slug} date={date} slug={slug} title={title} author={author} />;
   });
 
   // Convert team work items to external posts
@@ -103,13 +103,14 @@ const PostsResearch: NextPage<Props> = ({ posts, teamWork }) => {
       date={item.date}
       link={item.url}
       title={`${item.title} ↗`}
-      author={item.authorDisplay}
+      author={item.authors ? item.authors.join(', ') : item.authorDisplay}
+      tags={item.tags}
     />
   ));
 
   // Legacy external links from the original blog
   const legacyExternalPosts = externalLinks.map(({ date, link, title }) => (
-    <ExternalPost key={link} date={date} link={link} title={`${title} ↗`} />
+    <ExternalPost key={link} date={date} link={link} title={`${title} ↗`} tags={['Ethresearch Post']} />
   ));
 
   // Combine all posts: internal markdown + team work + legacy external
@@ -123,11 +124,13 @@ const PostsResearch: NextPage<Props> = ({ posts, teamWork }) => {
       />
 
       <main>
-        <Heading as='h1' mb={10}>
+        <Heading as='h1' mb={6}>
           Posts & Research
         </Heading>
 
-        <Stack spacing={2}>{allPosts.sort(sortByDate)}</Stack>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={4}>
+          {allPosts.sort(sortByDate)}
+        </SimpleGrid>
       </main>
     </>
   );

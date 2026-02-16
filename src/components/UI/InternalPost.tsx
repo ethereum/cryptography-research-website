@@ -1,4 +1,4 @@
-import { Heading, Link } from '@chakra-ui/react';
+import { Box, Heading, HStack, Link, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 import NextLink from 'next/link';
 
@@ -8,16 +8,29 @@ interface Props {
   date: string;
   slug: string;
   title: string;
+  author?: string;
 }
 
-export const InternalPost: FC<Props> = ({ date, slug, title }) => {
+export const InternalPost: FC<Props> = ({ date, slug, title, author }) => {
   const parsedDate = getParsedDate(date);
 
   return (
-    <article key={title}>
-      <Heading as='h3' fontSize='sm' fontWeight={400} mb={1}>
-        {parsedDate}
-      </Heading>
+    <Box as="article" p={4} bg="brand.bgAlt" borderRadius="md" boxShadow="sm">
+      <HStack spacing={2} mb={1}>
+        <Text fontSize='sm' color="brand.textMuted">
+          {parsedDate}
+        </Text>
+        <Text
+          fontSize="xs"
+          color="brand.textMuted"
+          bg="#e5f5f2"
+          px={2}
+          py={0.5}
+          borderRadius="sm"
+        >
+          Blog Post
+        </Text>
+      </HStack>
 
       <Link
         as={NextLink}
@@ -25,10 +38,16 @@ export const InternalPost: FC<Props> = ({ date, slug, title }) => {
         color='brand.lightblue'
         _hover={{ color: 'brand.orange', textDecoration: 'underline' }}
       >
-        <Heading as='h1' mb={4} fontSize='xl' fontWeight={500}>
+        <Heading as='h2' fontSize='lg' fontWeight={600}>
           {title}
         </Heading>
       </Link>
-    </article>
+
+      {author && (
+        <Text fontSize='sm' color="brand.textMuted" mt={1}>
+          {author}
+        </Text>
+      )}
+    </Box>
   );
 };

@@ -95,7 +95,8 @@ async function fetchAllTeamWork(TEAM_MEMBERS) {
                         date: item.date || '',
                         author: username,
                         authorDisplay: displayName,
-                        authorTwitter: twitter || null
+                        authorTwitter: twitter || null,
+                        authors: item.authors || null
                     }));
                 allWork.push(...memberWork);
                 console.log(`  ✓ Found ${memberWork.length} items from ${username}/${repo} (branch: ${branch})`);

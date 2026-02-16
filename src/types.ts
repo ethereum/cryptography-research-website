@@ -27,4 +27,5 @@ export type WorkItem = {
   author: string;
   authorDisplay: string;
   authorTwitter: string | null;
+  authors: string[] | null;
 };
