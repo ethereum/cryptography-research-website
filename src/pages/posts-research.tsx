@@ -96,8 +96,16 @@ const PostsResearch: NextPage<Props> = ({ posts, teamWork }) => {
     return <InternalPost key={slug} date={date} slug={slug} title={title} author={author} />;
   });
 
+  // De-duplicate team work items with the same title (keep first occurrence, which is newest)
+  const seenTitles = new Set<string>();
+  const uniqueTeamWork = teamWork.filter(item => {
+    if (seenTitles.has(item.title)) return false;
+    seenTitles.add(item.title);
+    return true;
+  });
+
   // Convert team work items to external posts
-  const teamWorkPosts = teamWork.map(item => (
+  const teamWorkPosts = uniqueTeamWork.map(item => (
     <ExternalPost
       key={item.url}
       date={item.date}
