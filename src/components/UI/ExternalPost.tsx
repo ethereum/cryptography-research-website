@@ -16,11 +16,12 @@ const getTypeColor = (tag: string): string => {
   if (tag === 'Blog Post') return '#e5f5f2';
   if (tag === 'Ethresearch Post') return '#f5f0e5';
   if (tag === 'Code') return '#e5f5e8';
+  if (tag === 'Talk') return '#f5e5f0';
   return '#f0efed';
 };
 
 const isTypeTag = (tag: string): boolean => {
-  return ['Paper', 'Blog Post', 'Ethresearch Post', 'Code'].includes(tag);
+  return ['Paper', 'Blog Post', 'Ethresearch Post', 'Code', 'Talk'].includes(tag);
 };
 
 export const ExternalPost: FC<Props> = ({ date, link, title, author, tags = [] }) => {
