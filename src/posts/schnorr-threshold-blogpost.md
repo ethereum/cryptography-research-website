@@ -118,7 +118,7 @@ Why is this transform necessary? In summary, it ensures that in the proof of sec
 
 KEA simply defines an extractor that is assumed to be able to extract the correct values, given the constraints described above. Hence, this assumption is non-falsifiable and therefore considered a strong assumption.
 
-Notably, KEA and Fischlin are often interchangable for protocols that require online extraction for proofs of possession. Lindell22 employs the Fischlin Transform (and hence is in the PROM), but could easily instead employ KEA. The proof for PedPop[^2] assumes KEA, but alternatively, could use Fischlin.
+Notably, KEA and Fischlin are often interchangeable for protocols that require online extraction for proofs of possession. Lindell22 employs the Fischlin Transform (and hence is in the PROM), but could easily instead employ KEA. The proof for PedPop[^2] assumes KEA, but alternatively, could use Fischlin.
 
 Forking+rewinding is how the unforgeability of Schnorr signatures is proven to reduce to the hardness of discrete log in the programmable ROM, when Fiat-Shamir is employed. We describe in more detail this reduction at the end of this post. However, while the proof of *unforgeability* for Schnorr signatures incurs acceptable tightness loss when forking+rewinding is used, the same is not true when Schnorr signatures are employed as proofs of possession (PoP) and the environment must *extract* secret information from the adversary, as is the case in PedPop and Lindell22. In the extractability case, the tightness loss incurred is instead *exponential*.  Hence why in the PoP setting where extractability is required, either KEA or Fischlin must instead be employed.
 
