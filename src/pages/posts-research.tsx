@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
 import { Heading, SimpleGrid } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
@@ -10,15 +9,11 @@ import { sortByDate } from '../utils';
 
 import { MarkdownPost, WorkItem } from '../types';
 import { POSTS_DIR } from '../constants';
+import { fetchTeamWork } from '../lib/fetchTeamWork';
 
 export const getStaticProps: GetStaticProps = async () => {
-  // Load fetched team work data
-  const teamWorkPath = path.join(process.cwd(), 'src/data/team-work-data.json');
-  let teamWork: WorkItem[] = [];
-  if (fs.existsSync(teamWorkPath)) {
-    const content = fs.readFileSync(teamWorkPath, 'utf-8');
-    teamWork = JSON.parse(content);
-  }
+  // Fetch team work directly from GitHub
+  const teamWork = await fetchTeamWork();
 
   // get list of files from the posts folder
   const files = fs.existsSync(POSTS_DIR) ? fs.readdirSync(POSTS_DIR) : [];
@@ -35,12 +30,12 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-  // return the pages static props
   return {
     props: {
       posts,
       teamWork
-    }
+    },
+    revalidate: 7200 // Re-generate every 2 hours
   };
 };
 
