@@ -63,7 +63,7 @@ const teamMembers: TeamMemberProps[] = [
   {
     name: 'Arantxa Zapico',
     url: 'https://sites.google.com/view/arantxazapico',
-    focus: 'Zero-knowledge proofs; lookup arguments, vector commitments.'
+    focus: 'Succinct arguments, zero-knowledge, zkVMs.'
   }
 ];
 

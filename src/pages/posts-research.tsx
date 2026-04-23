@@ -47,6 +47,13 @@ interface Props {
 // External links from the original blog page
 const externalLinks = [
   {
+    title: 'Lookups on zkVMs',
+    date: '2026-04-23',
+    link: 'https://notes.ethereum.org/@5OzPHg-eTIGneNi3i6jvbw/HyMeKbnt-e',
+    author: 'Arantxa Zapico',
+    tags: ['Blog Post']
+  },
+  {
     title: 'A Universal Verification Equation for Data Availability Sampling',
     date: '2022-08-04',
     link: 'https://ethresear.ch/t/a-universal-verification-equation-for-data-availability-sampling/13240'
@@ -111,9 +118,20 @@ const PostsResearch: NextPage<Props> = ({ posts, teamWork }) => {
     />
   ));
 
-  // Legacy external links from the original blog
-  const legacyExternalPosts = externalLinks.map(({ date, link, title }) => (
-    <ExternalPost key={link} date={date} link={link} title={`${title} ↗`} tags={['Ethresearch Post']} />
+  const externalLinksNotInTeamWork = externalLinks.filter(
+    link => !uniqueTeamWork.some(item => item.title === link.title)
+  );
+
+  // External links from the original blog and manually listed posts
+  const legacyExternalPosts = externalLinksNotInTeamWork.map(({ author, date, link, tags, title }) => (
+    <ExternalPost
+      key={link}
+      date={date}
+      link={link}
+      title={`${title} ↗`}
+      author={author}
+      tags={tags || ['Ethresearch Post']}
+    />
   ));
 
   // Combine all posts: internal markdown + team work + legacy external
