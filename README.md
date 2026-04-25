@@ -109,7 +109,7 @@ Take into account that images are automatically centered, no need to add extra H
 
 Follow [this syntax](https://github.blog/changelog/2021-09-30-footnotes-now-supported-in-markdown-fields/).
 
-## How to deploy changes succesfully
+## How to deploy changes successfully
 
 - **Locally**: **Make sure the site builds** locally, otherwise the build will break and the new version of the site (e.g.: adding a new post) will not be generated. To be sure of this, run `pnpm build` locally and check that you get no errors.
 - **On GitHub**: check that the `Deploy Preview` passes succesfully.
