@@ -59,7 +59,7 @@ The following list describes the main elements of the project structure:
     - `global.css`: global stylesheet.
   - `theme`: contains the [Chakra UI custom theme](https://chakra-ui.com/docs/styled-system/theming/customize-theme), organized in `foundations` and `components` for better scaling.
   - `utils`: utilitary stuff.
-  - `constants.ts`: this is the _global_ constants file, containg URLs and lists of elements we use across the site.
+  - `constants.ts`: this is the _global_ constants file, containing URLs and lists of elements we use across the site.
   - `types.ts`: contains the custom defined TypeScript types and interfaces.
 
 ## Markdown & LaTex support on blog posts
